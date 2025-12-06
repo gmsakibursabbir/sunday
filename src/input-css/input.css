@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-Alegreya: "Alegreya", serif;
+
+  --color-primary: #017bc0;
+  --color-secondary: #1b1c1b;
+  --color-blue: #01233b;
+  --color-blue-bright: #0189d5;
+  --color-gray: #86847e;
+  --color-red: #fd6c5d;
+  --color-placeholder: #018ad3;
+}
+
+.container {
+  @apply mx-auto w-full lg:max-w-[1326px];
+}
+
+body {
+  font-family: var(--font-poppins);
+}
+h1,
+h2 {
+  font-family: var(--font-Alegreya);
+}
+.header-blur {
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.38);
+}
+.shape-1 {
+  /* Ellipse 1 */
+  width: 1011px;
+  height: 228.15px;
+  transform: rotate(50.14deg);
+  filter: blur(200px);
+  background: rgba(176, 218, 242, 0.4);
+  position: absolute;
+  top: 50%;
+  left: -20%;
+}
+.shape-2 {
+  /* Ellipse 2 */
+  width: 792.85px;
+  height: 124.05px;
+  transform: rotate(-167.85deg);
+  filter: blur(200px);
+  background: rgba(176, 218, 242, 0.4);
+  position: absolute;
+  top: 50%;
+  left: -20%;
+}
+
+.discover-bg-two {
+  background: var(
+    --Gradient,
+    linear-gradient(
+      153.81deg,
+      rgba(250, 250, 250, 1),
+      rgba(217, 237, 249, 1) 100%
+    )
+  );
+}
+.discover-bg-three {
+  background: linear-gradient(
+    153.81deg,
+    rgba(217, 237, 249, 1),
+    rgba(250, 250, 250, 1) 100%
+  );
+}
+
+@media (width < 64rem) {
+  /* styles for screens smaller than lg */
+
+  .header-blur {
+    box-sizing: border-box;
+    border-bottom: 2px solid rgba(243, 244, 246, 1);
+    background: rgba(255, 255, 255, 1);
+  }
+}
