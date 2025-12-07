@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reenie+Beanie&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+
+  <link rel="stylesheet" href="./css/style.min.css" />
+</head>
+
+<body class="bg-white overflow-x-hidden">
+  <!-- header -->
+  <header class="sticky top-0 z-50 pt-0 lg:pt-4">
+    <div
+      class="header-blur mx-auto flex w-full flex-row items-center justify-between rounded-none px-4 py-3 lg:max-w-[1293px] lg:rounded-[14px] lg:px-6 lg:py-[14px]">
+      <a href="./index.html"><img src="./images/logo-header.svg" alt="logo-header" class="w-[96px] lg:w-[133px]" /></a>
+      <ul class="hidden flex-row items-center space-x-8 lg:flex">
+        <li>
+          <a href="#"
+            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Accueil</a>
+        </li>
+        <li>
+          <a href="#"
+            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Nos
+            évènements</a>
+        </li>
+        <li>
+          <a href="#"
+            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Nos
+            accessoires</a>
+        </li>
+        <li>
+          <a href="#"
+            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Nous
+            contacter</a>
+        </li>
+        <li>
+          <a href="#"
+            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Tarification</a>
+        </li>
+      </ul>
+      <a href="#"
+        class="hidden items-center gap-1 rounded-[6px] bg-[#0589D3] px-5 py-[10px] text-[15px] text-white lg:flex">
+        <svg viewBox="0 0 13.5 14.2559" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="13.500000" height="14.255859" fill="none" customFrame="#000000">
+          <path id="Vector"
+            d="M6.75 14.2559C6.23438 14.2559 5.74805 14.1562 5.29102 13.957C4.83398 13.7578 4.43555 13.4883 4.0957 13.1484C3.75586 12.8086 3.48633 12.4102 3.28711 11.9531C3.09961 11.5078 3.00586 11.0215 3.00586 10.4941C3.00586 9.97852 3.09961 9.49219 3.28711 9.03516C3.48633 8.57812 3.75586 8.18262 4.0957 7.84863C4.43555 7.51465 4.83398 7.24805 5.29102 7.04883C5.74805 6.84961 6.23438 6.75 6.75 6.75C7.26562 6.75 7.75195 6.84961 8.20898 7.04883C8.66602 7.24805 9.06445 7.51465 9.4043 7.84863C9.74414 8.18262 10.0137 8.57812 10.2129 9.03516C10.4004 9.49219 10.4941 9.97852 10.4941 10.4941C10.4941 11.0215 10.4004 11.5078 10.2129 11.9531C10.0137 12.4102 9.74414 12.8086 9.4043 13.1484C9.06445 13.4883 8.66602 13.7578 8.20898 13.957C7.75195 14.1562 7.26562 14.2559 6.75 14.2559ZM6.75 8.24414C6.12891 8.24414 5.59863 8.46387 5.15918 8.90332C4.71973 9.34277 4.5 9.87305 4.5 10.4941C4.5 11.1152 4.71973 11.6455 5.15918 12.085C5.59863 12.5244 6.12891 12.7441 6.75 12.7441C7.37109 12.7441 7.90137 12.5244 8.34082 12.085C8.78027 11.6455 9 11.1152 9 10.4941C9 9.87305 8.78027 9.34277 8.34082 8.90332C7.90137 8.46387 7.37109 8.24414 6.75 8.24414ZM13.5 0L13.5 0.755859C13.5 1.48242 13.3652 2.16211 13.0957 2.79492C12.8145 3.42773 12.4365 3.98145 11.9619 4.45605C11.4873 4.93066 10.9336 5.30859 10.3008 5.58984C9.65625 5.85938 8.9707 5.99414 8.24414 5.99414L5.25586 5.99414C4.5293 5.99414 3.84375 5.85938 3.19922 5.58984C2.56641 5.30859 2.0127 4.93066 1.53809 4.45605C1.06348 3.98145 0.685547 3.42773 0.404297 2.79492C0.134766 2.16211 0 1.48242 0 0.755859L0 0L1.49414 0L1.49414 0.755859C1.49414 1.27148 1.59375 1.75781 1.79297 2.21484C1.99219 2.67188 2.26172 3.06738 2.60156 3.40137C2.94141 3.73535 3.33984 4.00195 3.79688 4.20117C4.24219 4.40039 4.72852 4.5 5.25586 4.5L8.24414 4.5C8.77148 4.5 9.25781 4.40039 9.70312 4.20117C10.1602 4.00195 10.5586 3.73535 10.8984 3.40137C11.2383 3.06738 11.5078 2.67188 11.707 2.21484C11.9062 1.75781 12.0059 1.27148 12.0059 0.755859L12.0059 0L13.5 0Z"
+            fill="rgb(255,255,255)" fill-rule="nonzero" transform="matrix(1,0,0,-1,0,14.2559)" />
+        </svg>
+        <span>Se connecter</span>
+      </a>
+      <button class="inline-block lg:hidden">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="24.000000" height="24.000000" fill="none">
+          <rect id="Icon" width="24.000000" height="24.000000" x="0.000000" y="0.000000" />
+          <path id="Vector" d="M4 5L20 5" stroke="rgb(10.044,10.044,10.044)" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" />
+          <path id="Vector" d="M4 12L20 12" stroke="rgb(10.044,10.044,10.044)" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" />
+          <path id="Vector" d="M4 19L20 19" stroke="rgb(10.044,10.044,10.044)" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <!-- main -->
+  <main>
+    <!-- hero -->
+    <section class="py-6">
+      <div
+        class="relative lg:max-w-[1220px] mx-auto flex flex-col items-center justify-between gap-10 gap-[80px] px-5 lg:px-0 lg:gap-[128x]">
+        <div class="text-center w-full">
+          <h1 class="text-[32px] md:text-[52px] lg:text-[64px] font-bold text-[#101010]">
+            Plan d’abonnement Sunday Events
+          </h1>
+          <p class="text-[16px] lg:text-lg font-normal text-[#878787]">
+            Pas de frais cachés. Une tarification simple et transparente qui
+            évolue avec votre besoin.
+          </p>
+        </div>
+        <!-- prices -->
+        <div class="flex lg:flex-row flex-col items-start gap-[61px] lg:gap-5 w-full">
+          <!-- 1 -->
+          <div
+            class="w-full lg:w-1/3 p-[18px] lg:p-6 bg-[#E6F3FB] border-[1px] border-solid border-neutral-300 rounded-2xl h-auto">
+            <!-- top -->
+            <span
+              class="w-full min-h-[52px] lg:min-h-[56px] flex items-center justify-center bg-[#0189D5] rounded-[10px] text-white">
+              <h2 class="text-[32px] font-medium">Plan Gratuit</h2>
+            </span>
+            <!-- middle -->
+            <div class="py-[21px] border-b-[1px] border-[#B0DAF2]">
+              <h3 class="text-[36px] lg:text-[48px] font-medium text-[#101010]">
+                0 Fcfa
+                <sub class="text-lg font-normal relative bottom-[2px] text-[#606060]">/ mois</sub>
+              </h3>
+            </div>
+            <!-- bottom -->
+            <ul class="space-y-[10px] pt-[26px] pb-[24px]">
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/blue-check.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#002A52] text-base font-normal">Création évènement gratuit</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/blue-check.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#002A52] text-base font-normal">Billetterie gratuite</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/blue-check.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#002A52] text-base font-normal">Contrôle avec Sunday Scan</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/blue-check.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#002A52] text-base font-normal">Suivi des réservations</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Suivi des réservations</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Création évènement gratuit</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Formation 2h prise en main</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Commission sur billet</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Statistiques</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Export de fichiers</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Personnalisation de la billetterie</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Plan de salle</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Attribution des rôles</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/dark-close.svg" alt="check" class="w-6 h-6" />
+                <span class="text-[#B0BDC9] text-base font-normal">Option Produits/ Services</span>
+              </li>
+            </ul>
+            <!-- buton -->
+            <a href="#"
+              class="inline-block text-center w-full py-[14px] bg-white border-[1px] border-solid border-[#0971DA] rounded-[16px] text-[#0971DA] text-base font-medium hover:bg-[#0971DA] hover:text-white transition-colors duration-300">Commencer
+              maintenant</a>
+          </div>
+          <!-- 2 -->
+          <div
+            class="w-full lg:w-1/3 p-[18px] lg:p-6 border-[1px] border-solid border-cyan-400 rounded-2xl bg-[#0189D5] h-auto relative">
+            <!-- tips -->
+            <div
+              class="absolute -top-[34px] left-1/2 -translate-x-1/2 w-[206px] h-[34px] bg-[#1FD7F3] rounded-t-[16px] flex items-center justify-center gap-[10px]">
+              <span class="text-white text-base font-normal">Plus populaire</span><img src="./images/half-star.svg"
+                alt="star" class="w-6 h-6" />
+            </div>
+            <!-- top -->
+            <span
+              class="w-full min-h-[52px] lg:min-h-[56px] flex items-center justify-center shadow-xl shadow-black/[0.06] bg-gradient-to-tr from-[#FAFAFA] to-[#D9EDF9] rounded-[10px] text-[#0189D5]">
+              <h2 class="text-[32px] font-medium">Plan Standard</h2>
+            </span>
+            <!-- middle -->
+            <div class="py-[21px] border-b-[1px] border-[#B0DAF2]">
+              <h3 class="text-[36px] lg:text-[48px] font-medium text-[#ffffff]">
+                30000 FCFa
+                <sub class="text-lg font-normal relative bottom-[2px] text-[#ffffff]">/ mois</sub>
+              </h3>
+
+              <div class="flex flex-row items-center gap-2 mt-[6px]">
+                <h4 class="text-xl font-bold text-white">
+                  300 000
+                  <sub class="font-normal text-sm text-white relative bottom-[1px]">FCFA / an</sub>
+                </h4>
+                <span
+                  class="text-white text-base font-normal bg-[#1FD7F3] rounded-full min-h-[24px] inline-flex items-center justify-center px-[10px] border-[1px] border-white">2
+                  mois offerts</span>
+              </div>
+            </div>
+            <!-- bottom -->
+            <ul class="space-y-[10px] pt-[26px] pb-[24px]">
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Création évènement gratuit</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Billetterie gratuite</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Contrôle avec Sunday Scan</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Suivi des réservations</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Suivi des réservations</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Création évènement gratuit</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Formation 2h prise en main</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Commission sur billet</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Statistiques</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Export de fichiers</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Personnalisation de la billetterie</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Plan de salle</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Attribution des rôles</span>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
+                <span class="text-white text-base font-normal">Option Produits/ Services</span>
+              </li>
+            </ul>
+            <!-- buton -->
+            <a href="#"
+              class="inline-block text-center w-full py-[14px] bg-white border-[1px] border-solid border-[#0189D5] rounded-[16px] text-[#0189D5] text-base font-medium hover:bg-[#0189D5] hover:border-[#ffffff] hover:text-white transition-colors duration-300">Choisir
+              le plan</a>
+          </div>
+          <!-- 3 -->
+          <div
+            class="w-full lg:w-1/3 p-[18px] lg:p-6 bg-[#B0DAF2] border-[1px] border-solid border-neutral-300 rounded-2xl h-auto">
+            <!-- top -->
+            <span
+              class="w-full min-h-[52px] lg:min-h-[56px] flex items-center justify-center bg-[#0189D5] rounded-[10px] text-white">
+              <h2 class="text-[32px] font-medium">Plan Entreprise</h2>
+            </span>
+            <!-- middle -->
+            <div class="pt-[36px] pb-[34px] lg:pt-[53px] lg:pb-[73px]">
+              <h4 class="text-[24px] lg:text-[32px] font-medium text-[#101010] text-center max-w-[343px] mx-auto">
+                Contactez nous pour une offre personnalisée
+              </h4>
+            </div>
+
+            <!-- buton -->
+            <a href="#"
+              class="inline-block text-center w-full py-[14px] bg-white border-[1px] border-solid border-[#0971DA] rounded-[16px] text-[#0971DA] text-base font-medium hover:bg-[#0971DA] hover:text-white transition-colors duration-300">Contactez-nous</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- standered -->
+    <section class="px-5 w-full space-y-10">
+      <!-- 1 -->
+      <div
+        class="w-full lg:max-w-[1281px] mx-auto py-[24px] px-[12px] lg:py-[60px] lg:px-[40px] rounded-[16px] lg:rounded-[26px] min-h-[513px] lg:min-h-[393px] standedted-one flex flex-col lg:flex-row items-center justify-between gap-[30px]">
+        <div class="w-full lg:w-[60%] space-y-5">
+          <h2 class="text-[32px] lg:text-[56px] font-medium text-white leading-[120%] lg:max-w-[565px]">
+            Une tarification adaptée à vos évènements
+          </h2>
+          <a href="#"
+            class="inline-flex text-[#0189D5] lg:min-h-[56px] px-[88px] font-Alegreya text-[32px] font-medium rounded-[10px] shadow-xl shadow-black/[0.06] bg-gradient-to-tr from-[#FAFAFA] to-[#D9EDF9] flex items-center justify-center w-full lg:w-auto">STANDARD</a>
+          <p class="text-xl lg:text-2xl font-medium text-white">
+            8% du prix du billet et c’est TOUT.
+          </p>
+        </div>
+        <div class="w-full lg:w-[40%] space-y-[28px] lg:space-y-[30px]">
+          <p class="text-base lg:text-lg font-medium text-white max-w-[444px]">
+            Chez Sunday Events, nous nous engageons à offrir une solution de
+            billetterie en ligne transparente et abordable pour les
+            organisateurs d'événements.
+          </p>
+          <ul class="space-y-3 max-w-[385px]">
+            <li class="text-sm font-medium text-[#31A0DD] py-[8.5px] px-3 rounded-[10px] bg-white">
+              Création de compte organisateur gratuit
+            </li>
+            <li class="text-sm font-medium text-[#31A0DD] py-[8.5px] px-3 rounded-[10px] bg-white">
+              Pas de frais cachés
+            </li>
+            <li class="text-sm font-medium text-[#31A0DD] py-[8.5px] px-3 rounded-[10px] bg-white">
+              Retrait des fonds à partir du compte organisateur
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div
+        class="w-full lg:max-w-[1281px] mx-auto  pt-[32px] pb-[32px] lg:pb-[23px] px-[16px] rounded-[16px] lg:rounded-[26px] min-h-[513px] lg:min-h-[393px] bg-[#D9EDF9] flex flex-col gap-[38px]">
+        <h2 class="text-[36px] lg:text-[56px] font-medium text-[#0189D5] text-center">
+          Simulateur de Prix
+        </h2>
+        <div class="flex lg:flex-row flex-col items-start justify-between gap-[32px]">
+          <div class="w-full lg:w-[418px] bg-white p-4 space-y-4 rounded-[12px] border-[1px] border-[#EDEDED]">
+            <h4 class="text-lg font-medium leading-[120%] text-[#101010]">Commission Sundays Events</h4>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-[10px]">
+                <img src="./images/commision-01.svg" alt="commision-01" class="w-6 h-6" />
+                <span class="text-base font-medium text-[#101010]">8% commission/billet</span>
+              </li>
+              <li class="flex items-center gap-[10px]">
+                <img src="./images/commision-02.svg" alt="commision-02" class="w-6 h-6" />
+                <span class="text-base font-medium text-[#101010]">Un évènement gratuit reste
+                  GRATUIT CHEZ SUNDAY EVENTS</span>
+              </li>
+              <li class="flex items-center gap-[10px]">
+                <img src="./images/commision-03.svg" alt="commision-03" class="w-6 h-6" />
+                <span class="text-base font-medium text-[#101010]">Calculez vos revenus avec notre simulateur</span>
+              </li>
+            </ul>
+          </div>
+          <div class="w-[2px] h-[274px] bg-[#EDEDED] lg:block hidden"></div>
+          <div
+            class="flex-1 w-full bg-white p-4 space-y-4 rounded-[12px] border-[1px] border-[#EDEDED] flex flex-col lg:flex-row gap-[31px]">
+            <!-- 1 -->
+            <div class="w-full lg:w-[45%]">
+              <h4 class="text-lg font-medium leading-[120%] text-[#101010] pb-4 border-b-[1px] border-[#697A8D]/40">
+                Estimation de vos revenus</h4>
+              <ul class="space-y-[6px] mt-4">
+                <li>
+                  <label class="text-base font-medium leading-[120%] text-[#101010] pb-2  block">Prix du billet TTC
+                    (XAF)</label>
+                  <input type="number" placeholder="0"
+                    class="p-4 text-base font-medium leading-[120%] outline-none ring-[1px] ring-[#EDEDED] rounded-[11px] text-[#101010] placeholder:text-[#878787] w-full" />
+                </li>
+                <li><span class="text-base font-medium leading-[120%] text-[#101010]">X</span></li>
+                <li>
+                  <label class="text-base font-medium leading-[120%] text-[#101010] pb-2  block">Nombre de billets
+                    vendus</label>
+                  <input type="number" placeholder="0"
+                    class="p-4 text-base font-medium leading-[120%] outline-none ring-[1px] ring-[#EDEDED] rounded-[11px] text-[#101010] placeholder:text-[#878787] w-full" />
+                </li>
+              </ul>
+            </div>
+            <!-- 2 -->
+            <div class="w-full lg:w-[55%]">
+              <h4 class="text-lg font-medium leading-[120%] text-[#101010] pb-4 border-b-[1px] border-[#697A8D]/40">
+                Détail du calcul</h4>
+              <ul class="w-full mt-4 space-y-3">
+                <li
+                  class="block text-base font-Inter font-semibold leading-[120%] text-[#0F8ED5] px-4 py-[11px] flex flex-row items-center justify-between bg-[#D0E9F7] rounded-[12px] border border-[#EDEDED] shadow-xs">
+                  <span>Participants</span><span>0 XAF</span>
+                </li>
+                <li
+                  class="block text-base font-Inter font-semibold leading-[120%] text-[#0F8ED5] px-4 py-[11px] flex flex-row items-center justify-between bg-[#D0E9F7] rounded-[12px] border border-[#EDEDED] shadow-xs">
+                  <span>Commission SUNDAY EVENTS</span><span>0 XAF</span>
+                </li>
+                <li
+                  class="block text-base font-Inter font-semibold leading-[120%] text-[#0F8ED5] px-4 py-[11px] flex flex-row items-center justify-between bg-[#D0E9F7] rounded-[12px] border border-[#EDEDED] shadow-xs">
+                  <span>Vous recevez</span><span>0 XAF</span>
+                </li>
+                <li
+                  class="block text-base font-Inter font-semibold leading-[120%] text-[#FF5C40] px-4 py-[11px] flex flex-row items-center justify-between bg-[#FFE0DB] rounded-[12px] border border-[#EDEDED] shadow-xs">
+                  <span>Participants</span><span>0 XAF</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- faq -->
+    <section class="py-[40px] lg:py-[100px]">
+      <div class="lg:max-w-[1062px] mx-auto px-5">
+        <div class="text-center">
+          <h2 class="text-[32px] lg:text-[48px] font-medium text-[#101010]">
+            Questions fréquemment posées
+          </h2>
+          <p class="text-[16px] lg:text-lg font-normal text-[#878787] hidden lg:block pt-3">
+            We’ve compiled the most common questions to help you get started.
+          </p>
+        </div>
+        <!-- content faq -->
+        <div class="w-full space-y-[28px] p-4 bg-[#F7F7F7] ring-[1px] ring-[#EDEDED] mt-10 rounded-[20px]">
+          <!-- 1 -->
+          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+            <button
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              <span>Qu'est-ce que SUNDAY Events ?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
+              <p class="pb-0">
+                Nous proposons du marketing numérique, de la gestion des
+                réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                des solutions sur mesure pour répondre à vos besoins en
+                marketing.
+              </p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+            <button
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              <span>Qui peut utiliser Sunday Events ?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
+              <p class="pb-0">
+                Nous proposons du marketing numérique, de la gestion des
+                réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                des solutions sur mesure pour répondre à vos besoins en
+                marketing.
+              </p>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+            <button
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              <span>Est-ce que Sunday Events est gratuit ?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
+              <p class="pb-0">
+                Nous proposons du marketing numérique, de la gestion des
+                réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                des solutions sur mesure pour répondre à vos besoins en
+                marketing.
+              </p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+            <button
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              <span>Comment puis-je commencer à utiliser SUNDAY Events ?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
+              <p class="pb-0">
+                Nous proposons du marketing numérique, de la gestion des
+                réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                des solutions sur mesure pour répondre à vos besoins en
+                marketing.
+              </p>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+            <button
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              <span>Qui peut utiliser Sunday Events ?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
+              <p class="pb-0">
+                Nous proposons du marketing numérique, de la gestion des
+                réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                des solutions sur mesure pour répondre à vos besoins en
+                marketing.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+            <button
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              <span>Qu'est-ce que SUNDAY Events ?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
+              <p class="pb-0">
+                Nous proposons du marketing numérique, de la gestion des
+                réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                des solutions sur mesure pour répondre à vos besoins en
+                marketing.
+              </p>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+            <button
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              <span>Est-ce que Sunday Events est gratuit ?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
+              <p class="pb-0">
+                Nous proposons du marketing numérique, de la gestion des
+                réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                des solutions sur mesure pour répondre à vos besoins en
+                marketing.
+              </p>
+            </div>
+          </div>
+          <!-- 8 -->
+          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+            <button
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              <span>Comment puis-je commencer à utiliser SUNDAY Events ?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
+              <p class="pb-0">
+                Nous proposons du marketing numérique, de la gestion des
+                réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                des solutions sur mesure pour répondre à vos besoins en
+                marketing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- newsletter -->
+    <section class="z-20 px-[37px] relative -mb-[68px] lg:-mb-[204px]">
+      <div
+        class="container newsletter-bg rounded-[24px] lg:rounded-[30px] min-h-[318px] lg:min-h-[428px] flex flex-row justify-center items-center">
+        <div class="text-white max-w-[681px] flex flex-col justify-center items-center text-center">
+          <h2 class="text-2xl lg:text-[48px] font-bold">
+            Prêt à lancer votre évènement ?
+          </h2>
+          <p class="text-sm lg:text-xl font-bold font-Alegreya max-w-[421px] mt-4">
+            Créez votre événement en 2 minutes et profiter d’une expérience
+            incroyable
+          </p>
+          <div class="pt-[28px] lg:pt-[48px]">
+            <a href="#"
+              class="inline-block py-[14px] px-[59px] rounded-[8px] bg-[#B0DAF2] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)] font-medium text-base text-blue-bright text-center w-full lg:w-auto">Créer
+              votre évènement</a>
+            <div class="flex flex-col lg:flex-row items-center justify-end max-w-[300px] mt-[10px] gap-2">
+              <img src="./images/arrow-pointer.svg" alt="arrow-pointer"
+                class="w-[24px] h-[24px] lg:w-[30px] lg:h-[30px] lg:-mt-10" />
+              <p class="font-Reenie text-[24px] w-full lg:w-[143px] lg:self-end text-center lg:text-start">
+                Commençons votre voyage ici !
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="bg-blue z-10">
+    <!-- extra -->
+    <div class="pt-[86px] lg:pt-[251px]"></div>
+    <!-- top footer -->
+    <div class="container px-5">
+      <div class="flex flex-row flex-wrap items-start justify-between py-10 lg:py-20">
+        <!-- 1 -->
+        <div class="w-full pb-[24px] lg:w-[40%] lg:pb-0">
+          <div class="max-w-[309px] space-y-6">
+            <a href="./index.html" class="inline-flex items-center"><img src="./images/logo.svg" alt="logo"
+                class="w-full max-w-[184px]" /></a>
+            <p class="text-sm text-white">
+              Proposez la meilleure expérience à vos participants avec nos
+              solutions de billetterie en ligne, contrôle d’accès, gestion des
+              participants.
+            </p>
+            <ul class="flex flex-row space-x-2">
+              <li>
+                <a href="#"
+                  class="inline-flex min-h-8 min-w-8 items-center justify-center rounded-full border-[1px] border-white">
+                  <img src="./images/intragram.svg" alt="intragram" />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="inline-flex min-h-8 min-w-8 items-center justify-center rounded-full border-[1px] border-white">
+                  <img src="./images/twitter.svg" alt="twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="inline-flex min-h-8 min-w-8 items-center justify-center rounded-full border-[1px] border-white">
+                  <img src="./images/facebook.svg" alt="facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="inline-flex min-h-8 min-w-8 items-center justify-center rounded-full border-[1px] border-white">
+                  <img src="./images/linkedin.svg" alt="linkedin" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="w-1/2 text-white lg:w-[20%]">
+          <h5 class="text-base font-semibold">Menu</h5>
+          <ul class="flex flex-col gap-4 pt-6 text-sm">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Nos évènements</a></li>
+            <li><a href="#">Nos accessoires</a></li>
+            <li><a href="#">Nous contacter</a></li>
+            <li><a href="#">Tarification</a></li>
+          </ul>
+        </div>
+        <!-- 3 -->
+        <div class="w-1/2 text-white lg:w-[20%]">
+          <h5 class="text-base font-semibold">Autre</h5>
+          <ul class="flex flex-col gap-4 pt-6 text-sm">
+            <li><a href="#">Nous connaître</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Conditions de vente</a></li>
+            <li><a href="#">Termes et conditions</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <!-- 4 -->
+        <div class="w-full pt-[49px] text-white lg:w-[20%] lg:pt-0">
+          <h5 class="w-full text-center text-base font-semibold lg:max-w-[141px] lg:text-start">
+            Télécharger notre application
+          </h5>
+          <ul class="flex flex-row justify-center gap-[14px] pt-6 text-sm lg:flex-col lg:justify-start">
+            <li>
+              <a href="#"><img src="./images/playstore.svg" alt="playstore" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/app-store.svg" alt="appStore" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- bottom footer -->
+    <div class="border-t-[1px] border-[#ffffff]/16 py-[37px]">
+      <div class="container flex flex-col items-center justify-center px-5">
+        <p class="text-xs text-white lg:text-sm">
+          Copyright© 2025. Sunday Events. All Right Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- js -->
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
