@@ -91,6 +91,12 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
 }
+.contactbg {
+  background: url("../images/contact-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .standedted-one {
   background: url("../images/contact-sales-page.png");
   background-size: cover;
