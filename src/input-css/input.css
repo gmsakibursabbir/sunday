@@ -103,6 +103,12 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
 }
+.events-bgs {
+  background: url("../images/events-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 @media (width < 64rem) {
   /* styles for screens smaller than lg */
 
