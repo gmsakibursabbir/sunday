@@ -3,6 +3,8 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-Alegreya: "Alegreya", serif;
+  --font-Reenie: "Reenie Beanie", cursive;
+  --font-Inter: "Inter", sans-serif;
 
   --color-primary: #017bc0;
   --color-secondary: #1b1c1b;
@@ -70,7 +72,31 @@ h2 {
     rgba(250, 250, 250, 1) 100%
   );
 }
-
+.cv-bg-2 {
+  background: url("../images/cv-bg-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.event-bgs {
+  background: linear-gradient(
+    153.81deg,
+    rgba(250, 250, 250, 1),
+    rgba(217, 237, 249, 1) 100%
+  );
+}
+.newsletter-bg {
+  background: url("../images/newsletter-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.standedted-one {
+  background: url("../images/contact-sales-page.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 @media (width < 64rem) {
   /* styles for screens smaller than lg */
 

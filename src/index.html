@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reenie+Beanie&display=swap"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,8 @@
 
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
-  <body class="bg-white">
+
+  <body class="bg-white overflow-x-hidden">
     <!-- header -->
     <header class="sticky top-0 z-50 pt-0 lg:pt-4">
       <div
@@ -692,20 +693,26 @@
         </div>
       </section>
       <!-- choices -->
-      <section>
-        <div class="max-w-[1000px] mx-auto px-5">
-          <h2 class="text-[80px] font-bold text-center text-[#018AD3]">
+      <section class="py-[30px] lg:py-[100px]">
+        <div
+          class="max-w-[1000px] mx-auto px-5 space-y-[30px] lg:space-y-[46px]"
+        >
+          <h2
+            class="text-[26px] lg:text-[80px] font-bold text-center text-[#018AD3] w-[224px] mx-auto lg:w-full"
+          >
             Pourquoi nous choisir ?
           </h2>
           <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-x-[49px] gap-y-[36px] "
+            class="grid grid-cols-1 lg:grid-cols-2 gap-x-[49px] gap-y-[36px]"
           >
             <!-- 1 -->
             <div
-              class="col-span-1 lg:col-span-2 flex flex-col justify-center min-h-[338px] lg:min-h-[350px] bg-[#FEFAEF] rounded-[20px] lg:rounded-[30px] relative p-[57px]"
+              class="col-span-1 lg:col-span-2 flex flex-col lg:justify-center min-h-[338px] lg:min-h-[350px] bg-[#FEFAEF] rounded-[20px] lg:rounded-[30px] relative pt-[12px] px-[20px] lg:p-[57px] overflow-hidden group"
             >
               <div class="max-w-[436px] text-start">
-                <h3 class="text-[26px] lg:text-[42px] font-bold text-[#5D2911]">
+                <h3
+                  class="text-[26px] lg:text-[42px] font-bold lg:font-medium text-[#5D2911]"
+                >
                   Flexible
                 </h3>
                 <p class="text-[12px] lg:text-lg text-[#696C78]">
@@ -715,17 +722,1010 @@
                 </p>
               </div>
               <img
+                src="./images/chv-01.png"
+                alt="choices"
+                class="absolute w-[80%] lg:w-[50%] bottom-0 -right-[10%] group-hover:translate-x-[-20%] transition-transform duration-700 ease-out"
+              />
+            </div>
+            <!-- 2 -->
+            <div
+              class="relative col-span-1 lg:col-span-1 flex flex-col justify-start min-h-[328px] lg:min-h-[474px] rounded-[20px] lg:rounded-[30px] pt-5 px-[26px] lg:pt-[32px] lg:pl-[41px] lg:pr-[30px] cv-bg-2 overflow-hidden group"
+            >
+              <div class="max-w-[436px] text-start">
+                <h3
+                  class="text-[26px] lg:text-[42px] font-bold lg:font-medium text-[#015280]"
+                >
+                  Accessible
+                </h3>
+                <p class="text-[12px] lg:text-lg text-[#015280]">
+                  Un lien et vos évènements rencontrent des milliers de
+                  participants. Sunday Events rend vos évènements visibles
+                  partout et par tous.
+                </p>
+              </div>
+              <img
+                src="./images/chosie-v2.png"
+                alt="choices"
+                class="absolute -bottom-[40%] -left-[30%] group-hover:-translate-x-[-20%] transition-transform duration-700 ease-out w-[90%] lg:w-[98%]"
+              />
+            </div>
+            <!-- 3 -->
+            <div
+              class="relative col-span-1 lg:col-span-1 flex flex-col justify-start min-h-[328px] lg:min-h-[474px] rounded-[20px] lg:rounded-[30px] pt-5 px-[26px] lg:pt-[32px] lg:pl-[41px] lg:pr-[30px] bg-[#E4F0FF] overflow-hidden group"
+            >
+              <div class="max-w-[436px] text-start">
+                <h3
+                  class="text-[26px] lg:text-[42px] font-bold lg:font-medium text-[#015280]"
+                >
+                  Fiable
+                </h3>
+                <p class="text-[12px] lg:text-lg text-[#015280]">
+                  De la billetterie au contrôle d'accès, Sundays Events
+                  simplifie la gestion de vos évènements.
+                </p>
+              </div>
+              <img
                 src="./images/ch-01.png"
                 alt="choices"
-                class="absolute bottom-0 right-0"
+                class="absolute -bottom-[10%] -right-[25%] group-hover:translate-x-[-20%] transition-transform duration-700 ease-out"
               />
+            </div>
+            <!-- 4 -->
+            <div
+              class="col-span-1 lg:col-span-2 flex flex-col lg:justify-center min-h-[338px] lg:min-h-[350px] bg-[#FEFAEF] rounded-[20px] lg:rounded-[30px] relative pt-[12px] px-[20px] lg:p-[57px] overflow-hidden group"
+            >
+              <div class="max-w-[436px] text-start">
+                <h3
+                  class="text-[26px] lg:text-[42px] font-bold lg:font-medium text-[#5D2911]"
+                >
+                  Mesure de l'impact
+                </h3>
+                <p class="text-[12px] lg:text-lg text-[#696C78]">
+                  Analysez en temps réel le taux d'enregistrement de vos
+                  participants et ajustez votre stratégie pour maximiser vos
+                  ventes et atteindre vos objectifs de notoriété et de
+                  positionnement.
+                </p>
+              </div>
+              <img
+                src="./images/chv-01.png"
+                alt="choices"
+                class="absolute w-[80%] lg:w-[50%] bottom-0 -right-[10%] group-hover:translate-x-[-20%] transition-transform duration-700 ease-out"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- evetns -->
+      <section>
+        <div class="container px-5">
+          <div
+            class="rounded-4xl event-bgs px-3 pt-[24px] pb-[33px] lg:px-[63px] lg:pt-[59px] lg:pb-[75px] space-y-[75px]"
+          >
+            <h2
+              class="max-w-[280px] lg:max-w-[746px] text-[26px] lg:text-[42px] font-bold lg:font-medium text-[#0167A0] mx-auto text-center"
+            >
+              Sunday Events, votre partenaire pour tous vos évènements
+            </h2>
+            <div
+              class="hidden lg:grid grid-cols-2 lg:grid-cols-4 gap-[8px] lg:gap-[32px] items-start justify-start w-full"
+            >
+              <!-- 1 -->
+              <div class="space-y-[15px] lg:space-y-[32px]">
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[272px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-01.png"
+                    alt="Affaires"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Affaires
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[272px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-02.png"
+                    alt="Communautés"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Communautés
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- 2 -->
+              <div class="space-y-[15px] lg:space-y-[32px] lg:pt-[66px]">
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[276px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-03.png"
+                    alt="Conseils"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Conseils
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[272px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-04.png"
+                    alt="Divertissement"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Divertissement
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- 3 -->
+              <div class="space-y-[15px] lg:space-y-[32px]">
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[227px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-05.png"
+                    alt="Académique"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Académique
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[296px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-06.png"
+                    alt="Club Sportif"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Club Sportif
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- 4 -->
+              <div class="space-y-[15px] lg:space-y-[32px] lg:pt-[66px]">
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[278px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-07.png"
+                    alt="Charité"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Affaires
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[228px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-08.png"
+                    alt="Culturel"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Culturel
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="grid lg:hidden grid-cols-2 lg:grid-cols-4 gap-[8px] lg:gap-[32px] items-start justify-start w-full"
+            >
+              <div class="space-y-[15px] lg:space-y-[32px]">
+                <!-- 1 -->
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[272px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-01.png"
+                    alt="Affaires"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Affaires
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[272px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-02.png"
+                    alt="Communautés"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Communautés
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <!-- 2 -->
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[276px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-03.png"
+                    alt="Conseils"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Conseils
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[272px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-04.png"
+                    alt="Divertissement"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Divertissement
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div
+                class="space-y-[15px] lg:space-y-[32px] pt-[18px] lg:pt-[66px]"
+              >
+                <!-- 3 -->
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[227px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-05.png"
+                    alt="Académique"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Académique
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[296px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-06.png"
+                    alt="Club Sportif"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Club Sportif
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <!-- 4 -->
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[278px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-07.png"
+                    alt="Charité"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Affaires
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="group relative block h-[176px] lg:h-[228px] w-full overflow-hidden rounded-[20px] bg-gray-200 transition-shadow"
+                >
+                  <img
+                    src="./images/event-08.png"
+                    alt="Culturel"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-[30px] py-[15px]"
+                  >
+                    <div class="flex items-center justify-start gap-2">
+                      <h3
+                        class="text-sm md:text-[22px] font-semibold text-white"
+                      >
+                        Culturel
+                      </h3>
+                      <svg
+                        width="22"
+                        height="14"
+                        viewBox="0 0 22 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M13.5119 13.222C13.3324 13.0512 13.2309 12.8196 13.2295 12.5778C13.2281 12.3358 13.327 12.1032 13.5045 11.9305L17.9694 7.6566H0.956162C0.702573 7.6566 0.459368 7.56049 0.280054 7.3894C0.100737 7.21832 -1.0576e-08 6.98628 0 6.74433C1.0576e-08 6.50238 0.100737 6.27034 0.280054 6.09925C0.459368 5.92817 0.702573 5.83205 0.956162 5.83205H17.9694L13.4972 1.55414C13.3211 1.38069 13.2234 1.14836 13.2247 0.906946C13.2261 0.665518 13.3265 0.43421 13.5045 0.262588C13.5934 0.178693 13.6987 0.112324 13.8145 0.0672719C13.9303 0.0222191 14.0542 -0.000635364 14.1792 1.34359e-05C14.3042 0.000662236 14.4279 0.0248021 14.5432 0.0710536C14.6584 0.117305 14.7629 0.184763 14.8509 0.269574L20.9121 6.09456C20.995 6.17899 21.0622 6.27618 21.1109 6.38201C21.1606 6.49301 21.1855 6.61266 21.1842 6.73335C21.1843 6.97198 21.0867 7.20124 20.9121 7.37214L14.8509 13.1971C14.765 13.2833 14.6621 13.3523 14.5482 13.4003C14.4342 13.4482 14.3114 13.474 14.1868 13.4764C14.0623 13.4787 13.9384 13.4574 13.8226 13.4138C13.7067 13.3701 13.6011 13.305 13.5119 13.222Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- faq -->
+      <section class="py-[40px] lg:py-[100px]">
+        <div class="lg:max-w-[1062px] mx-auto px-5">
+          <div class="text-center">
+            <h2 class="text-[32px] lg:text-[48px] font-medium text-[#101010]">
+              Questions fréquemment posées
+            </h2>
+            <p
+              class="text-[16px] lg:text-lg font-normal text-[#878787] hidden lg:block pt-3"
+            >
+              We’ve compiled the most common questions to help you get started.
+            </p>
+          </div>
+          <!-- content faq -->
+          <div
+            class="w-full space-y-[28px] p-4 bg-[#F7F7F7] ring-[1px] ring-[#EDEDED] mt-10 rounded-[20px]"
+          >
+            <!-- 1 -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer"
+            >
+              <button
+                class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya"
+              >
+                <span>Qu'est-ce que SUNDAY Events ?</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="h-6 w-6 transform transition-transform duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed"
+              >
+                <p class="pb-0">
+                  Nous proposons du marketing numérique, de la gestion des
+                  réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                  des solutions sur mesure pour répondre à vos besoins en
+                  marketing.
+                </p>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer"
+            >
+              <button
+                class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya"
+              >
+                <span>Qui peut utiliser Sunday Events ?</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="h-6 w-6 transform transition-transform duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed"
+              >
+                <p class="pb-0">
+                  Nous proposons du marketing numérique, de la gestion des
+                  réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                  des solutions sur mesure pour répondre à vos besoins en
+                  marketing.
+                </p>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer"
+            >
+              <button
+                class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya"
+              >
+                <span>Est-ce que Sunday Events est gratuit ?</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="h-6 w-6 transform transition-transform duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed"
+              >
+                <p class="pb-0">
+                  Nous proposons du marketing numérique, de la gestion des
+                  réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                  des solutions sur mesure pour répondre à vos besoins en
+                  marketing.
+                </p>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer"
+            >
+              <button
+                class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya"
+              >
+                <span
+                  >Comment puis-je commencer à utiliser SUNDAY Events ?</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="h-6 w-6 transform transition-transform duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed"
+              >
+                <p class="pb-0">
+                  Nous proposons du marketing numérique, de la gestion des
+                  réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                  des solutions sur mesure pour répondre à vos besoins en
+                  marketing.
+                </p>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer"
+            >
+              <button
+                class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya"
+              >
+                <span>Qui peut utiliser Sunday Events ?</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="h-6 w-6 transform transition-transform duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed"
+              >
+                <p class="pb-0">
+                  Nous proposons du marketing numérique, de la gestion des
+                  réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                  des solutions sur mesure pour répondre à vos besoins en
+                  marketing.
+                </p>
+              </div>
+            </div>
+            <div
+              class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer"
+            >
+              <button
+                class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya"
+              >
+                <span>Qu'est-ce que SUNDAY Events ?</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="h-6 w-6 transform transition-transform duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed"
+              >
+                <p class="pb-0">
+                  Nous proposons du marketing numérique, de la gestion des
+                  réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                  des solutions sur mesure pour répondre à vos besoins en
+                  marketing.
+                </p>
+              </div>
+            </div>
+            <!-- 7 -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer"
+            >
+              <button
+                class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya"
+              >
+                <span>Est-ce que Sunday Events est gratuit ?</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="h-6 w-6 transform transition-transform duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed"
+              >
+                <p class="pb-0">
+                  Nous proposons du marketing numérique, de la gestion des
+                  réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                  des solutions sur mesure pour répondre à vos besoins en
+                  marketing.
+                </p>
+              </div>
+            </div>
+            <!-- 8 -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer"
+            >
+              <button
+                class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya"
+              >
+                <span
+                  >Comment puis-je commencer à utiliser SUNDAY Events ?</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="h-6 w-6 transform transition-transform duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed"
+              >
+                <p class="pb-0">
+                  Nous proposons du marketing numérique, de la gestion des
+                  réseaux sociaux, du SEO, de la publicité PPC, du branding et
+                  des solutions sur mesure pour répondre à vos besoins en
+                  marketing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- newsletter -->
+      <section class="z-20 px-[37px] relative -mb-[68px] lg:-mb-[204px]">
+        <div
+          class="container newsletter-bg rounded-[24px] lg:rounded-[30px] min-h-[318px] lg:min-h-[428px] flex flex-row justify-center items-center"
+        >
+          <div
+            class="text-white max-w-[681px] flex flex-col justify-center items-center text-center"
+          >
+            <h2 class="text-2xl lg:text-[48px] font-bold">
+              Prêt à lancer votre évènement ?
+            </h2>
+            <p
+              class="text-sm lg:text-xl font-bold font-Alegreya max-w-[421px] mt-4"
+            >
+              Créez votre événement en 2 minutes et profiter d’une expérience
+              incroyable
+            </p>
+            <div class="pt-[28px] lg:pt-[48px]">
+              <a
+                href="#"
+                class="inline-block py-[14px] px-[59px] rounded-[8px] bg-[#B0DAF2] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)] font-medium text-base text-blue-bright text-center w-full lg:w-auto"
+                >Créer votre évènement</a
+              >
+              <div
+                class="flex flex-col lg:flex-row items-center justify-end max-w-[300px] mt-[10px] gap-2"
+              >
+                <img
+                  src="./images/arrow-pointer.svg"
+                  alt="arrow-pointer"
+                  class="w-[24px] h-[24px] lg:w-[30px] lg:h-[30px] lg:-mt-10"
+                />
+                <p
+                  class="font-Reenie text-[24px] w-full lg:w-[143px] lg:self-end text-center lg:text-start"
+                >
+                  Commençons votre voyage ici !
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
     <!-- footer -->
-    <footer class="bg-blue">
+    <footer class="bg-blue z-10">
+      <!-- extra -->
+      <div class="pt-[86px] lg:pt-[251px]"></div>
       <!-- top footer -->
       <div class="container px-5">
         <div
@@ -838,6 +1838,6 @@
       </div>
     </footer>
     <!-- js -->
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
