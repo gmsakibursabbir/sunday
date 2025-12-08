@@ -15,38 +15,38 @@
 </head>
 
 <body class="bg-white overflow-x-hidden">
-  <!-- header -->
-  <header class="sticky top-0 z-50 pt-0 lg:pt-4">
+  <!-- header start -->
+  <header class="sticky top-0 z-50 pt-0 lg:pt-4 lg:px-4">
     <div
       class="header-blur mx-auto flex w-full flex-row items-center justify-between rounded-none px-4 py-3 lg:max-w-[1293px] lg:rounded-[14px] lg:px-6 lg:py-[14px]">
-      <a href="./index.html"><img src="./images/logo-header.svg" alt="logo-header" class="w-[96px] lg:w-[133px]" /></a>
-      <ul class="hidden flex-row items-center space-x-8 lg:flex">
+      <a href="./index.html"><img src="./images/logo-header.svg" alt="logo-header" class="w-[96px] lg:w-[132px]" /></a>
+      <ul class="hidden flex-row items-center space-x-4 xl:space-x-5 lg:flex">
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Accueil</a>
+          <a href="./index.html" data-text="Accueil"
+            class="nav-link hover:text-blue-bright focus-within:text-blue-bright text-sm xl:text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Accueil</a>
         </li>
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Nos
+          <a href="./events.html" data-text="Nos évènements"
+            class="nav-link text-blue-bright focus-within:text-blue-bright text-sm xl:text-base  focus-within:font-bold font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Nos
             évènements</a>
         </li>
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Nos
+          <a href="./accessories.html" data-text="Nos accessoires"
+            class="nav-link hover:text-blue-bright focus-within:text-blue-bright text-sm xl:text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Nos
             accessoires</a>
         </li>
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Nous
+          <a href="./contact.html" data-text="Nous contacter"
+            class="nav-link hover:text-blue-bright focus-within:text-blue-bright text-sm xl:text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Nous
             contacter</a>
         </li>
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Tarification</a>
+          <a href="./pricing.html" data-text="Tarification"
+            class="nav-link hover:text-blue-bright focus-within:text-blue-bright text-sm xl:text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Tarification</a>
         </li>
       </ul>
       <a href="#"
-        class="hidden items-center gap-1 rounded-[6px] bg-[#0589D3] px-5 py-[10px] text-[15px] text-white lg:flex">
+        class="hidden items-center gap-[4px] rounded-[6px] bg-[#0589D3] px-[21px] py-[12px] text-white lg:flex text-sm lg:text-[15px] font-medium transition-all duration-300 ease-out hover:bg-[#016EAA] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(5,137,211,0.4)] active:translate-y-0 active:shadow-[0_2px_8px_rgba(5,137,211,0.3)]">
         <svg viewBox="0 0 13.5 14.2559" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           width="13.500000" height="14.255859" fill="none" customFrame="#000000">
           <path id="Vector"
@@ -55,7 +55,7 @@
         </svg>
         <span>Se connecter</span>
       </a>
-      <button class="inline-block lg:hidden">
+      <button id="mobile-menu-open" class="inline-block lg:hidden" aria-label="Open mobile menu">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           width="24.000000" height="24.000000" fill="none">
           <rect id="Icon" width="24.000000" height="24.000000" x="0.000000" y="0.000000" />
@@ -69,6 +69,97 @@
       </button>
     </div>
   </header>
+
+  <!-- Mobile Menu Offcanvas -->
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+  <nav id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-header">
+      <a href="./index.html"><img src="./images/logo-header.svg" alt="logo-header" class="w-[96px]" /></a>
+      <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close mobile menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li style="--delay: 0.1s">
+        <a href="./index.html" class="mobile-menu-link ">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </span>
+          Accueil
+        </a>
+      </li>
+      <li style="--delay: 0.15s">
+        <a href="./events.html" class="mobile-menu-link active">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+          </span>
+          Nos évènements
+        </a>
+      </li>
+      <li style="--delay: 0.2s">
+        <a href="./accessories.html" class="mobile-menu-link">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+          </span>
+          Nos accessoires
+        </a>
+      </li>
+      <li style="--delay: 0.25s">
+        <a href="./contact.html" class="mobile-menu-link">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+          </span>
+          Nous contacter
+        </a>
+      </li>
+      <li style="--delay: 0.3s">
+        <a href="./pricing.html" class="mobile-menu-link">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </span>
+          Tarification
+        </a>
+      </li>
+    </ul>
+    <div class="mobile-menu-footer" style="--delay: 0.35s">
+      <a href="#" class="mobile-menu-cta">
+        <svg viewBox="0 0 13.5 14.2559" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+          <path
+            d="M6.75 14.2559C6.23438 14.2559 5.74805 14.1562 5.29102 13.957C4.83398 13.7578 4.43555 13.4883 4.0957 13.1484C3.75586 12.8086 3.48633 12.4102 3.28711 11.9531C3.09961 11.5078 3.00586 11.0215 3.00586 10.4941C3.00586 9.97852 3.09961 9.49219 3.28711 9.03516C3.48633 8.57812 3.75586 8.18262 4.0957 7.84863C4.43555 7.51465 4.83398 7.24805 5.29102 7.04883C5.74805 6.84961 6.23438 6.75 6.75 6.75C7.26562 6.75 7.75195 6.84961 8.20898 7.04883C8.66602 7.24805 9.06445 7.51465 9.4043 7.84863C9.74414 8.18262 10.0137 8.57812 10.2129 9.03516C10.4004 9.49219 10.4941 9.97852 10.4941 10.4941C10.4941 11.0215 10.4004 11.5078 10.2129 11.9531C10.0137 12.4102 9.74414 12.8086 9.4043 13.1484C9.06445 13.4883 8.66602 13.7578 8.20898 13.957C7.75195 14.1562 7.26562 14.2559 6.75 14.2559ZM6.75 8.24414C6.12891 8.24414 5.59863 8.46387 5.15918 8.90332C4.71973 9.34277 4.5 9.87305 4.5 10.4941C4.5 11.1152 4.71973 11.6455 5.15918 12.085C5.59863 12.5244 6.12891 12.7441 6.75 12.7441C7.37109 12.7441 7.90137 12.5244 8.34082 12.085C8.78027 11.6455 9 11.1152 9 10.4941C9 9.87305 8.78027 9.34277 8.34082 8.90332C7.90137 8.46387 7.37109 8.24414 6.75 8.24414ZM13.5 0L13.5 0.755859C13.5 1.48242 13.3652 2.16211 13.0957 2.79492C12.8145 3.42773 12.4365 3.98145 11.9619 4.45605C11.4873 4.93066 10.9336 5.30859 10.3008 5.58984C9.65625 5.85938 8.9707 5.99414 8.24414 5.99414L5.25586 5.99414C4.5293 5.99414 3.84375 5.85938 3.19922 5.58984C2.56641 5.30859 2.0127 4.93066 1.53809 4.45605C1.06348 3.98145 0.685547 3.42773 0.404297 2.79492C0.134766 2.16211 0 1.48242 0 0.755859L0 0L1.49414 0L1.49414 0.755859C1.49414 1.27148 1.59375 1.75781 1.79297 2.21484C1.99219 2.67188 2.26172 3.06738 2.60156 3.40137C2.94141 3.73535 3.33984 4.00195 3.79688 4.20117C4.24219 4.40039 4.72852 4.5 5.25586 4.5L8.24414 4.5C8.77148 4.5 9.25781 4.40039 9.70312 4.20117C10.1602 4.00195 10.5586 3.73535 10.8984 3.40137C11.2383 3.06738 11.5078 2.67188 11.707 2.21484C11.9062 1.75781 12.0059 1.27148 12.0059 0.755859L12.0059 0L13.5 0Z"
+            fill="rgb(255,255,255)" fill-rule="nonzero" transform="matrix(1,0,0,-1,0,14.2559)" />
+        </svg>
+        <span>Se connecter</span>
+      </a>
+    </div>
+  </nav>
+  <!-- header end -->
   <!-- main -->
   <main>
     <!-- hero -->
