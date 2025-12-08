@@ -94,3 +94,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Mobile Menu
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuOpen = document.getElementById("mobile-menu-open");
+  const mobileMenuClose = document.getElementById("mobile-menu-close");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+
+  function openMobileMenu() {
+    mobileMenu.classList.add("active");
+    mobileMenuOverlay.classList.add("active");
+    document.body.classList.add("mobile-menu-open");
+  }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("active");
+    mobileMenuOverlay.classList.remove("active");
+    document.body.classList.remove("mobile-menu-open");
+  }
+
+  if (mobileMenuOpen) {
+    mobileMenuOpen.addEventListener("click", openMobileMenu);
+  }
+
+  if (mobileMenuClose) {
+    mobileMenuClose.addEventListener("click", closeMobileMenu);
+  }
+
+  if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+  }
+
+  // Close menu on Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close menu when clicking a link
+  const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      closeMobileMenu();
+    });
+  });
+});

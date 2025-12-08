@@ -15,38 +15,38 @@
 </head>
 
 <body class="bg-white overflow-x-hidden">
-  <!-- header -->
-  <header class="sticky top-0 z-50 pt-0 lg:pt-4">
+  <!-- header start -->
+  <header class="sticky top-0 z-50 pt-0 lg:pt-4 lg:px-4">
     <div
       class="header-blur mx-auto flex w-full flex-row items-center justify-between rounded-none px-4 py-3 lg:max-w-[1293px] lg:rounded-[14px] lg:px-6 lg:py-[14px]">
-      <a href="./index.html"><img src="./images/logo-header.svg" alt="logo-header" class="w-[96px] lg:w-[133px]" /></a>
-      <ul class="hidden flex-row items-center space-x-8 lg:flex">
+      <a href="./index.html"><img src="./images/logo-header.svg" alt="logo-header" class="w-[96px] lg:w-[132px]" /></a>
+      <ul class="hidden flex-row items-center space-x-4 xl:space-x-5 lg:flex">
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Accueil</a>
+          <a href="./index.html" data-text="Accueil"
+            class="nav-link hover:text-blue-bright focus-within:text-blue-bright text-sm xl:text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Accueil</a>
         </li>
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Nos
+          <a href="./events.html" data-text="Nos évènements"
+            class="nav-link text-blue-bright focus-within:text-blue-bright text-sm xl:text-base  focus-within:font-bold font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Nos
             évènements</a>
         </li>
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Nos
+          <a href="./accessories.html" data-text="Nos accessoires"
+            class="nav-link hover:text-blue-bright focus-within:text-blue-bright text-sm xl:text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Nos
             accessoires</a>
         </li>
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Nous
+          <a href="./contact.html" data-text="Nous contacter"
+            class="nav-link hover:text-blue-bright focus-within:text-blue-bright text-sm xl:text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Nous
             contacter</a>
         </li>
         <li>
-          <a href="#"
-            class="hover:text-blue-bright focus-within:text-blue-bright text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold">Tarification</a>
+          <a href="./pricing.html" data-text="Tarification"
+            class="nav-link hover:text-blue-bright focus-within:text-blue-bright text-sm xl:text-base font-normal text-[#566A7F] focus-within:font-bold hover:font-bold px-[6px] lg:px-[8px] xl:px-[14px] py-2">Tarification</a>
         </li>
       </ul>
       <a href="#"
-        class="hidden items-center gap-1 rounded-[6px] bg-[#0589D3] px-5 py-[10px] text-[15px] text-white lg:flex">
+        class="hidden items-center gap-[4px] rounded-[6px] bg-[#0589D3] px-[21px] py-[12px] text-white lg:flex text-sm lg:text-[15px] font-medium transition-all duration-300 ease-out hover:bg-[#016EAA] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(5,137,211,0.4)] active:translate-y-0 active:shadow-[0_2px_8px_rgba(5,137,211,0.3)]">
         <svg viewBox="0 0 13.5 14.2559" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           width="13.500000" height="14.255859" fill="none" customFrame="#000000">
           <path id="Vector"
@@ -55,7 +55,7 @@
         </svg>
         <span>Se connecter</span>
       </a>
-      <button class="inline-block lg:hidden">
+      <button id="mobile-menu-open" class="inline-block lg:hidden" aria-label="Open mobile menu">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           width="24.000000" height="24.000000" fill="none">
           <rect id="Icon" width="24.000000" height="24.000000" x="0.000000" y="0.000000" />
@@ -69,12 +69,103 @@
       </button>
     </div>
   </header>
+
+  <!-- Mobile Menu Offcanvas -->
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+  <nav id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-header">
+      <a href="./index.html"><img src="./images/logo-header.svg" alt="logo-header" class="w-[96px]" /></a>
+      <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close mobile menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li style="--delay: 0.1s">
+        <a href="./index.html" class="mobile-menu-link ">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </span>
+          Accueil
+        </a>
+      </li>
+      <li style="--delay: 0.15s">
+        <a href="./events.html" class="mobile-menu-link active">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+          </span>
+          Nos évènements
+        </a>
+      </li>
+      <li style="--delay: 0.2s">
+        <a href="./accessories.html" class="mobile-menu-link">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+          </span>
+          Nos accessoires
+        </a>
+      </li>
+      <li style="--delay: 0.25s">
+        <a href="./contact.html" class="mobile-menu-link">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+          </span>
+          Nous contacter
+        </a>
+      </li>
+      <li style="--delay: 0.3s">
+        <a href="./pricing.html" class="mobile-menu-link">
+          <span class="mobile-menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </span>
+          Tarification
+        </a>
+      </li>
+    </ul>
+    <div class="mobile-menu-footer" style="--delay: 0.35s">
+      <a href="#" class="mobile-menu-cta">
+        <svg viewBox="0 0 13.5 14.2559" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+          <path
+            d="M6.75 14.2559C6.23438 14.2559 5.74805 14.1562 5.29102 13.957C4.83398 13.7578 4.43555 13.4883 4.0957 13.1484C3.75586 12.8086 3.48633 12.4102 3.28711 11.9531C3.09961 11.5078 3.00586 11.0215 3.00586 10.4941C3.00586 9.97852 3.09961 9.49219 3.28711 9.03516C3.48633 8.57812 3.75586 8.18262 4.0957 7.84863C4.43555 7.51465 4.83398 7.24805 5.29102 7.04883C5.74805 6.84961 6.23438 6.75 6.75 6.75C7.26562 6.75 7.75195 6.84961 8.20898 7.04883C8.66602 7.24805 9.06445 7.51465 9.4043 7.84863C9.74414 8.18262 10.0137 8.57812 10.2129 9.03516C10.4004 9.49219 10.4941 9.97852 10.4941 10.4941C10.4941 11.0215 10.4004 11.5078 10.2129 11.9531C10.0137 12.4102 9.74414 12.8086 9.4043 13.1484C9.06445 13.4883 8.66602 13.7578 8.20898 13.957C7.75195 14.1562 7.26562 14.2559 6.75 14.2559ZM6.75 8.24414C6.12891 8.24414 5.59863 8.46387 5.15918 8.90332C4.71973 9.34277 4.5 9.87305 4.5 10.4941C4.5 11.1152 4.71973 11.6455 5.15918 12.085C5.59863 12.5244 6.12891 12.7441 6.75 12.7441C7.37109 12.7441 7.90137 12.5244 8.34082 12.085C8.78027 11.6455 9 11.1152 9 10.4941C9 9.87305 8.78027 9.34277 8.34082 8.90332C7.90137 8.46387 7.37109 8.24414 6.75 8.24414ZM13.5 0L13.5 0.755859C13.5 1.48242 13.3652 2.16211 13.0957 2.79492C12.8145 3.42773 12.4365 3.98145 11.9619 4.45605C11.4873 4.93066 10.9336 5.30859 10.3008 5.58984C9.65625 5.85938 8.9707 5.99414 8.24414 5.99414L5.25586 5.99414C4.5293 5.99414 3.84375 5.85938 3.19922 5.58984C2.56641 5.30859 2.0127 4.93066 1.53809 4.45605C1.06348 3.98145 0.685547 3.42773 0.404297 2.79492C0.134766 2.16211 0 1.48242 0 0.755859L0 0L1.49414 0L1.49414 0.755859C1.49414 1.27148 1.59375 1.75781 1.79297 2.21484C1.99219 2.67188 2.26172 3.06738 2.60156 3.40137C2.94141 3.73535 3.33984 4.00195 3.79688 4.20117C4.24219 4.40039 4.72852 4.5 5.25586 4.5L8.24414 4.5C8.77148 4.5 9.25781 4.40039 9.70312 4.20117C10.1602 4.00195 10.5586 3.73535 10.8984 3.40137C11.2383 3.06738 11.5078 2.67188 11.707 2.21484C11.9062 1.75781 12.0059 1.27148 12.0059 0.755859L12.0059 0L13.5 0Z"
+            fill="rgb(255,255,255)" fill-rule="nonzero" transform="matrix(1,0,0,-1,0,14.2559)" />
+        </svg>
+        <span>Se connecter</span>
+      </a>
+    </div>
+  </nav>
+  <!-- header end -->
   <!-- main -->
   <main>
     <!-- hero -->
-    <section class="py-6 px-5">
+    <section class="pt-4 lg:pt-[21px] pb-[56px] lg:pb-[36px] px-5">
       <div
-        class="lg:max-w-[1320px] mx-auto lg:min-h-[431px] py-[25px] px-[19px] lg:px-[49px] lg:py-[36px] rounded-[28px] events-bgs flex flex-col justify-center gap-[40px] lg:gap-[51px]">
+        class="lg:max-w-[1320px] mx-auto lg:min-h-[431px] py-[25px] px-[15px] lg:px-[49px] lg:py-[36px] rounded-[28px] events-bgs flex flex-col justify-center gap-[40px] lg:gap-[51px]">
         <div class="lg:max-w-[649px] space-y-[6px]">
           <div class="flex flex-row items-center gap-[10px] lg:gap-4"><img src="images/white-logo-mini.svg" alt="logo"
               class="w-[22px] h-[22px] lg:w-[41px] lg:h-[41px]">
@@ -85,12 +176,13 @@
           </h1>
         </div>
 
-        <div class="lg:max-w-[966px] p-3 bg-white rounded-[12px]">
+        <div class="lg:max-w-[966px] p-2 lg:p-3 bg-white rounded-[12px]">
           <div class="flex w-full max-w-5xl flex-col gap-[14px] lg:flex-row lg:items-center lg:gap-0">
 
+            <!-- Search Input -->
             <div class="relative w-full lg:flex-1">
               <div
-                class="flex h-[46px] items-center rounded-xl border border-gray-200 bg-white  transition-colors hover:border-gray-300 lg:h-auto lg:border-none lg:bg-transparent lg:hover:border-none px-3 lg:px-0">
+                class="flex h-[46px] items-center rounded-xl border border-[#F2F2F2] bg-white transition-colors hover:border-gray-300 lg:h-auto lg:border-none lg:bg-transparent lg:hover:border-none px-3 lg:px-0">
 
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -101,92 +193,101 @@
                     fill="#84919A" />
                 </svg>
 
-
                 <input type="text" placeholder="Rechercher un évènement"
                   class="h-full w-full bg-transparent text-[#101010] placeholder-[#828282] outline-none ml-[10px]">
               </div>
             </div>
 
-            <div class="hidden h-8 w-px bg-gray-200 lg:block lg:mx-2"></div>
+            <!-- Divider 1 -->
+            <div class="hidden h-8 w-px bg-gray-200 lg:block lg:mx-3"></div>
 
-            <div class="grid w-full grid-cols-2 gap-3 lg:w-auto lg:flex lg:items-center lg:gap-0">
+            <div class="grid w-full grid-cols-2 gap-3 lg:contents">
 
-              <div
-                class="group flex h-[46px] cursor-pointer items-center justify-between rounded-xl border border-gray-200 bg-white px-4 transition-colors hover:border-gray-300 lg:h-auto lg:w-44 lg:border-none lg:bg-transparent lg:hover:bg-gray-50 lg:rounded-[12px] lg:px-4 lg:py-2">
-                <div class="flex items-center gap-2 truncate">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Lieu Dropdown -->
+              <div class="w-full lg:flex-1">
+                <div
+                  class="group flex h-[46px] cursor-pointer items-center justify-between rounded-xl border border-[#F2F2F2] bg-white px-4 transition-colors hover:border-gray-300 lg:h-auto lg:border-none lg:bg-transparent lg:hover:bg-gray-50 lg:rounded-[12px] lg:p-[10px] lg:max-w-[165px] lg:mx-auto w-full">
+                  <div class="flex items-center gap-2 truncate">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.9999 14.17C9.86988 14.17 8.12988 12.44 8.12988 10.3C8.12988 8.16 9.86988 6.44 11.9999 6.44C14.1299 6.44 15.8699 8.17 15.8699 10.31C15.8699 12.45 14.1299 14.17 11.9999 14.17ZM11.9999 7.94C10.6999 7.94 9.62988 9 9.62988 10.31C9.62988 11.62 10.6899 12.68 11.9999 12.68C13.3099 12.68 14.3699 11.62 14.3699 10.31C14.3699 9 13.2999 7.94 11.9999 7.94Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M11.9997 22.76C10.5197 22.76 9.02969 22.2 7.86969 21.09C4.91969 18.25 1.65969 13.72 2.88969 8.33C3.99969 3.44 8.26969 1.25 11.9997 1.25C11.9997 1.25 11.9997 1.25 12.0097 1.25C15.7397 1.25 20.0097 3.44 21.1197 8.34C22.3397 13.73 19.0797 18.25 16.1297 21.09C14.9697 22.2 13.4797 22.76 11.9997 22.76ZM11.9997 2.75C9.08969 2.75 5.34969 4.3 4.35969 8.66C3.27969 13.37 6.23969 17.43 8.91969 20C10.6497 21.67 13.3597 21.67 15.0897 20C17.7597 17.43 20.7197 13.37 19.6597 8.66C18.6597 4.3 14.9097 2.75 11.9997 2.75Z"
+                        fill="#6B7280" />
+                    </svg>
+
+                    <span class="truncate text-[#828282]">Lieu</span>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M11.9999 14.17C9.86988 14.17 8.12988 12.44 8.12988 10.3C8.12988 8.16 9.86988 6.44 11.9999 6.44C14.1299 6.44 15.8699 8.17 15.8699 10.31C15.8699 12.45 14.1299 14.17 11.9999 14.17ZM11.9999 7.94C10.6999 7.94 9.62988 9 9.62988 10.31C9.62988 11.62 10.6899 12.68 11.9999 12.68C13.3099 12.68 14.3699 11.62 14.3699 10.31C14.3699 9 13.2999 7.94 11.9999 7.94Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M11.9997 22.76C10.5197 22.76 9.02969 22.2 7.86969 21.09C4.91969 18.25 1.65969 13.72 2.88969 8.33C3.99969 3.44 8.26969 1.25 11.9997 1.25C11.9997 1.25 11.9997 1.25 12.0097 1.25C15.7397 1.25 20.0097 3.44 21.1197 8.34C22.3397 13.73 19.0797 18.25 16.1297 21.09C14.9697 22.2 13.4797 22.76 11.9997 22.76ZM11.9997 2.75C9.08969 2.75 5.34969 4.3 4.35969 8.66C3.27969 13.37 6.23969 17.43 8.91969 20C10.6497 21.67 13.3597 21.67 15.0897 20C17.7597 17.43 20.7197 13.37 19.6597 8.66C18.6597 4.3 14.9097 2.75 11.9997 2.75Z"
-                      fill="#6B7280" />
+                      d="M16.6004 7.45831L11.1671 12.8916C10.5254 13.5333 9.47539 13.5333 8.83372 12.8916L3.40039 7.45831"
+                      stroke="#828282" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
                   </svg>
-
-                  <span class="truncate text-gray-600">Lieu</span>
                 </div>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M16.6004 7.45831L11.1671 12.8916C10.5254 13.5333 9.47539 13.5333 8.83372 12.8916L3.40039 7.45831"
-                    stroke="#828282" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-
               </div>
 
-              <div class="hidden h-8 w-px bg-gray-200 lg:block lg:mx-2"></div>
+              <!-- Divider 2 -->
+              <div class="hidden h-8 w-px bg-gray-200 lg:block lg:mx-3"></div>
 
-              <div
-                class="group flex h-[46px] cursor-pointer items-center justify-between rounded-xl border border-gray-200 bg-white px-4 transition-colors hover:border-gray-300 lg:h-auto lg:w-44 lg:border-none lg:bg-transparent lg:hover:bg-gray-50 lg:rounded-[12px] lg:px-4 lg:py-2">
-                <div class="flex items-center gap-2 truncate">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Date Dropdown -->
+              <div class="w-full lg:flex-1">
+                <div
+                  class="group flex h-[46px] cursor-pointer items-center justify-between rounded-xl border border-[#F2F2F2] bg-white px-4 transition-colors hover:border-gray-300 lg:h-auto lg:border-none lg:bg-transparent lg:hover:bg-gray-50 lg:rounded-[12px] lg:p-[10px] lg:max-w-[165px] lg:mx-auto w-full">
+                  <div class="flex items-center gap-2 truncate">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8 5.75C7.59 5.75 7.25 5.41 7.25 5V2C7.25 1.59 7.59 1.25 8 1.25C8.41 1.25 8.75 1.59 8.75 2V5C8.75 5.41 8.41 5.75 8 5.75Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M16 5.75C15.59 5.75 15.25 5.41 15.25 5V2C15.25 1.59 15.59 1.25 16 1.25C16.41 1.25 16.75 1.59 16.75 2V5C16.75 5.41 16.41 5.75 16 5.75Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M8.5 14.5C8.37 14.5 8.24 14.47 8.12 14.42C7.99 14.37 7.89 14.3 7.79 14.21C7.61 14.02 7.5 13.77 7.5 13.5C7.5 13.37 7.53 13.24 7.58 13.12C7.63 13 7.7 12.89 7.79 12.79C7.89 12.7 7.99 12.63 8.12 12.58C8.48 12.43 8.93 12.51 9.21 12.79C9.39 12.98 9.5 13.24 9.5 13.5C9.5 13.56 9.49 13.63 9.48 13.7C9.47 13.76 9.45 13.82 9.42 13.88C9.4 13.94 9.37 14 9.33 14.06C9.3 14.11 9.25 14.16 9.21 14.21C9.02 14.39 8.76 14.5 8.5 14.5Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M12 14.5C11.87 14.5 11.74 14.47 11.62 14.42C11.49 14.37 11.39 14.3 11.29 14.21C11.11 14.02 11 13.77 11 13.5C11 13.37 11.03 13.24 11.08 13.12C11.13 13 11.2 12.89 11.29 12.79C11.39 12.7 11.49 12.63 11.62 12.58C11.98 12.42 12.43 12.51 12.71 12.79C12.89 12.98 13 13.24 13 13.5C13 13.56 12.99 13.63 12.98 13.7C12.97 13.76 12.95 13.82 12.92 13.88C12.9 13.94 12.87 14 12.83 14.06C12.8 14.11 12.75 14.16 12.71 14.21C12.52 14.39 12.26 14.5 12 14.5Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M15.5 14.5C15.37 14.5 15.24 14.47 15.12 14.42C14.99 14.37 14.89 14.3 14.79 14.21C14.75 14.16 14.71 14.11 14.67 14.06C14.63 14 14.6 13.94 14.58 13.88C14.55 13.82 14.53 13.76 14.52 13.7C14.51 13.63 14.5 13.56 14.5 13.5C14.5 13.24 14.61 12.98 14.79 12.79C14.89 12.7 14.99 12.63 15.12 12.58C15.49 12.42 15.93 12.51 16.21 12.79C16.39 12.98 16.5 13.24 16.5 13.5C16.5 13.56 16.49 13.63 16.48 13.7C16.47 13.76 16.45 13.82 16.42 13.88C16.4 13.94 16.37 14 16.33 14.06C16.3 14.11 16.25 14.16 16.21 14.21C16.02 14.39 15.76 14.5 15.5 14.5Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M8.5 18C8.37 18 8.24 17.97 8.12 17.92C8 17.87 7.89 17.8 7.79 17.71C7.61 17.52 7.5 17.26 7.5 17C7.5 16.87 7.53 16.74 7.58 16.62C7.63 16.49 7.7 16.38 7.79 16.29C8.16 15.92 8.84 15.92 9.21 16.29C9.39 16.48 9.5 16.74 9.5 17C9.5 17.26 9.39 17.52 9.21 17.71C9.02 17.89 8.76 18 8.5 18Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M12 18C11.74 18 11.48 17.89 11.29 17.71C11.11 17.52 11 17.26 11 17C11 16.87 11.03 16.74 11.08 16.62C11.13 16.49 11.2 16.38 11.29 16.29C11.66 15.92 12.34 15.92 12.71 16.29C12.8 16.38 12.87 16.49 12.92 16.62C12.97 16.74 13 16.87 13 17C13 17.26 12.89 17.52 12.71 17.71C12.52 17.89 12.26 18 12 18Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M15.5 18C15.24 18 14.98 17.89 14.79 17.71C14.7 17.62 14.63 17.51 14.58 17.38C14.53 17.26 14.5 17.13 14.5 17C14.5 16.87 14.53 16.74 14.58 16.62C14.63 16.49 14.7 16.38 14.79 16.29C15.02 16.06 15.37 15.95 15.69 16.02C15.76 16.03 15.82 16.05 15.88 16.08C15.94 16.1 16 16.13 16.06 16.17C16.11 16.2 16.16 16.25 16.21 16.29C16.39 16.48 16.5 16.74 16.5 17C16.5 17.26 16.39 17.52 16.21 17.71C16.02 17.89 15.76 18 15.5 18Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M20.5 9.83997H3.5C3.09 9.83997 2.75 9.49997 2.75 9.08997C2.75 8.67997 3.09 8.33997 3.5 8.33997H20.5C20.91 8.33997 21.25 8.67997 21.25 9.08997C21.25 9.49997 20.91 9.83997 20.5 9.83997Z"
+                        fill="#6B7280" />
+                      <path
+                        d="M16 22.75H8C4.35 22.75 2.25 20.65 2.25 17V8.5C2.25 4.85 4.35 2.75 8 2.75H16C19.65 2.75 21.75 4.85 21.75 8.5V17C21.75 20.65 19.65 22.75 16 22.75ZM8 4.25C5.14 4.25 3.75 5.64 3.75 8.5V17C3.75 19.86 5.14 21.25 8 21.25H16C18.86 21.25 20.25 19.86 20.25 17V8.5C20.25 5.64 18.86 4.25 16 4.25H8Z"
+                        fill="#6B7280" />
+                    </svg>
+
+                    <span class="truncate text-[#828282]">Date</span>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M8 5.75C7.59 5.75 7.25 5.41 7.25 5V2C7.25 1.59 7.59 1.25 8 1.25C8.41 1.25 8.75 1.59 8.75 2V5C8.75 5.41 8.41 5.75 8 5.75Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M16 5.75C15.59 5.75 15.25 5.41 15.25 5V2C15.25 1.59 15.59 1.25 16 1.25C16.41 1.25 16.75 1.59 16.75 2V5C16.75 5.41 16.41 5.75 16 5.75Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M8.5 14.5C8.37 14.5 8.24 14.47 8.12 14.42C7.99 14.37 7.89 14.3 7.79 14.21C7.61 14.02 7.5 13.77 7.5 13.5C7.5 13.37 7.53 13.24 7.58 13.12C7.63 13 7.7 12.89 7.79 12.79C7.89 12.7 7.99 12.63 8.12 12.58C8.48 12.43 8.93 12.51 9.21 12.79C9.39 12.98 9.5 13.24 9.5 13.5C9.5 13.56 9.49 13.63 9.48 13.7C9.47 13.76 9.45 13.82 9.42 13.88C9.4 13.94 9.37 14 9.33 14.06C9.3 14.11 9.25 14.16 9.21 14.21C9.02 14.39 8.76 14.5 8.5 14.5Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M12 14.5C11.87 14.5 11.74 14.47 11.62 14.42C11.49 14.37 11.39 14.3 11.29 14.21C11.11 14.02 11 13.77 11 13.5C11 13.37 11.03 13.24 11.08 13.12C11.13 13 11.2 12.89 11.29 12.79C11.39 12.7 11.49 12.63 11.62 12.58C11.98 12.42 12.43 12.51 12.71 12.79C12.89 12.98 13 13.24 13 13.5C13 13.56 12.99 13.63 12.98 13.7C12.97 13.76 12.95 13.82 12.92 13.88C12.9 13.94 12.87 14 12.83 14.06C12.8 14.11 12.75 14.16 12.71 14.21C12.52 14.39 12.26 14.5 12 14.5Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M15.5 14.5C15.37 14.5 15.24 14.47 15.12 14.42C14.99 14.37 14.89 14.3 14.79 14.21C14.75 14.16 14.71 14.11 14.67 14.06C14.63 14 14.6 13.94 14.58 13.88C14.55 13.82 14.53 13.76 14.52 13.7C14.51 13.63 14.5 13.56 14.5 13.5C14.5 13.24 14.61 12.98 14.79 12.79C14.89 12.7 14.99 12.63 15.12 12.58C15.49 12.42 15.93 12.51 16.21 12.79C16.39 12.98 16.5 13.24 16.5 13.5C16.5 13.56 16.49 13.63 16.48 13.7C16.47 13.76 16.45 13.82 16.42 13.88C16.4 13.94 16.37 14 16.33 14.06C16.3 14.11 16.25 14.16 16.21 14.21C16.02 14.39 15.76 14.5 15.5 14.5Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M8.5 18C8.37 18 8.24 17.97 8.12 17.92C8 17.87 7.89 17.8 7.79 17.71C7.61 17.52 7.5 17.26 7.5 17C7.5 16.87 7.53 16.74 7.58 16.62C7.63 16.49 7.7 16.38 7.79 16.29C8.16 15.92 8.84 15.92 9.21 16.29C9.39 16.48 9.5 16.74 9.5 17C9.5 17.26 9.39 17.52 9.21 17.71C9.02 17.89 8.76 18 8.5 18Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M12 18C11.74 18 11.48 17.89 11.29 17.71C11.11 17.52 11 17.26 11 17C11 16.87 11.03 16.74 11.08 16.62C11.13 16.49 11.2 16.38 11.29 16.29C11.66 15.92 12.34 15.92 12.71 16.29C12.8 16.38 12.87 16.49 12.92 16.62C12.97 16.74 13 16.87 13 17C13 17.26 12.89 17.52 12.71 17.71C12.52 17.89 12.26 18 12 18Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M15.5 18C15.24 18 14.98 17.89 14.79 17.71C14.7 17.62 14.63 17.51 14.58 17.38C14.53 17.26 14.5 17.13 14.5 17C14.5 16.87 14.53 16.74 14.58 16.62C14.63 16.49 14.7 16.38 14.79 16.29C15.02 16.06 15.37 15.95 15.69 16.02C15.76 16.03 15.82 16.05 15.88 16.08C15.94 16.1 16 16.13 16.06 16.17C16.11 16.2 16.16 16.25 16.21 16.29C16.39 16.48 16.5 16.74 16.5 17C16.5 17.26 16.39 17.52 16.21 17.71C16.02 17.89 15.76 18 15.5 18Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M20.5 9.83997H3.5C3.09 9.83997 2.75 9.49997 2.75 9.08997C2.75 8.67997 3.09 8.33997 3.5 8.33997H20.5C20.91 8.33997 21.25 8.67997 21.25 9.08997C21.25 9.49997 20.91 9.83997 20.5 9.83997Z"
-                      fill="#6B7280" />
-                    <path
-                      d="M16 22.75H8C4.35 22.75 2.25 20.65 2.25 17V8.5C2.25 4.85 4.35 2.75 8 2.75H16C19.65 2.75 21.75 4.85 21.75 8.5V17C21.75 20.65 19.65 22.75 16 22.75ZM8 4.25C5.14 4.25 3.75 5.64 3.75 8.5V17C3.75 19.86 5.14 21.25 8 21.25H16C18.86 21.25 20.25 19.86 20.25 17V8.5C20.25 5.64 18.86 4.25 16 4.25H8Z"
-                      fill="#6B7280" />
+                      d="M16.6004 7.45831L11.1671 12.8916C10.5254 13.5333 9.47539 13.5333 8.83372 12.8916L3.40039 7.45831"
+                      stroke="#828282" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
                   </svg>
-
-                  <span class="truncate text-gray-600">Date</span>
                 </div>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M16.6004 7.45831L11.1671 12.8916C10.5254 13.5333 9.47539 13.5333 8.83372 12.8916L3.40039 7.45831"
-                    stroke="#828282" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-
               </div>
             </div>
-            <div class="hidden h-8 w-px bg-gray-200 lg:block lg:mx-2"></div>
-            <div class="w-full lg:w-auto lg:pl-2">
+
+            <!-- Divider 3 -->
+            <div class="hidden h-8 w-px bg-gray-200 lg:block lg:mx-3"></div>
+
+            <!-- Rechercher Button -->
+            <div class="w-full lg:flex-1">
               <button
-                class="flex min-h-[42px] w-full items-center justify-start lg:justify-center gap-2 rounded-[8px] bg-[#008bd2] font-medium text-white transition-colors hover:bg-[#0077b5] lg:py-[13px] px-3 lg:px-6">
+                class="flex min-h-[42px] w-full lg:w-auto float-end items-center justify-start lg:justify-center gap-2 rounded-[8px] bg-[#008bd2] font-medium text-white transition-colors hover:bg-[#0077b5] lg:py-[13px] px-3 lg:px-6 cursor-pointer">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M8.625 15.75C12.56 15.75 15.75 12.56 15.75 8.625C15.75 4.68997 12.56 1.5 8.625 1.5C4.68997 1.5 1.5 4.68997 1.5 8.625C1.5 12.56 4.68997 15.75 8.625 15.75Z"
@@ -223,8 +324,8 @@
             </button>
 
             <div id="menu-events"
-              class="hidden absolute top-full left-0 mt-2 w-full min-w-[200px] overflow-hidden rounded-xl border border-gray-100 bg-white shadow-xl z-50">
-              <ul class="py-2 text-sm text-[#717B9E]">
+              class="hidden absolute top-full left-0 mt-2 w-full min-w-[211px] overflow-hidden rounded-xl border border-gray-100 bg-white shadow-xl z-50">
+              <ul class="py-2 text-sm text-[#717B9E] font-Inter">
                 <li><a href="#" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#008bd2]">Concerts & Musique</a>
                 </li>
                 <li><a href="#" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#008bd2]">Conférences</a></li>
@@ -251,7 +352,7 @@
 
             <div id="menu-status"
               class="hidden absolute top-full left-0 mt-2 w-full overflow-hidden rounded-xl border border-gray-100 bg-white shadow-xl z-50">
-              <ul class="py-2 text-sm text-gray-700">
+              <ul class="py-2 text-sm text-[#717B9E] font-Inter">
                 <li><a href="#" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#008bd2]">À venir</a></li>
                 <li><a href="#" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#008bd2]">En cours</a></li>
                 <li><a href="#" class="block px-4 py-2 hover:bg-blue-50 hover:text-[#008bd2]">Terminé</a></li>
@@ -265,7 +366,7 @@
         <div class="">
           <div class="flex flex-row items-center justify-between">
             <h2 class="text-[32px] font-bold text-[#03363D] mb-[28px] lg:mb-5">Tous nos évènements</h2> <a href="#"
-              class="inline-flex lg:hidden flex-row items-center gap-2"><span
+              class="hidden flex-row items-center gap-2"><span
                 class="text-xs font-medium text-[#03363D] font-Inter ">Voir tout</span><svg width="19" height="19"
                 viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.4"
@@ -278,7 +379,7 @@
 
           </div>
           <!-- cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-[53px] lg:gap-y-[48px]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-x-[53px] lg:gap-y-[48px]">
             <!-- 1 -->
             <div
               class="col-span-1 group relative w-full overflow-hidden rounded-[12px] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-[#E5E7EB]">
@@ -415,7 +516,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -557,7 +658,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -699,7 +800,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -707,7 +808,7 @@
             </div>
             <!-- 4 -->
             <div
-              class="col-span-1 group relative w-full overflow-hidden rounded-[12px] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-[#E5E7EB]">
+              class="col-span-1 group relative w-full h-full flex flex-col overflow-hidden rounded-[12px] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-[#E5E7EB]">
 
               <div class="relative h-[191px] lg:h-[192px] w-full">
                 <img src="./images/ev-01.png" alt="Football Event" class="h-full w-full">
@@ -734,7 +835,7 @@
 
               </div>
 
-              <div class="py-[27px] px-[13px]">
+              <div class="py-[27px] px-[13px] flex-grow">
                 <h3 class="mb-5 text-lg font-medium uppercase leading-[24px] text-[#566A7F] pt-4">
                   Il était une fois la naissan-ce du Staat Kamerun 1884-1914"
                 </h3>
@@ -902,9 +1003,9 @@
 
 
               </div>
-              <div class="pb-4 px-[13px] selft-end pt-6">
+              <div class="pb-4 px-[13px] selft-end">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -1046,7 +1147,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -1188,7 +1289,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -1197,7 +1298,7 @@
           </div>
         </div>
         <!-- 2 -->
-        <div class="">
+        <div class="pt-[84px] pb-[104px]">
           <div class="flex flex-row items-center justify-between">
             <h2 class="text-[32px] font-bold text-[#03363D] mb-[28px] lg:mb-5">Concert</h2> <a href="#"
               class="inline-flex lg:hidden flex-row items-center gap-2"><span
@@ -1213,7 +1314,7 @@
 
           </div>
           <!-- cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-[53px] lg:gap-y-[48px]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-x-[53px] lg:gap-y-[48px]">
             <!-- 1 -->
             <div
               class="col-span-1 group relative w-full overflow-hidden rounded-[12px] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-[#E5E7EB]">
@@ -1350,7 +1451,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -1492,7 +1593,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -1634,7 +1735,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -1644,7 +1745,7 @@
           </div>
         </div>
         <!-- 3 -->
-        <div class="py-[64px]">
+        <div class="">
           <div class="flex flex-row items-center justify-between">
             <h2 class="text-[32px] font-bold text-[#03363D] mb-[28px] lg:mb-5">Collecte</h2> <a href="#"
               class="inline-flex lg:hidden flex-row items-center gap-2"><span
@@ -1660,7 +1761,7 @@
 
           </div>
           <!-- cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-[53px] lg:gap-y-[48px]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-x-[53px] lg:gap-y-[48px]">
             <!-- 1 -->
             <div
               class="col-span-1 group relative w-full overflow-hidden rounded-[12px] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-[#E5E7EB]">
@@ -1797,7 +1898,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -1939,7 +2040,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -2081,7 +2182,7 @@
               </div>
               <div class="pb-4 px-[13px]">
                 <button
-                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
+                  class="w-full rounded-[6px] bg-[#0589D3] py-[10px] text-base font-semibold text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98]">
                   Réserver
                 </button>
               </div>
@@ -2092,10 +2193,10 @@
         </div>
     </section>
     <!-- faq -->
-    <section class="py-[40px] lg:py-[100px]">
+    <section class="pt-[103px] pb-[40px] lg:pt-[148px] lg:pb-[125px]">
       <div class="lg:max-w-[1062px] mx-auto px-5">
         <div class="text-center">
-          <h2 class="text-[32px] lg:text-[48px] font-medium text-[#101010]">
+          <h2 class="text-[32px] lg:text-[48px] font-medium text-[#101010] lg:leading-[140%]">
             Questions fréquemment posées
           </h2>
           <p class="text-[16px] lg:text-lg font-normal text-[#878787] hidden lg:block pt-3">
@@ -2107,7 +2208,7 @@
           <!-- 1 -->
           <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
               <span>Qu'est-ce que SUNDAY Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
@@ -2126,7 +2227,7 @@
           <!-- 2 -->
           <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
               <span>Qui peut utiliser Sunday Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
@@ -2145,7 +2246,7 @@
           <!-- 3 -->
           <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
               <span>Est-ce que Sunday Events est gratuit ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
@@ -2164,7 +2265,7 @@
           <!-- 4 -->
           <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
               <span>Comment puis-je commencer à utiliser SUNDAY Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
@@ -2183,7 +2284,7 @@
           <!-- 5 -->
           <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
               <span>Qui peut utiliser Sunday Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
@@ -2201,7 +2302,7 @@
           </div>
           <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
               <span>Qu'est-ce que SUNDAY Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
@@ -2220,7 +2321,7 @@
           <!-- 7 -->
           <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
               <span>Est-ce que Sunday Events est gratuit ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
@@ -2239,7 +2340,7 @@
           <!-- 8 -->
           <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-gray-900 font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
               <span>Comment puis-je commencer à utiliser SUNDAY Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
@@ -2263,16 +2364,16 @@
       <div
         class="container newsletter-bg rounded-[24px] lg:rounded-[30px] min-h-[318px] lg:min-h-[428px] flex flex-row justify-center items-center">
         <div class="text-white max-w-[681px] flex flex-col justify-center items-center text-center">
-          <h2 class="text-2xl lg:text-[48px] font-bold">
+          <h2 class="text-2xl lg:text-[48px] font-bold max-w-[274px] lg:max-w-full">
             Prêt à lancer votre évènement ?
           </h2>
-          <p class="text-sm lg:text-xl font-bold font-Alegreya max-w-[421px] mt-4">
+          <p class="text-sm lg:text-xl font-bold font-Alegreya max-w-[275px] lg:max-w-[421px] mt-4">
             Créez votre événement en 2 minutes et profiter d’une expérience
             incroyable
           </p>
           <div class="pt-[28px] lg:pt-[48px]">
             <a href="#"
-              class="inline-block py-[14px] px-[59px] rounded-[8px] bg-[#B0DAF2] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)] font-medium text-base text-blue-bright text-center w-full lg:w-auto">Créer
+              class="inline-block py-[14px] px-[32px] rounded-[8px] bg-[#E6F3FB] border-[0.5px] border-[#B0DAF2] ring-[2px] ring-[#E6F3FB] font-medium text-base text-blue-bright text-center w-auto transition-all duration-300 ease-out hover:bg-[#B0DAF2] hover:ring-[#B0DAF2] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">Créer
               votre évènement</a>
             <div class="flex flex-col lg:flex-row items-center justify-end max-w-[300px] mt-[10px] gap-2">
               <img src="./images/arrow-pointer.svg" alt="arrow-pointer"

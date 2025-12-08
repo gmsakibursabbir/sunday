@@ -1,0 +1,1 @@
+transition-all duration-300 ease-out hover:bg-[#B0DAF2] hover:ring-[#B0DAF2] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0
