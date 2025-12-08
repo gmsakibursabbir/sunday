@@ -121,3 +121,11 @@ h2 {
     background: rgba(255, 255, 255, 1);
   }
 }
+/* Utility to hide the default scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
