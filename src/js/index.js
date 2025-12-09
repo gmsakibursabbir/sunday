@@ -31,7 +31,7 @@ function toggleFAQ(item) {
       // Reset styles for closed state
       otherContent.style.maxHeight = "0px";
       otherContent.style.opacity = "0";
-      otherItem.classList.remove("bg-[#008bd2]", "text-white");
+      otherItem.classList.remove("faq-active");
       otherItem.classList.add("bg-white");
       otherButton.classList.remove("text-white");
       otherButton.classList.add("text-gray-900");
@@ -44,7 +44,7 @@ function toggleFAQ(item) {
   if (!isOpen) {
     // Open
     item.classList.remove("bg-white");
-    item.classList.add("bg-[#008bd2]", "text-white");
+    item.classList.add("faq-active");
     button.classList.remove("text-gray-900");
     button.classList.add("text-white");
     icon.classList.remove("text-gray-900");
@@ -53,7 +53,7 @@ function toggleFAQ(item) {
     content.style.opacity = "1";
   } else {
     // Close (if clicking the already open one)
-    item.classList.remove("bg-[#008bd2]", "text-white");
+    item.classList.remove("faq-active");
     item.classList.add("bg-white");
     button.classList.remove("text-white");
     button.classList.add("text-gray-900");
@@ -140,4 +140,30 @@ document.addEventListener("DOMContentLoaded", function () {
       closeMobileMenu();
     });
   });
+});
+
+// Flatpickr Integration
+// Imports removed in favor of CDN for browser compatibility
+// import flatpickr from "flatpickr";
+// import "flatpickr/dist/flatpickr.min.css";
+// import { French } from "flatpickr/dist/l10n/fr.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dateContainer = document.getElementById("date-picker-container");
+  const dateText = document.getElementById("date-text");
+
+  if (dateContainer && typeof flatpickr !== "undefined") {
+    flatpickr(dateContainer, {
+      locale: "fr", // Use the locale string since script is loaded
+      dateFormat: "d F", // e.g., 08 Août
+      disableMobile: "true",
+      onChange: function (selectedDates, dateStr, instance) {
+        if (dateText) {
+          dateText.textContent = dateStr;
+          dateText.classList.remove("text-[#828282]");
+          dateText.classList.add("text-[#101010]");
+        }
+      },
+    });
+  }
 });

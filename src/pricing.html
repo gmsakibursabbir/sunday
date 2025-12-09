@@ -9,6 +9,11 @@
     href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reenie+Beanie&display=swap"
     rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- facions -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
   <title>Pricing</title>
 
   <link rel="stylesheet" href="./css/style.min.css" />
@@ -166,9 +171,9 @@
     <section class="pt-5 lg:pt-[50px] pb-10 lg:pb-20">
       <div class="pricingbg"></div>
       <div
-        class="relative lg:max-w-[1281px] mx-auto flex flex-col items-center justify-between gap-10 gap-[80px] px-5 lg:px-0 lg:gap-[128x]">
-        <div class="text-center w-full">
-          <h1 class="text-[32px] md:text-[52px] lg:text-[64px] font-bold text-[#101010]">
+        class="relative lg:max-w-[1281px] mx-auto flex flex-col items-center justify-between gap-10 px-5 lg:px-0 lg:gap-20">
+        <div class="text-center w-full space-y-3">
+          <h1 class="text-[32px] md:text-[52px] lg:text-[64px] font-bold text-[#101010] leading-[120%]">
             Plan d’abonnement Sunday Events
           </h1>
           <p class="text-[16px] lg:text-lg font-normal text-[#878787]">
@@ -180,7 +185,7 @@
         <div class="flex lg:flex-row flex-col items-start gap-[61px] lg:gap-5 w-full">
           <!-- 1 -->
           <div
-            class="w-full lg:w-1/3 p-[18px] lg:p-6 bg-[#E6F3FB] border-[1px] border-solid border-neutral-300 rounded-2xl h-auto">
+            class="w-full lg:w-1/3 p-[18px] lg:p-6 bg-[#E6F3FB] border-[1px] border-solid border-neutral-300 rounded-2xl h-auto lg:min-h-[741px] flex flex-col">
             <!-- top -->
             <span
               class="w-full min-h-[52px] lg:min-h-[56px] flex items-center justify-center bg-[#0189D5] rounded-[10px] text-white border-[1px] border-[#ffffff]/50 ring-[2px] ring-[#0189D5]">
@@ -254,12 +259,12 @@
             </ul>
             <!-- buton -->
             <a href="#"
-              class="inline-block text-center w-full py-[14px] bg-white border-[1px] border-solid border-[#0971DA] rounded-[16px] text-[#0971DA] text-base font-medium hover:bg-[#0971DA] hover:text-white transition-colors duration-300">Commencer
+              class="mt-auto inline-block text-center w-full py-[14px] bg-white border-[1px] border-solid border-[#0971DA] rounded-[16px] text-[#0971DA] text-base font-medium hover:bg-[#0971DA] hover:text-white transition-colors duration-300">Commencer
               maintenant</a>
           </div>
           <!-- 2 -->
           <div
-            class="w-full lg:w-1/3 p-[18px] lg:p-6 border-[1px] border-solid border-cyan-400 rounded-2xl bg-[#0189D5] h-auto relative">
+            class="w-full lg:w-1/3 p-[18px] lg:p-6 border-[1px] border-solid border-cyan-400 rounded-2xl bg-[#0189D5] h-auto relative lg:min-h-[741px] flex flex-col">
             <img src="./images/pricing-overlay.png" alt="overlay"
               class="absolute inset-0 w-full h-full object-cover rounded-2xl z-0 pointer-events-none mix-blend-overlay opacity-100" />
             <!-- tips -->
@@ -310,10 +315,6 @@
               </li>
               <li class="flex flex-row items-center gap-2">
                 <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
-                <span class="text-white text-base font-normal">Suivi des réservations</span>
-              </li>
-              <li class="flex flex-row items-center gap-2">
-                <img src="./images/tick-circle.svg" alt="check" class="w-6 h-6" />
                 <span class="text-white text-base font-normal">Création évènement gratuit</span>
               </li>
               <li class="flex flex-row items-center gap-2">
@@ -351,7 +352,7 @@
             </ul>
             <!-- buton -->
             <a href="#"
-              class="inline-block text-center w-full relative z-10 py-[14px] bg-white border-[1px] border-solid border-[#0189D5] rounded-[16px] text-[#0189D5] text-base font-medium hover:bg-[#0189D5] hover:border-[#ffffff] hover:text-white transition-colors duration-300">Choisir
+              class="mt-auto inline-block text-center w-full relative z-10 py-[14px] bg-white border-[1px] border-solid border-[#0189D5] rounded-[16px] text-[#0189D5] text-base font-medium hover:bg-[#0189D5] hover:border-[#ffffff] hover:text-white transition-colors duration-300">Choisir
               le plan</a>
           </div>
           <!-- 3 -->
@@ -422,16 +423,16 @@
             <ul class="space-y-4">
               <li class="flex items-center gap-[10px]">
                 <img src="./images/commision-01.svg" alt="commision-01" class="w-6 h-6" />
-                <span class="text-base font-medium text-[#101010]">8% commission/billet</span>
+                <span class="text-sm lg:text-base font-medium text-[#101010]">8% commission/billet</span>
               </li>
               <li class="flex items-center gap-[10px]">
                 <img src="./images/commision-02.svg" alt="commision-02" class="w-6 h-6" />
-                <span class="text-base font-medium text-[#101010]">Un évènement gratuit reste
+                <span class="text-sm lg:text-base font-medium text-[#101010]">Un évènement gratuit reste
                   GRATUIT CHEZ SUNDAY EVENTS</span>
               </li>
               <li class="flex items-center gap-[10px]">
                 <img src="./images/commision-03.svg" alt="commision-03" class="w-6 h-6" />
-                <span class="text-base font-medium text-[#101010]">Calculez vos revenus avec notre simulateur</span>
+                <span class="text-sm lg:text-base font-medium text-[#101010]">Calculez vos revenus avec notre simulateur</span>
               </li>
             </ul>
           </div>
@@ -464,19 +465,19 @@
                 Détail du calcul</h4>
               <ul class="w-full mt-4 space-y-3">
                 <li
-                  class="block text-base font-Inter font-semibold leading-[120%] text-[#0F8ED5] px-4 py-[11px] flex flex-row items-center justify-between bg-[#D0E9F7] rounded-[12px] border border-[#EDEDED] shadow-xs">
+                  class="block text-sm lg:text-base font-Inter font-semibold leading-[120%] text-[#0F8ED5] px-4 py-[11px] flex flex-row items-center justify-between bg-[#D0E9F7] rounded-[12px] border border-[#EDEDED] shadow-xs">
                   <span>Participants</span><span>0 XAF</span>
                 </li>
                 <li
-                  class="block text-base font-Inter font-semibold leading-[120%] text-[#0F8ED5] px-4 py-[11px] flex flex-row items-center justify-between bg-[#D0E9F7] rounded-[12px] border border-[#EDEDED] shadow-xs">
+                  class="block text-sm lg:text-base font-Inter font-semibold leading-[120%] text-[#0F8ED5] px-4 py-[11px] flex flex-row items-center justify-between bg-[#D0E9F7] rounded-[12px] border border-[#EDEDED] shadow-xs">
                   <span>Commission SUNDAY EVENTS</span><span>0 XAF</span>
                 </li>
                 <li
-                  class="block text-base font-Inter font-semibold leading-[120%] text-[#0F8ED5] px-4 py-[11px] flex flex-row items-center justify-between bg-[#D0E9F7] rounded-[12px] border border-[#EDEDED] shadow-xs">
+                  class="block text-sm lg:text-base font-Inter font-semibold leading-[120%] text-[#0F8ED5] px-4 py-[11px] flex flex-row items-center justify-between bg-[#D0E9F7] rounded-[12px] border border-[#EDEDED] shadow-xs">
                   <span>Vous recevez</span><span>0 XAF</span>
                 </li>
                 <li
-                  class="block text-base font-Inter font-semibold leading-[120%] text-[#FF5C40] px-4 py-[11px] flex flex-row items-center justify-between bg-[#FFE0DB] rounded-[12px] border border-[#EDEDED] shadow-xs">
+                  class="block text-sm lg:text-base font-Inter font-semibold leading-[120%] text-[#FF5C40] px-4 py-[11px] flex flex-row items-center justify-between bg-[#FFE0DB] rounded-[12px] border border-[#EDEDED] shadow-xs">
                   <span>Participants</span><span>0 XAF</span>
                 </li>
               </ul>
@@ -489,7 +490,7 @@
     <section class="pt-[103px] pb-[40px] lg:pt-[148px] lg:pb-[125px]">
       <div class="lg:max-w-[1062px] mx-auto px-5">
         <div class="text-center">
-          <h2 class="text-[32px] lg:text-[48px] font-medium text-[#101010] lg:leading-[140%]">
+          <h2 class="text-[32px] lg:text-[48px] font-medium font-Inter text-[#101010] lg:leading-[120%]">
             Questions fréquemment posées
           </h2>
           <p class="text-[16px] lg:text-lg font-normal text-[#878787] hidden lg:block pt-3">
@@ -499,17 +500,18 @@
         <!-- content faq -->
         <div class="w-full space-y-[28px] p-4 bg-[#F7F7F7] ring-[1px] ring-[#EDEDED] mt-10 rounded-[20px]">
           <!-- 1 -->
-          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+          <div
+            class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 px-6 py-[27px] lg:p-6 cursor-pointer border-[1px] border-[#EDEDED]">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya cursor-pointer gap-2">
               <span>Qu'est-ce que SUNDAY Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </button>
-            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
-              <p class="pb-0">
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden  text-xs lg:text-base leading-relaxed">
+              <p class="pb-0 pt-2">
                 Nous proposons du marketing numérique, de la gestion des
                 réseaux sociaux, du SEO, de la publicité PPC, du branding et
                 des solutions sur mesure pour répondre à vos besoins en
@@ -518,17 +520,18 @@
             </div>
           </div>
           <!-- 2 -->
-          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+          <div
+            class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 px-6 py-[27px] lg:p-6 cursor-pointer border-[1px] border-[#EDEDED]">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya cursor-pointer gap-2">
               <span>Qui peut utiliser Sunday Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </button>
-            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
-              <p class="pb-0">
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden  text-xs lg:text-base leading-relaxed">
+              <p class="pb-0 pt-2">
                 Nous proposons du marketing numérique, de la gestion des
                 réseaux sociaux, du SEO, de la publicité PPC, du branding et
                 des solutions sur mesure pour répondre à vos besoins en
@@ -537,17 +540,18 @@
             </div>
           </div>
           <!-- 3 -->
-          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+          <div
+            class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 px-6 py-[27px] lg:p-6 cursor-pointer border-[1px] border-[#EDEDED]">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya cursor-pointer gap-2">
               <span>Est-ce que Sunday Events est gratuit ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </button>
-            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
-              <p class="pb-0">
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden  text-xs lg:text-base leading-relaxed">
+              <p class="pb-0 pt-2">
                 Nous proposons du marketing numérique, de la gestion des
                 réseaux sociaux, du SEO, de la publicité PPC, du branding et
                 des solutions sur mesure pour répondre à vos besoins en
@@ -556,17 +560,18 @@
             </div>
           </div>
           <!-- 4 -->
-          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+          <div
+            class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 px-6 py-[27px] lg:p-6 cursor-pointer border-[1px] border-[#EDEDED]">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya cursor-pointer gap-2">
               <span>Comment puis-je commencer à utiliser SUNDAY Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </button>
-            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
-              <p class="pb-0">
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden  text-xs lg:text-base leading-relaxed">
+              <p class="pb-0 pt-2">
                 Nous proposons du marketing numérique, de la gestion des
                 réseaux sociaux, du SEO, de la publicité PPC, du branding et
                 des solutions sur mesure pour répondre à vos besoins en
@@ -575,17 +580,18 @@
             </div>
           </div>
           <!-- 5 -->
-          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+          <div
+            class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 px-6 py-[27px] lg:p-6 cursor-pointer border-[1px] border-[#EDEDED]">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya cursor-pointer gap-2">
               <span>Qui peut utiliser Sunday Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </button>
-            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
-              <p class="pb-0">
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden  text-xs lg:text-base leading-relaxed">
+              <p class="pb-0 pt-2">
                 Nous proposons du marketing numérique, de la gestion des
                 réseaux sociaux, du SEO, de la publicité PPC, du branding et
                 des solutions sur mesure pour répondre à vos besoins en
@@ -593,17 +599,18 @@
               </p>
             </div>
           </div>
-          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+          <div
+            class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 px-6 py-[27px] lg:p-6 cursor-pointer border-[1px] border-[#EDEDED]">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya cursor-pointer gap-2">
               <span>Qu'est-ce que SUNDAY Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </button>
-            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
-              <p class="pb-0">
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden  text-xs lg:text-base leading-relaxed">
+              <p class="pb-0 pt-2">
                 Nous proposons du marketing numérique, de la gestion des
                 réseaux sociaux, du SEO, de la publicité PPC, du branding et
                 des solutions sur mesure pour répondre à vos besoins en
@@ -612,17 +619,18 @@
             </div>
           </div>
           <!-- 7 -->
-          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+          <div
+            class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 px-6 py-[27px] lg:p-6 cursor-pointer border-[1px] border-[#EDEDED]">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya cursor-pointer gap-2">
               <span>Est-ce que Sunday Events est gratuit ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </button>
-            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
-              <p class="pb-0">
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden  text-xs lg:text-base leading-relaxed">
+              <p class="pb-0 pt-2">
                 Nous proposons du marketing numérique, de la gestion des
                 réseaux sociaux, du SEO, de la publicité PPC, du branding et
                 des solutions sur mesure pour répondre à vos besoins en
@@ -631,17 +639,18 @@
             </div>
           </div>
           <!-- 8 -->
-          <div class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 p-6 cursor-pointer">
+          <div
+            class="faq-item overflow-hidden rounded-2xl bg-white transition-colors duration-300 px-6 py-[27px] lg:p-6 cursor-pointer border-[1px] border-[#EDEDED]">
             <button
-              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya">
+              class="flex w-full items-center justify-between text-left text-base lg:text-2xl font-medium text-[#1B1C1B] font-Alegreya cursor-pointer gap-2">
               <span>Comment puis-je commencer à utiliser SUNDAY Events ?</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                 stroke="currentColor" class="h-6 w-6 transform transition-transform duration-300">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </button>
-            <div class="faq-content max-h-0 opacity-0 overflow-hidden pt-3 text-xs lg:text-base leading-relaxed">
-              <p class="pb-0">
+            <div class="faq-content max-h-0 opacity-0 overflow-hidden  text-xs lg:text-base leading-relaxed">
+              <p class="pb-0 pt-2">
                 Nous proposons du marketing numérique, de la gestion des
                 réseaux sociaux, du SEO, de la publicité PPC, du branding et
                 des solutions sur mesure pour répondre à vos besoins en
