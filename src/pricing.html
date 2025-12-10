@@ -19,7 +19,11 @@
   <link rel="stylesheet" href="./css/style.min.css" />
 </head>
 
-<body class="bg-white overflow-x-hidden glowbg">
+<body class="bg-white overflow-x-hidden relative">
+  <!-- background overlay -->
+  <div class="absolute top-0 left-0 translate-y-[-40%] translate-x-[-40%] z-0 pointer-events-none">
+    <img src="./images/bg-overlay-01.png" alt="bg-overlay-01" />
+  </div>
   <!-- header start -->
   <header class="sticky top-0 z-50 pt-0 lg:pt-4 lg:px-4">
     <div
@@ -166,7 +170,7 @@
   </nav>
   <!-- header end -->
   <!-- main -->
-  <main>
+  <main class="relative z-10">
     <!-- hero -->
     <section class="pt-5 lg:pt-[50px] pb-10 lg:pb-20">
       <div class="relative lg:max-w-[1281px] mx-auto flex flex-col items-center justify-between px-5 lg:px-0">

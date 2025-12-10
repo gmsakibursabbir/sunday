@@ -546,3 +546,53 @@ body.mobile-menu-open {
   background-repeat: no-repeat;
   color: white;
 }
+.billets-one {
+  background: linear-gradient(
+    90deg,
+    rgba(105.94, 114.01, 130.18, 1),
+    rgba(73.65, 85.05, 101.01, 1) 100%
+  );
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.billets-two {
+  background: linear-gradient(
+    215.59deg,
+    rgba(32, 214, 242, 1),
+    rgba(4, 137, 211, 1) 100%
+  );
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.billets-three {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 104.74, 0, 1),
+    rgba(231.15, 0, 10.76, 1) 100%
+  );
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.billets-four {
+  background: linear-gradient(
+    90deg,
+    rgba(172.87, 70.37, 255, 1),
+    rgba(152.19, 15.74, 250.25, 1) 100%
+  );
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.billets-five {
+  background: linear-gradient(
+    90deg,
+    rgba(246.28, 50.53, 154.1, 1),
+    rgba(236.48, 0, 63.42, 1) 100%
+  );
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}

@@ -167,3 +167,64 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Read More Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const readMoreBtn = document.getElementById("read-more-btn");
+  const eventDescription = document.getElementById("event-description");
+
+  if (readMoreBtn && eventDescription) {
+    readMoreBtn.addEventListener("click", function () {
+      eventDescription.classList.toggle("line-clamp-4");
+
+      if (eventDescription.classList.contains("line-clamp-4")) {
+        readMoreBtn.textContent = "Lire plus";
+      } else {
+        readMoreBtn.textContent = "Lire moins";
+      }
+    });
+  }
+});
+
+// Generic Accordion
+document.addEventListener("DOMContentLoaded", function () {
+  const triggers = document.querySelectorAll(".accordion-trigger");
+
+  // Initialize default active items
+  triggers.forEach((trigger) => {
+    if (trigger.classList.contains("default-active")) {
+      const targetId = trigger.getAttribute("data-target");
+      const content = document.querySelector(targetId);
+      const icon = trigger.querySelector(".accordion-icon");
+
+      if (content) {
+        content.classList.remove("hidden");
+      }
+      if (icon) {
+        icon.classList.add("rotate-180");
+        // Ensure icon has transition class if not present in HTML, though we added it there.
+        icon.classList.add("transition-transform", "duration-300");
+      }
+    }
+  });
+
+  // Event Delegation for Accordion Triggers
+  document.addEventListener("click", function (e) {
+    const trigger = e.target.closest(".accordion-trigger");
+    if (!trigger) return;
+
+    const targetId = trigger.getAttribute("data-target");
+    const content = document.querySelector(targetId);
+    if (!content) return;
+
+    const icon = trigger.querySelector(".accordion-icon");
+
+    // Toggle Content
+    content.classList.toggle("hidden");
+
+    // Rotate Icon
+    if (icon) {
+      icon.classList.toggle("rotate-180");
+    }
+  });
+});
