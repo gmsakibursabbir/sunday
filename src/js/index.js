@@ -33,8 +33,8 @@ function toggleFAQ(item) {
       otherContent.style.opacity = "0";
       otherItem.classList.remove("faq-active");
       otherItem.classList.add("bg-white");
-      otherButton.classList.remove("text-white");
-      otherButton.classList.add("text-gray-900");
+      otherButton.classList.remove("text-white", "font-medium");
+      otherButton.classList.add("text-gray-900", "font-bold");
       otherIcon.classList.remove("rotate-180", "text-white");
       otherIcon.classList.add("text-gray-900");
     }
@@ -45,8 +45,8 @@ function toggleFAQ(item) {
     // Open
     item.classList.remove("bg-white");
     item.classList.add("faq-active");
-    button.classList.remove("text-gray-900");
-    button.classList.add("text-white");
+    button.classList.remove("text-gray-900", "font-bold");
+    button.classList.add("text-white", "font-medium");
     icon.classList.remove("text-gray-900");
     icon.classList.add("rotate-180", "text-white");
     content.style.maxHeight = content.scrollHeight + "px";
@@ -55,8 +55,8 @@ function toggleFAQ(item) {
     // Close (if clicking the already open one)
     item.classList.remove("faq-active");
     item.classList.add("bg-white");
-    button.classList.remove("text-white");
-    button.classList.add("text-gray-900");
+    button.classList.remove("text-white", "font-medium");
+    button.classList.add("text-gray-900", "font-bold");
     icon.classList.remove("rotate-180", "text-white");
     icon.classList.add("text-gray-900");
     content.style.maxHeight = "0px";
@@ -228,3 +228,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// modal
+function toggleModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+
+  if (modal.classList.contains("hidden")) {
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  } else {
+    modal.classList.add("hidden");
+    document.body.style.overflow = "";
+  }
+}

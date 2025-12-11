@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reenie+Beanie&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reenie+Beanie&display=swap"
+    rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- facions -->
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
   <link rel="manifest" href="./favicon/site.webmanifest" />
-  <title>Payment Reservation</title>
+  <title>Payment Reservation Mail Modal</title>
 
   <link rel="stylesheet" href="./css/style.min.css" />
 </head>
@@ -606,37 +606,69 @@
     </div>
   </footer>
   <!-- Modal -->
-  <div id="success-modal" class="modal-overlay hidden fixed inset-0 flex items-center justify-center p-4">
+  <div id="success-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4">
     <div
-      class="modal-content bg-white w-full max-w-[480px] rounded-[24px] p-8 flex flex-col items-center text-center shadow-2xl relative">
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
       <!-- Logo -->
-      <img src="./images/logo-header.svg" alt="Sunday Events" class="h-8 mb-8" />
+      <img src="./images/logo-header.svg" alt="Sunday Events" class="h-[48px] mb-6" />
 
       <!-- Icon -->
-      <div class="mb-6 relative w-24 h-24 flex items-center justify-center">
-        <!-- Using a placeholder SVG for the green check/confetti if exact asset not found, but trying emoji-check.svg first -->
-        <img src="./images/emoji-check.svg" alt="Success" class="w-full h-full object-contain" />
+      <div class="mb-[32px] relative flex items-center justify-center">
+        <img src="./images/sucess.png" alt="success" />
       </div>
 
       <!-- Content -->
-      <h2 class="text-[#101010] text-[32px] font-bold mb-4 font-Inter">Succès</h2>
+      <h2 class="text-[#161924] text-[32px] font-semibold leading-[120%] mb-6 !font-Archivo">Succès</h2>
 
-      <p class="text-[#666D80] text-base font-normal leading-relaxed mb-8">
-        Vous allez recevoir vos invitations par <span class="font-bold text-[#101010]">Mail</span>
-        <br>ou<br>
-        Cliquez sur le bouton <span class="text-[#03C3EC] font-bold">Télécharger</span>
-      </p>
-
+      <div class="border-[1px] border-[#E7E9E9] bg-[#F9FAFA] rounded-[12px] p-[14px] space-y-4">
+        <p class="text-[#73757C] text-[16px] font-medium leading-[120%]">Les participants suivants sont sur liste
+          d'attente</p>
+        <div class="bg-[#E6F3FB] rounded-[12px] p-[14px]">
+          <!-- 1 -->
+          <div class="flex flex-col items-start justify-between">
+            <span class="text-[#0D0D12] text-[14px] font-medium leading-[150%]">Sophia Turner</span>
+            <div class="flex flex-row items-start gap-[18px]">
+              <div class="min-w-[111px] text-[#666D80] text-[12px] font-medium leading-[150%] text-start">Statut :
+                <span class="text-[#FF2D55]">En
+                  attente</span>
+              </div>
+              <div class=" text-[#666D80] text-[12px] font-medium leading-[150%]">Position : <span
+                  class="text-[#0189D5]">02</span></div>
+            </div>
+          </div>
+          <!-- divider -->
+          <div class="border-b-[1px] border-[#697A8D]/40 my-[10px]"></div>
+          <!-- 2 -->
+          <div class="flex flex-col items-start justify-between">
+            <span class="text-[#0D0D12] text-[14px] font-medium leading-[150%]">Sophia Turner</span>
+            <div class="flex flex-row items-start gap-[18px]">
+              <div class="min-w-[111px] text-[#666D80] text-[12px] font-medium leading-[150%] text-start">Statut :
+                <span class="text-[#FF2D55]">En
+                  attente</span>
+              </div>
+              <div class=" text-[#666D80] text-[12px] font-medium leading-[150%]">Position : <span
+                  class="text-[#0189D5]">02</span></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="text-[#73757C] text-[16px] font-medium leading-[120%]">vous pouvez annuler en cliquant sur le bouton
+          </p>
+          <a href="#" class="text-[#0189D5] text-xl font-medium leading-[120%]">Désister</a>
+        </div>
+      </div>
       <!-- Button -->
       <a href="./index.html"
-        class="w-full max-w-[280px] py-[12px] rounded-[6px] bg-[#03C3EC] text-white font-medium text-base hover:bg-[#02a0c1] transition-colors flex items-center justify-center gap-2">
+        class="w-full max-w-[176px] py-[10px] rounded-[12px] ovbtn text-white font-medium text-sm  hover:bg-[#02a0c1] transition-colors flex items-center justify-center gap-2 mt-[27px]">
         Nos évènements
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.16602 10H15.8327" stroke="white" stroke-width="1.5" stroke-linecap="round"
+          <path d="M3.7334 9.98332H16.2251" stroke="white" stroke-width="1.5" stroke-linecap="round"
             stroke-linejoin="round" />
-          <path d="M10 4.16669L15.8333 10L10 15.8334" stroke="white" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round" />
+          <path d="M11.2354 4.98999L16.2662 9.99999L11.2354 15.01" stroke="white" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" />
         </svg>
+
+
       </a>
     </div>
   </div>
