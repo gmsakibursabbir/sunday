@@ -606,7 +606,7 @@ body.mobile-menu-open {
   z-index: 9999;
 }
 header {
-  z-index: 999;
+  z-index: 9;
 }
 .ovbtn {
   background: linear-gradient(
