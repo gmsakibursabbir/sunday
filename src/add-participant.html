@@ -568,7 +568,7 @@
   <div id="success-modal" class="modal-overlay fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50">
     <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
       <div
-        class="relative transform overflow-visible rounded-[20px] bg-white text-left shadow-xl transition-all sm:my-8 w-full max-w-[648px] flex flex-col">
+        class="relative transform overflow-visible rounded-[20px] bg-white text-left shadow-xl transition-all sm:my-8 w-full max-w-[648px] flex flex-col z-[10000]">
         <!-- Header -->
         <div class="px-4 sm:px-8 py-5 flex-shrink-0">
           <h3 class="text-[#0B0B0B] text-xl font-semibold font-Archivo">Ajouter un participant</h3>
@@ -838,7 +838,7 @@
             <label class="block text-sm text-[#14201F] font-medium mb-3">Comment souhaitez-vous recevoir votre
               invitation
               ?</label>
-            <div class="space-y-3 px-4 py-3 rounded-[12px] border-[1px] border-[#E8E8E9]">
+            <div class="space-y-4 px-4 py-3 rounded-[12px] border-[1px] border-[#E8E8E9]">
               <!-- Email Toggle -->
               <div class="flex items-center gap-3">
                 <button type="button" onclick="toggleSwitch(this)"
