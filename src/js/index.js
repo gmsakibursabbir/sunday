@@ -242,3 +242,5 @@ function toggleModal(modalId) {
     document.body.style.overflow = "";
   }
 }
+// Expose to global scope for inline onclick handlers (required for ES modules)
+window.toggleModal = toggleModal;
