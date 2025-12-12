@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reenie+Beanie&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reenie+Beanie&display=swap"
+    rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- facions -->
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
   <link rel="manifest" href="./favicon/site.webmanifest" />
-  <title>Add a participant</title>
+  <title>Payment Reservation Mail Modal</title>
 
   <link rel="stylesheet" href="./css/style.min.css" />
 </head>
@@ -172,11 +172,11 @@
   <!-- main -->
   <main class="relative z-10">
     <!-- details -->
-    <section class="pt-[24px] lg:pt-[31px] pb-[133px] lg:pb-[220px] px-5 ">
+    <section class="pt-[24px] lg:pt-[31px] pb-[80px] lg:pb-[220px] px-4 lg:px-5 ">
       <div
         class="w-full lg:max-w-[1291px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-[24px] lg:gap-[17px]">
         <!-- left -->
-        <div class="w-full h-auto lg:max-w-[360px] py-6 px-5 rounded-[16px] bg-white border-[1px] border-[#E5E7EB] ">
+        <div class="w-full h-auto lg:max-w-[360px] py-6 px-4 lg:px-5 rounded-[16px] bg-white border-[1px] border-[#E5E7EB] ">
           <!-- img -->
           <div
             class="mb-[27px] w-full min-h-[187px] rounded-[28px] bg-[url(../images/detailes-event-bg.png)] bg-cover bg-center bg-no-repeat">
@@ -190,7 +190,7 @@
           </div>
           <!-- middle -->
           <div class="pt-4">
-            <div class="block space-y-4">
+            <div class="flex flex-row items-center gap-4 mb-4">
               <a href="#"
                 class="w-[42px] h-[42px] rounded-[6px] inline-flex items-center justify-center bg-[#E6F3FB] shadow-xs gap-[4px] text-xl text-[#0189D5] leading-[23px]"><svg
                   width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -222,9 +222,9 @@
           </div>
           <!-- bottom -->
           <div class="w-full flex justify-center pt-[27px]">
-            <a href="#"
-              class="w-full md:w-auto px-[14px] py-[12px] rounded-[6px] bg-[#0589D3] text-xl font-normal leading-[23px] text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98] inline-flex flex-row items-center justify-center gap-[4px] text-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" class="hidden md:inline" fill="none"
+            <a href="./contact.html"
+              class="w-full md:w-auto px-[14px] py-[12px] rounded-[6px] bg-[#0589D3] text-xl font-normal leading-[23px] text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98] inline-flex flex-row items-center justify-center gap-[10px] text-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" class="" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M17.62 10.75C17.19 10.75 16.85 10.4 16.85 9.97998C16.85 9.60998 16.48 8.83998 15.86 8.16998C15.25 7.51998 14.58 7.13998 14.02 7.13998C13.59 7.13998 13.25 6.78998 13.25 6.36998C13.25 5.94998 13.6 5.59998 14.02 5.59998C15.02 5.59998 16.07 6.13998 16.99 7.10998C17.85 8.01998 18.4 9.14998 18.4 9.96998C18.4 10.4 18.05 10.75 17.62 10.75Z"
@@ -297,6 +297,160 @@
                   </tr>
                 </thead>
                 <tbody class="bg-white [&>tr>td]:border-b [&>tr>td]:border-[#E5E7EB]">
+                  <!-- Row 1 -->
+                  <tr>
+                    <td class="py-[16px] px-[16px] text-sm text-[#0D0D12] font-medium min-w-[140px] flex flex-col">
+                      <span>Sophia Turner</span>
+                      <ul class="mt-[2px]">
+                        <li class="text-xs leading-[150%] font-medium text-[#666D80]">Statut : <span
+                            class="text-[#FF2D55]">En attente</span></li>
+                        <li class="text-xs leading-[150%] font-medium text-[#666D80]">Position : <span
+                            class="text-[#0189D5]">02</span></li>
+                      </ul>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <div class="flex flex-col">
+                        <span class="text-xs text-[#0D0D12] font-medium leading-[150%]">+237 691 67 90 45</span>
+                        <a href="#"
+                          class="text-[10px] text-[#666D80] font-medium leading-[150%]">sophiaturner@example.com</span>
+                      </div>
+                    </td>
+                    <td class="py-[16px] px-[16px] text-xs text-[#0D0D12] font-medium leading-[150%] min-w-[160px]">
+                      ESPACE
+                      COWORKING</td>
+                    <td class="py-[16px] px-[16px]">
+                      <span
+                        class="inline-block px-[18px] py-[6px] rounded-[6px] bg-[#E6F3FB] border border-[#0189D5] text-[#0189D5] text-xs font-medium capitalize cursor-pointer">GRATUIT</span>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <button
+                        class="flex items-center gap-[4px] pl-[6px] pr-[8px] py-[6px] rounded-[6px] bg-[#E6F3FB] border border-[#0189D5] text-[#0189D5] text-xs font-medium capitalize cursor-pointer">
+                        <span>Télécharger</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.1445 13.9582V2.2915" stroke="#0189D5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M15.9419 17.2917H4.34766" stroke="#0189D5" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M14 10L9.9996 14L6 10" stroke="#0189D5" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </button>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <div class="flex items-center gap-2">
+                        <button
+                          class="w-[28px] h-[28px] bg-[#F0FBFF] rounded-[6px] hover:bg-blue-100 transition-colors flex items-center justify-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.54516 1.91635C9.32333 1.69455 8.96366 1.69455 8.74182 1.91635C8.51998 2.13816 8.51998 2.49778 8.74182 2.71959L11.2803 5.2577C11.5021 5.47951 11.8618 5.47951 12.0836 5.2577C12.3055 5.03589 12.3055 4.67628 12.0836 4.45447L9.54516 1.91635Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M3.56594 7.15349C3.45502 7.2644 3.45502 7.44421 3.56594 7.55511L6.44553 10.4343C6.55645 10.5452 6.73628 10.5452 6.8472 10.4343L10.532 6.75062C10.6429 6.63972 10.6429 6.45826 10.532 6.34736L7.65201 3.46775C7.54109 3.35684 7.35962 3.35686 7.2487 3.46776L3.56594 7.15349Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M2.19524 8.86971L1.75917 11.4857C1.68515 11.9298 2.07022 12.3148 2.51438 12.2408L5.13075 11.8048C5.30659 11.7755 5.4736 11.7109 5.62214 11.6159C5.75429 11.5314 5.75314 11.3484 5.64223 11.2375L2.76264 8.35831C2.65172 8.2474 2.46869 8.24626 2.38417 8.37839C2.28917 8.52691 2.22454 8.6939 2.19524 8.86971Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M7.58333 11.0833C7.26117 11.0833 7 11.3445 7 11.6667C7 11.9888 7.26117 12.25 7.58333 12.25H11.6667C11.9888 12.25 12.25 11.9888 12.25 11.6667C12.25 11.3445 11.9888 11.0833 11.6667 11.0833H7.58333Z"
+                              fill="#33CFFF" />
+                          </svg>
+
+                        </button>
+                        <button
+                          class="w-[28px] h-[28px] bg-[#FFF0F3] rounded-[6px] hover:bg-red-100 transition-colors flex items-center justify-center">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 2.5H4.26772C4.38903 1.65193 5.11838 1 6 1C6.88162 1 7.61097 1.65193 7.73228 2.5H9.5C9.77614 2.5 10 2.72386 10 3C10 3.27614 9.77614 3.5 9.5 3.5H2.5C2.22386 3.5 2 3.27614 2 3C2 2.72386 2.22386 2.5 2.5 2.5ZM6 2C6.32655 2 6.60436 2.2087 6.70732 2.5H5.29268C5.39564 2.2087 5.67345 2 6 2Z"
+                              fill="#DF1C41" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.9235 4H3.07651C2.77224 4 2.5385 4.26949 2.58154 4.57071L3.31602 9.71213C3.42159 10.4511 4.05447 11 4.80095 11H7.19906C7.94554 11 8.57842 10.4511 8.68399 9.71213L9.41848 4.57071C9.46151 4.26949 9.22778 4 8.9235 4ZM5.00001 5.5C5.27615 5.5 5.50001 5.72386 5.50001 6V9C5.50001 9.27614 5.27615 9.5 5.00001 9.5C4.72386 9.5 4.50001 9.27614 4.50001 9V6C4.50001 5.72386 4.72386 5.5 5.00001 5.5ZM7 5.5C7.27615 5.5 7.5 5.72386 7.5 6V9C7.5 9.27614 7.27615 9.5 7 9.5C6.72386 9.5 6.50001 9.27614 6.50001 9V6C6.50001 5.72386 6.72386 5.5 7 5.5Z"
+                              fill="#DF1C41" />
+                          </svg>
+
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Row 2 -->
+                  <tr>
+                    <td class="py-[16px] px-[16px] text-sm text-[#0D0D12] font-medium min-w-[140px] flex flex-col">
+                      <span>Sophia Turner</span>
+                      <ul class="mt-[2px]">
+                        <li class="text-xs leading-[150%] font-medium text-[#666D80]">Statut : <span
+                            class="text-[#FF2D55]">En attente</span></li>
+                        <li class="text-xs leading-[150%] font-medium text-[#666D80]">Position : <span
+                            class="text-[#0189D5]">02</span></li>
+                      </ul>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <div class="flex flex-col">
+                        <span class="text-xs text-[#0D0D12] font-medium leading-[150%]">+237 691 67 90 45</span>
+                        <a href="#"
+                          class="text-[10px] text-[#666D80] font-medium leading-[150%]">sophiaturner@example.com</span>
+                      </div>
+                    </td>
+                    <td class="py-[16px] px-[16px] text-xs text-[#0D0D12] font-medium leading-[150%] min-w-[160px]">
+                      ESPACE
+                      COWORKING</td>
+                    <td class="py-[16px] px-[16px]">
+                      <span
+                        class="inline-block px-[18px] py-[6px] rounded-[6px] bg-[#E6F3FB] border border-[#0189D5] text-[#0189D5] text-xs font-medium capitalize cursor-pointer">GRATUIT</span>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <button
+                        class="flex items-center gap-[4px] pl-[6px] pr-[8px] py-[6px] rounded-[6px] bg-[#E6F3FB] border border-[#0189D5] text-[#0189D5] text-xs font-medium capitalize cursor-pointer">
+                        <span>Télécharger</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.1445 13.9582V2.2915" stroke="#0189D5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M15.9419 17.2917H4.34766" stroke="#0189D5" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M14 10L9.9996 14L6 10" stroke="#0189D5" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </button>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <div class="flex items-center gap-2">
+                        <button
+                          class="w-[28px] h-[28px] bg-[#F0FBFF] rounded-[6px] hover:bg-blue-100 transition-colors flex items-center justify-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.54516 1.91635C9.32333 1.69455 8.96366 1.69455 8.74182 1.91635C8.51998 2.13816 8.51998 2.49778 8.74182 2.71959L11.2803 5.2577C11.5021 5.47951 11.8618 5.47951 12.0836 5.2577C12.3055 5.03589 12.3055 4.67628 12.0836 4.45447L9.54516 1.91635Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M3.56594 7.15349C3.45502 7.2644 3.45502 7.44421 3.56594 7.55511L6.44553 10.4343C6.55645 10.5452 6.73628 10.5452 6.8472 10.4343L10.532 6.75062C10.6429 6.63972 10.6429 6.45826 10.532 6.34736L7.65201 3.46775C7.54109 3.35684 7.35962 3.35686 7.2487 3.46776L3.56594 7.15349Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M2.19524 8.86971L1.75917 11.4857C1.68515 11.9298 2.07022 12.3148 2.51438 12.2408L5.13075 11.8048C5.30659 11.7755 5.4736 11.7109 5.62214 11.6159C5.75429 11.5314 5.75314 11.3484 5.64223 11.2375L2.76264 8.35831C2.65172 8.2474 2.46869 8.24626 2.38417 8.37839C2.28917 8.52691 2.22454 8.6939 2.19524 8.86971Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M7.58333 11.0833C7.26117 11.0833 7 11.3445 7 11.6667C7 11.9888 7.26117 12.25 7.58333 12.25H11.6667C11.9888 12.25 12.25 11.9888 12.25 11.6667C12.25 11.3445 11.9888 11.0833 11.6667 11.0833H7.58333Z"
+                              fill="#33CFFF" />
+                          </svg>
+
+                        </button>
+                        <button
+                          class="w-[28px] h-[28px] bg-[#FFF0F3] rounded-[6px] hover:bg-red-100 transition-colors flex items-center justify-center">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 2.5H4.26772C4.38903 1.65193 5.11838 1 6 1C6.88162 1 7.61097 1.65193 7.73228 2.5H9.5C9.77614 2.5 10 2.72386 10 3C10 3.27614 9.77614 3.5 9.5 3.5H2.5C2.22386 3.5 2 3.27614 2 3C2 2.72386 2.22386 2.5 2.5 2.5ZM6 2C6.32655 2 6.60436 2.2087 6.70732 2.5H5.29268C5.39564 2.2087 5.67345 2 6 2Z"
+                              fill="#DF1C41" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.9235 4H3.07651C2.77224 4 2.5385 4.26949 2.58154 4.57071L3.31602 9.71213C3.42159 10.4511 4.05447 11 4.80095 11H7.19906C7.94554 11 8.57842 10.4511 8.68399 9.71213L9.41848 4.57071C9.46151 4.26949 9.22778 4 8.9235 4ZM5.00001 5.5C5.27615 5.5 5.50001 5.72386 5.50001 6V9C5.50001 9.27614 5.27615 9.5 5.00001 9.5C4.72386 9.5 4.50001 9.27614 4.50001 9V6C4.50001 5.72386 4.72386 5.5 5.00001 5.5ZM7 5.5C7.27615 5.5 7.5 5.72386 7.5 6V9C7.5 9.27614 7.27615 9.5 7 9.5C6.72386 9.5 6.50001 9.27614 6.50001 9V6C6.50001 5.72386 6.72386 5.5 7 5.5Z"
+                              fill="#DF1C41" />
+                          </svg>
+
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -566,500 +720,179 @@
     </div>
   </footer>
   <!-- Modal -->
-  <div id="success-modal" class="modal-overlay fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50">
-    <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-      <div
-        class="relative transform overflow-visible rounded-[20px] bg-white text-left shadow-xl transition-all sm:my-8 w-full max-w-[648px] flex flex-col z-[10000]">
-        <!-- Header -->
-        <div class="px-6 sm:px-8 pt-8 pb-[12px] lg:pb-5  flex-shrink-0">
-          <h3
-            class="text-[#0189D5] lg:text-[#0B0B0B] text-sm lg:text-xl font-medium lg:font-semibold font-Archivo inline-block lg:px-0 lg:py-0 px-4 py-2 rounded-full border-[1px] border-[#0189D5] bg-[#E6F3FB] lg:bg-transparent lg:border-transparent">
-            Ajouter un participant</h3>
-        </div>
-        <div class="border-t-[1px] border-[#697A8D]/40 mx-4 sm:mx-8 hidden lg:block "></div>
-        <!-- Content -->
-        <div class="pt-5 px-6 sm:px-8 pb-[24px] space-y-[14px]">
-          <!-- Name Fields -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm text-[#161924] font-medium mb-[6px]">Prénom</label>
-              <input type="text" placeholder="Ex : Maulana"
-                class="w-full h-[42px] px-3 bg-white border border-[#E8E8E9] rounded-[8px] text-base font-poppins font-medium outline-none focus:border-[#0189D5] placeholder:text-[#E0E0E0]">
-            </div>
-            <div>
-              <label class="block text-sm text-[#161924] font-medium mb-[6px]">Nom</label>
-              <input type="text" placeholder="Ex : Pratama"
-                class="w-full h-[42px] px-3 bg-white border border-[#E8E8E9] rounded-[8px] text-base font-poppins font-medium outline-none focus:border-[#0189D5] placeholder:text-[#E0E0E0]">
-            </div>
-          </div>
+  <div id="success-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Logo -->
+      <img src="./images/logo-header.svg" alt="Sunday Events" class="h-[48px] mb-6" />
 
-          <!-- Email and Phone -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm text-[#161924] font-medium mb-[6px]">Adresse email</label>
-              <input type="email" placeholder="Entrer l'adresse mail"
-                class="w-full h-[42px] px-3 bg-white border border-[#E8E8E9] rounded-[8px] text-base font-poppins font-medium outline-none focus:border-[#0189D5] placeholder:text-[#E0E0E0]">
-            </div>
-            <div>
-              <label class="block text-sm text-[#161924] font-medium mb-[6px]">N°Tel</label>
-              <div
-                class="flex h-[42px] border border-[#E8E8E9] rounded-[8px] focus-within:border-[#0189D5] relative z-30">
-                <!-- Country Code Dropdown -->
-                <div class="relative group-dropdown h-full">
-                  <button type="button" onclick="toggleDropdown('menu-phone-country', 'icon-phone-country')"
-                    class="h-full px-3 bg-white flex items-center gap-2  cursor-pointer hover:bg-gray-50 rounded-l-[8px] outline-none">
-                    <div class="w-5 h-5 rounded-full overflow-hidden shrink-0">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/cm.svg" alt="CM"
-                        class="w-full h-full object-cover">
-                    </div>
-                    <span id="country-code-text" class="text-sm text-[#14201F] font-medium">+237</span>
-                    <svg id="icon-phone-country" class="transition-transform duration-300" width="8" height="4"
-                      viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 0L4 4L8 0" fill="#161924" />
-                    </svg>
+      <!-- Icon -->
+      <div class="mb-[32px] relative flex items-center justify-center">
+        <img src="./images/sucess.png" alt="success" />
+      </div>
 
-                  </button>
-                  <!-- Dropdown Menu -->
-                  <div id="menu-phone-country"
-                    class="hidden absolute top-[calc(100%+4px)] left-0 w-[240px] bg-white border border-[#E5E7EB] rounded-[8px] shadow-lg max-h-[200px] overflow-y-auto z-50">
-                    <div onclick="selectPhoneCountry('cm', '+237', 'Cameroun')"
-                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/cm.svg" alt="CM"
-                        class="w-5 h-5 rounded-full object-cover"> <span>+237</span> <span
-                        class="text-gray-400">Cameroun</span>
-                    </div>
-                    <div onclick="selectPhoneCountry('fr', '+33', 'France')"
-                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/fr.svg" alt="FR"
-                        class="w-5 h-5 rounded-full object-cover"> <span>+33</span> <span
-                        class="text-gray-400">France</span>
-                    </div>
-                    <div onclick="selectPhoneCountry('us', '+1', 'USA')"
-                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/us.svg" alt="US"
-                        class="w-5 h-5 rounded-full object-cover"> <span>+1</span> <span
-                        class="text-gray-400">USA</span>
-                    </div>
-                    <div onclick="selectPhoneCountry('gb', '+44', 'UK')"
-                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/gb.svg" alt="GB"
-                        class="w-5 h-5 rounded-full object-cover"> <span>+44</span> <span
-                        class="text-gray-400">UK</span>
-                    </div>
-                    <div onclick="selectPhoneCountry('de', '+49', 'Germany')"
-                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/de.svg" alt="DE"
-                        class="w-5 h-5 rounded-full object-cover"> <span>+49</span> <span
-                        class="text-gray-400">Germany</span>
-                    </div>
-                    <div onclick="selectPhoneCountry('ga', '+241', 'Gabon')"
-                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/ga.svg" alt="GA"
-                        class="w-5 h-5 rounded-full object-cover"> <span>+241</span> <span
-                        class="text-gray-400">Gabon</span>
-                    </div>
-                    <div onclick="selectPhoneCountry('ng', '+234', 'Nigeria')"
-                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/ng.svg" alt="NG"
-                        class="w-5 h-5 rounded-full object-cover"> <span>+234</span> <span
-                        class="text-gray-400">Nigeria</span>
-                    </div>
-                    <div onclick="selectPhoneCountry('sn', '+221', 'Senegal')"
-                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/sn.svg" alt="SN"
-                        class="w-5 h-5 rounded-full object-cover"> <span>+221</span> <span
-                        class="text-gray-400">Senegal</span>
-                    </div>
-                    <div onclick="selectPhoneCountry('ci', '+225', 'Ivory Coast')"
-                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
-                      <img src="https://circle-flags.cdn.skk.moe/flags/ci.svg" alt="CI"
-                        class="w-5 h-5 rounded-full object-cover"> <span>+225</span> <span class="text-gray-400">Ivory
-                        Coast</span>
-                    </div>
-                  </div>
-                </div>
-                <input type="tel" placeholder="numéro"
-                  class="flex-1 px-3 text-base font-medium outline-none placeholder:text-[#E0E0E0] bg-transparent h-full rounded-r-[8px]">
+      <!-- Content -->
+      <h2 class="text-[#161924] text-[32px] font-semibold leading-[120%] mb-6 !font-Archivo">Succès</h2>
+
+      <div class="border-[1px] border-[#E7E9E9] bg-[#F9FAFA] rounded-[12px] p-[14px] space-y-4">
+        <p class="text-[#73757C] text-[16px] font-medium leading-[120%]">Les participants suivants sont sur liste
+          d'attente</p>
+        <div class="bg-[#E6F3FB] rounded-[12px] p-[14px]">
+          <!-- 1 -->
+          <div class="flex flex-col items-start justify-between">
+            <span class="text-[#0D0D12] text-[14px] font-medium leading-[150%]">Sophia Turner</span>
+            <div class="flex flex-row items-start gap-[18px]">
+              <div class="min-w-[111px] text-[#666D80] text-[12px] font-medium leading-[150%] text-start">Statut :
+                <span class="text-[#FF2D55]">En
+                  attente</span>
               </div>
+              <div class=" text-[#666D80] text-[12px] font-medium leading-[150%]">Position : <span
+                  class="text-[#0189D5]">02</span></div>
             </div>
           </div>
-          <div class="border-t-[1px] border-[#697A8D]/40"></div>
-          <!-- Lieu de participation -->
-          <div>
-            <label class="block text-sm text-[#14201F] font-medium mb-3">Lieu de participation</label>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="location-cards">
-              <!-- Location Card 1 - Selected -->
-              <div onclick="selectLocationCard(this)"
-                class="location-card selected bg-white border-[1px] border-[#0189D5] rounded-[12px] cursor-pointer transition-all flex flex-col overflow-visible relative">
-                <!-- Top color bar -->
-                <div
-                  class="location-card-header w-full h-[29px] bg-[#E6F3FB] border-b border-[#0189D5] rounded-t-[10px]">
-                </div>
-
-                <!-- Icon -->
-                <div
-                  class="location-card-icon w-[36px] h-[36px] rounded-full bg-[#0189D5]  border-[1px] border-[#0189D5]  flex items-center justify-center shrink-0 shadow-sm absolute top-[11px] left-4 z-10">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.4"
-                      d="M17.1829 7.04165C16.3079 3.19165 12.9496 1.45831 9.99959 1.45831C9.99959 1.45831 9.99959 1.45831 9.99126 1.45831C7.04959 1.45831 3.68292 3.18331 2.80792 7.03331C1.83292 11.3333 4.46626 14.975 6.84959 17.2666C7.73292 18.1166 8.86626 18.5416 9.99959 18.5416C11.1329 18.5416 12.2663 18.1166 13.1413 17.2666C15.5246 14.975 18.1579 11.3416 17.1829 7.04165Z"
-                      fill="white" />
-                    <path
-                      d="M10 11.2167C11.4497 11.2167 12.625 10.0414 12.625 8.59168C12.625 7.14193 11.4497 5.96667 10 5.96667C8.55025 5.96667 7.375 7.14193 7.375 8.59168C7.375 10.0414 8.55025 11.2167 10 11.2167Z"
-                      fill="white" />
-                  </svg>
-                </div>
-
-                <!-- Content -->
-                <div class="px-4 pb-[12px] pt-[24px]">
-                  <h4 class="text-[#161924] text-base font-medium leading-tight ">Douala - Salle des fêtes d'Akwa
-                  </h4>
-                  <p class="text-[#5A5C66] text-sm mt-1 font-medium">20 Nov 2025 | 12:00 - 18:00</p>
-                </div>
+          <!-- divider -->
+          <div class="border-b-[1px] border-[#697A8D]/40 my-[10px]"></div>
+          <!-- 2 -->
+          <div class="flex flex-col items-start justify-between">
+            <span class="text-[#0D0D12] text-[14px] font-medium leading-[150%]">Sophia Turner</span>
+            <div class="flex flex-row items-start gap-[18px]">
+              <div class="min-w-[111px] text-[#666D80] text-[12px] font-medium leading-[150%] text-start">Statut :
+                <span class="text-[#FF2D55]">En
+                  attente</span>
               </div>
-
-              <!-- Location Card 2 -->
-              <div onclick="selectLocationCard(this)"
-                class="location-card bg-white border-[1px] border-[#E8E8E9] rounded-[12px] cursor-pointer transition-all hover:border-[#0189D5] flex flex-col overflow-visible relative">
-                <!-- Top color bar -->
-                <div
-                  class="location-card-header w-full h-[29px] bg-[#F4F5F5] border-b border-[#E8E8E9] rounded-t-[10px]">
-                </div>
-
-                <!-- Icon -->
-                <div
-                  class="location-card-icon w-[36px] h-[36px] rounded-full bg-[#F4F5F5] border-[1px] border-[#E8E8E9] flex items-center justify-center shrink-0 shadow-sm absolute top-[11px] left-4 z-10 text-[#C7C7CC] hover:text-[#0189D5]">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.4"
-                      d="M17.1829 7.04165C16.3079 3.19165 12.9496 1.45831 9.99959 1.45831C9.99959 1.45831 9.99959 1.45831 9.99126 1.45831C7.04959 1.45831 3.68292 3.18331 2.80792 7.03331C1.83292 11.3333 4.46626 14.975 6.84959 17.2666C7.73292 18.1166 8.86626 18.5416 9.99959 18.5416C11.1329 18.5416 12.2663 18.1166 13.1413 17.2666C15.5246 14.975 18.1579 11.3416 17.1829 7.04165Z"
-                      fill="currentColor" />
-                    <path
-                      d="M10 11.2167C11.4497 11.2167 12.625 10.0414 12.625 8.59168C12.625 7.14193 11.4497 5.96667 10 5.96667C8.55025 5.96667 7.375 7.14193 7.375 8.59168C7.375 10.0414 8.55025 11.2167 10 11.2167Z"
-                      fill="currentColor" />
-                  </svg>
-
-                </div>
-
-                <!-- Content -->
-                <div class="px-4 pb-[12px] pt-[24px]">
-                  <h4 class="text-[#161924] text-base font-medium leading-tight">Douala - Salle des fêtes d'Akwa
-                  </h4>
-                  <p class="text-[#5A5C66] text-sm mt-1 font-medium">20 Nov 2025 | 12:00 - 18:00</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="border-t-[1px] border-[#697A8D]/40"></div>
-          <!-- Forfaits -->
-          <div>
-            <label class="block text-sm text-[#14201F] font-medium mb-3">Forfaits</label>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="package-cards">
-              <!-- Package Card 1 - Selected -->
-              <div onclick="selectPackageCard(this)"
-                class="package-card selected bg-white border-[1px] border-[#0189D5] rounded-[12px] cursor-pointer transition-all flex flex-col overflow-visible relative">
-                <!-- Top color bar -->
-                <div
-                  class="package-card-header w-full h-[29px] bg-[#E6F3FB] border-b border-[#0189D5] rounded-t-[10px]">
-                </div>
-
-                <!-- Icon -->
-                <div
-                  class="package-card-icon w-[36px] h-[36px] rounded-full bg-[#0189D5] border-[1px] border-[#0189D5] flex items-center justify-center shrink-0 shadow-sm absolute top-[11px] left-4 z-10">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.4"
-                      d="M16.0834 6.59999V10.8917C16.0834 13.4583 14.6167 14.5583 12.4167 14.5583H5.09171C4.71671 14.5583 4.35838 14.525 4.02504 14.45C3.81671 14.4167 3.61672 14.3584 3.43339 14.2917C2.18339 13.825 1.42505 12.7417 1.42505 10.8917V6.59999C1.42505 4.03332 2.89171 2.93335 5.09171 2.93335H12.4167C14.2834 2.93335 15.625 3.72501 15.9834 5.53335C16.0417 5.86668 16.0834 6.20832 16.0834 6.59999Z"
-                      fill="white" />
-                    <path
-                      d="M18.5837 9.09997V13.3917C18.5837 15.9583 17.1171 17.0583 14.9171 17.0583H7.59206C6.97539 17.0583 6.41706 16.975 5.93373 16.7917C4.94206 16.425 4.26706 15.6667 4.02539 14.45C4.35872 14.525 4.71706 14.5583 5.09206 14.5583H12.4171C14.6171 14.5583 16.0837 13.4583 16.0837 10.8917V6.59997C16.0837 6.2083 16.0504 5.85833 15.9837 5.53333C17.5671 5.86666 18.5837 6.9833 18.5837 9.09997Z"
-                      fill="white" />
-                    <path
-                      d="M8.75006 10.9501C9.96509 10.9501 10.9501 9.96509 10.9501 8.75006C10.9501 7.53503 9.96509 6.55005 8.75006 6.55005C7.53503 6.55005 6.55005 7.53503 6.55005 8.75006C6.55005 9.96509 7.53503 10.9501 8.75006 10.9501Z"
-                      fill="white" />
-                    <path
-                      d="M3.9834 6.875C3.64173 6.875 3.3584 7.15833 3.3584 7.5V10C3.3584 10.3417 3.64173 10.625 3.9834 10.625C4.32507 10.625 4.6084 10.3417 4.6084 10V7.5C4.6084 7.15833 4.3334 6.875 3.9834 6.875Z"
-                      fill="white" />
-                    <path
-                      d="M13.5088 6.875C13.1671 6.875 12.8838 7.15833 12.8838 7.5V10C12.8838 10.3417 13.1671 10.625 13.5088 10.625C13.8505 10.625 14.1338 10.3417 14.1338 10V7.5C14.1338 7.15833 13.8588 6.875 13.5088 6.875Z"
-                      fill="white" />
-                  </svg>
-
-                </div>
-                <!-- Content -->
-                <div class="px-4 pb-[12px] pt-[24px] flex justify-between items-start">
-                  <div>
-                    <h4 class="text-[#161924] text-base font-medium">Gratuit</h4>
-                    <p class="text-[#5A5C66] text-sm font-medium">Consulter annonce</p>
-                  </div>
-                  <span class="text-[#5A5C66] text-sm font-medium">XAF 0</span>
-                </div>
-              </div>
-
-              <!-- Package Card 2 -->
-              <div onclick="selectPackageCard(this)"
-                class="package-card bg-white border-[1px] border-[#E8E8E9] rounded-[12px] cursor-pointer transition-all hover:border-[#0189D5] flex flex-col overflow-visible relative">
-                <!-- Top color bar -->
-                <div
-                  class="package-card-header w-full h-[29px] bg-[#F4F5F5] border-b border-[#E8E8E9] rounded-t-[10px]">
-                </div>
-
-                <!-- Icon -->
-                <div
-                  class="package-card-icon w-[36px] h-[36px] rounded-full bg-[#F4F5F5] border-[1px] border-[#E8E8E9] flex items-center justify-center shrink-0 shadow-sm absolute top-[11px] left-4 z-10 text-[#C7C7CC] hover:text-[#0189D5]">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.4"
-                      d="M16.0834 6.59999V10.8917C16.0834 13.4583 14.6167 14.5583 12.4167 14.5583H5.09171C4.71671 14.5583 4.35838 14.525 4.02504 14.45C3.81671 14.4167 3.61672 14.3584 3.43339 14.2917C2.18339 13.825 1.42505 12.7417 1.42505 10.8917V6.59999C1.42505 4.03332 2.89171 2.93335 5.09171 2.93335H12.4167C14.2834 2.93335 15.625 3.72501 15.9834 5.53335C16.0417 5.86668 16.0834 6.20832 16.0834 6.59999Z"
-                      fill="currentColor" />
-                    <path
-                      d="M18.5837 9.09997V13.3917C18.5837 15.9583 17.1171 17.0583 14.9171 17.0583H7.59206C6.97539 17.0583 6.41706 16.975 5.93373 16.7917C4.94206 16.425 4.26706 15.6667 4.02539 14.45C4.35872 14.525 4.71706 14.5583 5.09206 14.5583H12.4171C14.6171 14.5583 16.0837 13.4583 16.0837 10.8917V6.59997C16.0837 6.2083 16.0504 5.85833 15.9837 5.53333C17.5671 5.86666 18.5837 6.9833 18.5837 9.09997Z"
-                      fill="currentColor" />
-                    <path
-                      d="M8.75006 10.9501C9.96509 10.9501 10.9501 9.96509 10.9501 8.75006C10.9501 7.53503 9.96509 6.55005 8.75006 6.55005C7.53503 6.55005 6.55005 7.53503 6.55005 8.75006C6.55005 9.96509 7.53503 10.9501 8.75006 10.9501Z"
-                      fill="currentColor" />
-                    <path
-                      d="M3.9834 6.875C3.64173 6.875 3.3584 7.15833 3.3584 7.5V10C3.3584 10.3417 3.64173 10.625 3.9834 10.625C4.32507 10.625 4.6084 10.3417 4.6084 10V7.5C4.6084 7.15833 4.3334 6.875 3.9834 6.875Z"
-                      fill="currentColor" />
-                    <path
-                      d="M13.5088 6.875C13.1671 6.875 12.8838 7.15833 12.8838 7.5V10C12.8838 10.3417 13.1671 10.625 13.5088 10.625C13.8505 10.625 14.1338 10.3417 14.1338 10V7.5C14.1338 7.15833 13.8588 6.875 13.5088 6.875Z"
-                      fill="currentColor" />
-                  </svg>
-
-                </div>
-
-                <!-- Content -->
-                <div class="px-4 pb-[12px] pt-[24px] flex justify-between items-start">
-                  <div>
-                    <h4 class="text-[#161924] text-base font-medium">Standard</h4>
-                    <p class="text-[#5A5C66] text-sm font-medium">Pass, Bonbon</p>
-                  </div>
-                  <span class="text-[#5A5C66] text-sm font-medium"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="border-t-[1px] border-[#697A8D]/40"></div>
-          <!-- Invitation Method -->
-          <div>
-            <label class="block text-sm text-[#14201F] font-medium mb-3">Comment souhaitez-vous recevoir votre
-              invitation
-              ?</label>
-            <div class="space-y-4 px-4 py-3 rounded-[12px] border-[1px] border-[#E8E8E9]">
-              <!-- Email Toggle -->
-              <div class="flex items-center gap-3">
-                <button type="button" onclick="toggleSwitch(this)"
-                  class="toggle-switch w-[44px] h-[24px] rounded-full bg-[#E5E7EB] relative transition-colors cursor-pointer">
-                  <span
-                    class="toggle-knob absolute top-[2px] left-[2px] w-[20px] h-[20px] rounded-full bg-white shadow-md transition-all"></span>
-                </button>
-                <span class="text-sm font-medium text-[#73757C]">Email</span>
-              </div>
-              <!-- Direct Download Toggle -->
-              <div class="flex items-center gap-3">
-                <button type="button" onclick="toggleSwitch(this)"
-                  class="toggle-switch active w-[44px] h-[24px] rounded-full bg-[#017BC0] relative transition-colors cursor-pointer">
-                  <span
-                    class="toggle-knob absolute top-[2px] left-[22px] w-[20px] h-[20px] rounded-full bg-white shadow-md transition-all"></span>
-                </button>
-                <span class="text-sm font-medium text-[#73757C]">Téléchargement direct</span>
-              </div>
+              <div class=" text-[#666D80] text-[12px] font-medium leading-[150%]">Position : <span
+                  class="text-[#0189D5]">02</span></div>
             </div>
           </div>
         </div>
-
-        <!-- Footer Buttons -->
-        <div class="px-6 sm:px-8 pb-[32px]  flex flex-col sm:flex-row gap-3 flex-shrink-0">
-          <button onclick="toggleModal('success-modal')"
-            class="flex-1 py-[10px] px-6 rounded-[8px] bg-[#C3C4C7] text-[#000000] font-medium text-sm hover:bg-[#b0b0b0] transition-colors">
-            Annuler
-          </button>
-          <button
-            class="flex-1 py-[10px] px-6 rounded-[8px] bg-[#008CCF] text-white font-medium text-sm hover:bg-[#007bb5] transition-colors">
-            Ajouter
-          </button>
+        <div>
+          <p class="text-[#73757C] text-[16px] font-medium leading-[120%]">vous pouvez annuler en cliquant sur le bouton
+          </p>
+          <a href="#" class="text-[#0189D5] text-xl font-medium leading-[120%]">Désister</a>
         </div>
       </div>
+      <!-- Button -->
+      <a href="./index.html"
+        class="w-auto min-w-[176px] py-[10px] px-[23px] rounded-[12px] ovbtn text-white font-medium text-sm  hover:bg-[#02a0c1] transition-colors flex items-center justify-center gap-2 mt-[27px]">
+        Nos évènements
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.7334 9.98332H16.2251" stroke="white" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M11.2354 4.98999L16.2662 9.99999L11.2354 15.01" stroke="white" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+
+      </a>
     </div>
+  </div>
 
-    <script>
-      // Phone country selector
-      function selectPhoneCountry(countryCode, code, country) {
-        const codeText = document.getElementById('country-code-text');
-        codeText.textContent = code;
 
-        // Update main flag image
-        const flagImg = document.querySelector('.group-dropdown img');
-        if (flagImg) {
-          flagImg.src = `https://circle-flags.cdn.skk.moe/flags/${countryCode}.svg`;
-          flagImg.alt = countryCode.toUpperCase();
-        }
+  <!-- js -->
+  <script>
+    function toggleDropdown(menuId, iconId) {
+      const menu = document.getElementById(menuId);
+      const icon = document.getElementById(iconId);
 
-        toggleDropdown('menu-phone-country', 'icon-phone-country');
+      // Check if currently open
+      const isOpen = !menu.classList.contains("hidden");
+
+      // 1. Close ALL dropdowns first (Standard UI behavior)
+      // This prevents having multiple menus floating open at once
+      document
+        .querySelectorAll('[id^="menu-"]')
+        .forEach((el) => el.classList.add("hidden"));
+      document
+        .querySelectorAll('[id^="icon-"]')
+        .forEach((el) => el.classList.remove("rotate-180"));
+
+      // 2. If it wasn't open before, open it now
+      if (!isOpen) {
+        menu.classList.remove("hidden");
+        icon.classList.add("rotate-180");
       }
+    }
 
-      // Location card selection
-      // Location card selection
-      function selectLocationCard(el) {
-        const cards = document.querySelectorAll('#location-cards .location-card');
-        cards.forEach(card => {
-          // Reset Card Container
-          card.classList.remove('selected', 'border-[#0189D5]', 'border-2', 'bg-white');
-          card.classList.add('border', 'border-[#E8E8E9]', 'bg-white');
+    // 3. Global Click Listener: Close dropdowns if clicking "outside"
+    document.addEventListener("click", function (event) {
+      // Check if the click is INSIDE any dropdown container
+      const isClickInside = event.target.closest(".group-dropdown");
 
-          // Reset Header
-          const header = card.querySelector('.location-card-header');
-          if (header) {
-            header.classList.remove('bg-[#E6F3FB]', 'border-[#0189D5]');
-            header.classList.add('bg-[#F4F5F5]', 'border-[#E8E8E9]');
-          }
-
-          // Reset Icon
-          const iconContainer = card.querySelector('.location-card-icon');
-          if (iconContainer) {
-            // Remove selected classes
-            iconContainer.classList.remove('bg-[#0189D5]', 'border-[#0189D5]');
-
-            // Add unselected classes
-            iconContainer.classList.add('bg-[#F4F5F5]', 'border-[#E8E8E9]', 'text-[#C7C7CC]', 'hover:text-[#0189D5]');
-            // User had border-[1px] in HTML, so we use border class if defined in Tailwind config or just assume border implies 1px
-            // Actually, Tailwind 'border' is 1px. User used 'border-[1px]'. 'border' is cleaner.
-            // But let's stick to what's in the snippet or standard 'border'.
-
-            // Set paths to currentColor
-            const paths = iconContainer.querySelectorAll('path');
-            paths.forEach(p => p.setAttribute('fill', 'currentColor'));
-          }
-        });
-
-        // Set Selected State
-        el.classList.remove('border', 'border-[#E8E8E9]');
-        el.classList.add('selected', 'border-[#0189D5]', 'border-2', 'bg-white');
-
-        // Set Header
-        const header = el.querySelector('.location-card-header');
-        if (header) {
-          header.classList.remove('bg-[#F4F5F5]', 'border-[#E8E8E9]');
-          header.classList.add('bg-[#E6F3FB]', 'border-[#0189D5]');
-        }
-
-        // Set Icon
-        const iconContainer = el.querySelector('.location-card-icon');
-        if (iconContainer) {
-          // Remove unselected classes
-          iconContainer.classList.remove('bg-[#F4F5F5]', 'border-[#E8E8E9]', 'text-[#C7C7CC]', 'hover:text-[#0189D5]');
-
-          // Add selected classes
-          iconContainer.classList.add('bg-[#0189D5]', 'border-[#0189D5]');
-
-          // Set paths to white
-          const paths = iconContainer.querySelectorAll('path');
-          paths.forEach(p => p.setAttribute('fill', 'white'));
-        }
-      }
-
-      // Package card selection
-      function selectPackageCard(el) {
-        const cards = document.querySelectorAll('#package-cards .package-card');
-        cards.forEach(card => {
-          // Reset Card Container
-          card.classList.remove('selected', 'border-[#0189D5]', 'border-2', 'bg-white');
-          card.classList.add('border', 'border-[#E8E8E9]', 'bg-white');
-
-          // Reset Header
-          const header = card.querySelector('.package-card-header');
-          if (header) {
-            header.classList.remove('bg-[#E6F3FB]', 'border-[#0189D5]');
-            header.classList.add('bg-[#F4F5F5]', 'border-[#E8E8E9]');
-          }
-
-          // Reset Icon
-          const iconContainer = card.querySelector('.package-card-icon');
-          if (iconContainer) {
-            iconContainer.classList.remove('bg-[#0189D5]', 'border-[#0189D5]');
-            iconContainer.classList.add('bg-[#F4F5F5]', 'border-[#E8E8E9]', 'text-[#C7C7CC]', 'hover:text-[#0189D5]');
-
-            const paths = iconContainer.querySelectorAll('path');
-            paths.forEach(p => p.setAttribute('fill', 'currentColor'));
-          }
-        });
-
-        // Set Selected State
-        el.classList.remove('border', 'border-[#E8E8E9]');
-        el.classList.add('selected', 'border-[#0189D5]', 'border-2', 'bg-white');
-
-        // Set Header
-        const header = el.querySelector('.package-card-header');
-        if (header) {
-          header.classList.remove('bg-[#F4F5F5]', 'border-[#E8E8E9]');
-          header.classList.add('bg-[#E6F3FB]', 'border-[#0189D5]');
-        }
-
-        // Set Icon
-        const iconContainer = el.querySelector('.package-card-icon');
-        if (iconContainer) {
-          iconContainer.classList.remove('bg-[#F4F5F5]', 'border-[#E8E8E9]', 'text-[#C7C7CC]', 'hover:text-[#0189D5]');
-          iconContainer.classList.add('bg-[#0189D5]', 'border-[#0189D5]');
-
-          const paths = iconContainer.querySelectorAll('path');
-          paths.forEach(p => p.setAttribute('fill', 'white'));
-        }
-      }
-
-      // Toggle switch
-      function toggleSwitch(el) {
-        const isActive = el.classList.contains('active');
-        const knob = el.querySelector('.toggle-knob');
-
-        if (isActive) {
-          el.classList.remove('active', 'bg-[#017BC0]');
-          el.classList.add('bg-[#E5E7EB]');
-          knob.style.left = '2px';
-        } else {
-          el.classList.add('active', 'bg-[#017BC0]');
-          el.classList.remove('bg-[#E5E7EB]');
-          knob.style.left = '22px';
-        }
-      }
-    </script>
-    <!-- js -->
-    <script>
-      function toggleDropdown(menuId, iconId) {
-        const menu = document.getElementById(menuId);
-        const icon = document.getElementById(iconId);
-
-        // Check if currently open
-        const isOpen = !menu.classList.contains("hidden");
-
-        // 1. Close ALL dropdowns first (Standard UI behavior)
-        // This prevents having multiple menus floating open at once
+      // If click is NOT inside a dropdown container, close everything
+      if (!isClickInside) {
         document
           .querySelectorAll('[id^="menu-"]')
           .forEach((el) => el.classList.add("hidden"));
         document
           .querySelectorAll('[id^="icon-"]')
           .forEach((el) => el.classList.remove("rotate-180"));
-
-        // 2. If it wasn't open before, open it now
-        if (!isOpen) {
-          menu.classList.remove("hidden");
-          icon.classList.add("rotate-180");
-        }
       }
+    });
 
-      // 3. Global Click Listener: Close dropdowns if clicking "outside"
-      document.addEventListener("click", function (event) {
-        // Check if the click is INSIDE any dropdown container
-        const isClickInside = event.target.closest(".group-dropdown");
+    // Payment Tab Switching
+    function selectCountry(country) {
+      const textSpan = document.getElementById('country-selected');
+      textSpan.textContent = country;
+      textSpan.classList.remove('text-[#E0E0E0]');
+      textSpan.classList.add('text-[#101010]');
 
-        // If click is NOT inside a dropdown container, close everything
-        if (!isClickInside) {
-          document
-            .querySelectorAll('[id^="menu-"]')
-            .forEach((el) => el.classList.add("hidden"));
-          document
-            .querySelectorAll('[id^="icon-"]')
-            .forEach((el) => el.classList.remove("rotate-180"));
+      toggleDropdown('menu-country', 'icon-country');
+    }
+
+    function switchPaymentTab(tab) {
+      const tabs = ['mobile', 'card', 'cash'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('pay-tab-' + t);
+        const content = document.getElementById('pay-content-' + t);
+        if (t === tab) {
+          btn.className = "pay-tab-btn w-[142px] h-[42px] flex justify-center items-center rounded-[6px] bg-[#03C3EC] text-white font-bold text-[15px] border border-[#03C3EC] cursor-pointer transition-all";
+          content.classList.remove('hidden');
+        } else {
+          btn.className = "pay-tab-btn w-[142px] h-[42px] flex justify-center items-center rounded-[6px] bg-white text-[#666D80] font-normal text-[15px] border border-[#DFE1E7] cursor-pointer hover:border-[#03C3EC] transition-all";
+          content.classList.add('hidden');
         }
       });
-    </script>
-    <script type="module" src="./js/index.js"></script>
+    }
+
+    // Payment Mode Selection
+    function selectMode(el) {
+      const container = el.closest('#payment-modes');
+      Array.from(container.children).forEach(child => {
+        // Reset to default
+        child.className = "pay-mode group flex items-center border border-[#D7D7D7] bg-white rounded-[16px] cursor-pointer transition-all hover:border-[#0189D5] hover:shadow-sm";
+        // Reset inner div
+        const innerDiv = child.firstElementChild;
+        innerDiv.className = "p-[11px] bg-[#F3F3F3] group-hover:bg-[#E6F3FB] transition-colors flex justify-center items-center h-full rounded-l-[16px] min-w-[68px]";
+      });
+
+      // Set active
+      el.className = "pay-mode group flex items-center border border-[#0189D5] bg-white rounded-[16px] cursor-pointer transition-all shadow-sm";
+      const activeInner = el.firstElementChild;
+      activeInner.className = "p-[11px] bg-[#E6F3FB] group-hover:bg-[#E6F3FB] transition-colors flex justify-center items-center h-full rounded-l-[16px] min-w-[68px]";
+    }
+
+    // Card Type Selection
+    function selectCard(el) {
+      const container = el.closest('#card-types');
+      Array.from(container.children).forEach(child => {
+        child.classList.remove('border-[#0189D5]', 'border-2');
+        child.classList.remove('border-[#E5E7EB]'); // Remove potential variant
+        child.classList.add('border-[#DFE1E7]', 'border');
+
+        const check = child.querySelector('.check');
+        if (check) check.classList.add('hidden');
+        const absoluteCheck = child.querySelector('div.absolute');
+        if (absoluteCheck) absoluteCheck.style.display = 'none';
+      });
+      el.classList.remove('border-[#DFE1E7]', 'border', 'border-[#E5E7EB]');
+      el.classList.add('border-[#0189D5]', 'border-2');
+      const check = el.querySelector('.check');
+      if (check) { check.classList.remove('hidden'); check.classList.add('flex'); }
+      const absoluteCheck = el.querySelector('div.absolute');
+      if (absoluteCheck) absoluteCheck.style.display = 'flex';
+    }
+  </script>
+  <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>

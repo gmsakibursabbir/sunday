@@ -172,11 +172,11 @@
   <!-- main -->
   <main class="relative z-10">
     <!-- details -->
-    <section class="pt-[24px] lg:pt-[31px] pb-[133px] lg:pb-[220px] px-5 ">
+    <section class="pt-[24px] lg:pt-[31px] pb-[80px] lg:pb-[220px] px-4 lg:px-5 ">
       <div
         class="w-full lg:max-w-[1291px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-[24px] lg:gap-[17px]">
         <!-- left -->
-        <div class="w-full h-auto lg:max-w-[360px] py-6 px-5 rounded-[16px] bg-white border-[1px] border-[#E5E7EB] ">
+        <div class="w-full h-auto lg:max-w-[360px] py-6 px-4 lg:px-5 rounded-[16px] bg-white border-[1px] border-[#E5E7EB] ">
           <!-- img -->
           <div
             class="mb-[27px] w-full min-h-[187px] rounded-[28px] bg-[url(../images/detailes-event-bg.png)] bg-cover bg-center bg-no-repeat">
@@ -190,7 +190,7 @@
           </div>
           <!-- middle -->
           <div class="pt-4">
-            <div class="flex flex-row items-center gap-[16px]">
+            <div class="flex flex-row items-center gap-4 mb-4">
               <a href="#"
                 class="w-[42px] h-[42px] rounded-[6px] inline-flex items-center justify-center bg-[#E6F3FB] shadow-xs gap-[4px] text-xl text-[#0189D5] leading-[23px]"><svg
                   width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -216,15 +216,15 @@
                 Partager
               </a>
             </div>
-            <p class="text-sm text-[#1FD7F3] leading-[36px] font-semibold italic hidden lg:block mt-4">
+            <p class="text-sm text-[#1FD7F3] leading-[36px] font-semibold italic hidden lg:block">
               Créée le 15 février 2025
             </p>
           </div>
           <!-- bottom -->
           <div class="w-full flex justify-center pt-[27px]">
-            <a href="#"
-              class="w-full md:w-auto px-[14px] py-[12px] rounded-[6px] bg-[#0589D3] text-xl font-normal leading-[23px] text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98] inline-flex flex-row items-center justify-center gap-[4px] text-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" class="hidden md:inline" fill="none"
+            <a href="./contact.html"
+              class="w-full md:w-auto px-[14px] py-[12px] rounded-[6px] bg-[#0589D3] text-xl font-normal leading-[23px] text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98] inline-flex flex-row items-center justify-center gap-[10px] text-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" class="" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M17.62 10.75C17.19 10.75 16.85 10.4 16.85 9.97998C16.85 9.60998 16.48 8.83998 15.86 8.16998C15.25 7.51998 14.58 7.13998 14.02 7.13998C13.59 7.13998 13.25 6.78998 13.25 6.36998C13.25 5.94998 13.6 5.59998 14.02 5.59998C15.02 5.59998 16.07 6.13998 16.99 7.10998C17.85 8.01998 18.4 9.14998 18.4 9.96998C18.4 10.4 18.05 10.75 17.62 10.75Z"
@@ -247,238 +247,351 @@
         <!-- right -->
         <div class="w-full h-auto lg:flex-1 py-5 px-3 lg:p-5 rounded-[16px] bg-[#E6F3FB] gap-5">
           <!-- 1 -->
-          <div class="h-auto px-[16px] pb-[26px] rounded-[16px] border-[1px] border-[#E5E7EB] bg-white flex flex-col">
-            <!-- Header -->
-            <div class="flex items-center py-[21px] px-[10px]">
-              <h3 class="text-[#0D0D12] text-xl font-semibold font-Inter leading-[150%]">Information de paiement</h3>
-            </div>
-            <!-- Tab Buttons -->
-            <div class="w-full flex flex-row flex-wrap gap-[12px] bg-[#F6F8FA] rounded-[16px] px-[20px] py-[15px]">
-              <button onclick="switchPaymentTab('mobile')" id="pay-tab-mobile"
-                class="pay-tab-btn w-[142px] h-[42px] flex justify-center items-center rounded-[6px] bg-[#03C3EC] text-white font-bold text-[15px] border border-[#03C3EC] cursor-pointer transition-all">Mobile
-                money</button>
-              <button onclick="switchPaymentTab('card')" id="pay-tab-card"
-                class="pay-tab-btn w-[142px] h-[42px] flex justify-center items-center rounded-[6px] bg-white text-[#666D80] font-normal text-[15px] border border-[#DFE1E7] cursor-pointer hover:border-[#03C3EC] transition-all">Carte
-                de crédit</button>
-              <button onclick="switchPaymentTab('cash')" id="pay-tab-cash"
-                class="pay-tab-btn w-[142px] h-[42px] flex justify-center items-center rounded-[6px] bg-white text-[#666D80] font-normal text-[15px] border border-[#DFE1E7] cursor-pointer hover:border-[#03C3EC] transition-all">Paiement
-                cash</button>
-            </div>
-            <!-- Tab Content -->
-            <div class="flex-1 mt-[24px]">
-              <!-- Mobile Money -->
-              <div id="pay-content-mobile" class="space-y-[24px]">
-                <div><label class="text-[#101010] text-base font-medium">Pays</label>
-                  <div class="relative mt-2 group-dropdown">
-                    <button type="button" onclick="toggleDropdown('menu-country', 'icon-country')"
-                      class="w-full h-[52px] px-4 bg-white border border-[#E5E7EB] rounded-[8px] flex items-center font-medium justify-between outline-none focus:border-[#03C3EC] cursor-pointer">
-                      <span id="country-selected" class="text-[#E0E0E0] text-sm">Sélectionner le pays</span>
-                      <svg id="icon-country" class="transition-transform duration-300" width="20" height="20"
-                        fill="none">
-                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#666D80" stroke-width="1.5" stroke-linecap="round" />
-                      </svg>
-                    </button>
-                    <!-- Dropdown Menu -->
-                    <div id="menu-country"
-                      class="hidden absolute top-[calc(100%+8px)] left-0 w-full bg-white border border-[#E5E7EB] rounded-[8px] shadow-lg z-20 overflow-hidden">
-                      <div onclick="selectCountry('Cameroun')"
-                        class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm !text-[#101010] transition-colors">
-                        Cameroun</div>
-                      <div onclick="selectCountry('France')"
-                        class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm !text-[#101010] transition-colors">
-                        France</div>
-                      <div onclick="selectCountry('Gabon')"
-                        class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm !text-[#101010] transition-colors">
-                        Gabon</div>
-                    </div>
-                  </div>
-                </div>
-                <div><label class="text-[#101010] text-base font-medium">Mode de paiement<span
-                      class="text-red-500">*</span></label>
-                  <div class="grid grid-cols-2 lg:grid-cols-4 gap-[14px] mt-6" id="payment-modes">
-                    <!-- Orange Money -->
-                    <div onclick="selectMode(this, 'om')" id="mode-om"
-                      class="pay-mode group flex items-center border border-[#0189D5] bg-white rounded-[16px] cursor-pointer transition-all hover:border-[#0189D5] shadow-sm">
-                      <div
-                        class="p-[11px] bg-[#E6F3FB] group-hover:bg-[#E6F3FB] transition-colors flex justify-center items-center h-full rounded-l-[16px] min-w-[68px]">
-                        <img src="./images/mdp-01.png" alt="Orange Money"
-                          class="w-full h-full object-contain max-w-[46px] max-h-[46px]">
-                      </div>
-                      <span
-                        class="text-sm font-medium text-[#141511] px-[11px] whitespace-nowrap overflow-hidden text-ellipsis">Orange
-                        Money</span>
-                    </div>
-                    <!-- Mobile Money -->
-                    <div onclick="selectMode(this, 'momo')" id="mode-momo"
-                      class="pay-mode group flex items-center border border-[#D7D7D7] bg-white rounded-[16px] cursor-pointer transition-all hover:border-[#0189D5] hover:shadow-sm">
-                      <div
-                        class="p-[11px] bg-[#F3F3F3] group-hover:bg-[#E6F3FB] transition-colors flex justify-center items-center h-full rounded-l-[16px] min-w-[68px]">
-                        <img src="./images/mdp-02.png" alt="Orange Money"
-                          class="w-full h-full object-contain max-w-[46px] max-h-[46px]">
-                      </div>
-                      <span
-                        class="text-sm font-medium text-[#141511] px-[11px] whitespace-nowrap overflow-hidden text-ellipsis">Mobile
-                        Money</span>
-                    </div>
-                    <!-- Autre mode 1 -->
-                    <div onclick="selectMode(this, 'other1')" id="mode-other1"
-                      class="pay-mode group flex items-center border border-[#D7D7D7] bg-white rounded-[16px] cursor-pointer transition-all hover:border-[#0189D5] hover:shadow-sm">
-                      <div
-                        class="p-[11px] bg-[#F3F3F3] group-hover:bg-[#E6F3FB] transition-colors flex justify-center items-center h-full rounded-l-[16px] min-w-[68px]">
-                        <img src="./images/mdp-03.png" alt="Orange Money"
-                          class="w-full h-full object-contain max-w-[46px] max-h-[46px]">
-                      </div>
-                      <span
-                        class="text-sm font-medium text-[#141511] px-[11px] whitespace-nowrap overflow-hidden text-ellipsis">Autre
-                        mode 1</span>
-                    </div>
-                    <!-- Autre mode 2 -->
-                    <div onclick="selectMode(this, 'other2')" id="mode-other2"
-                      class="pay-mode group flex items-center border border-[#D7D7D7] bg-white rounded-[16px] cursor-pointer transition-all hover:border-[#0189D5] hover:shadow-sm">
-                      <div
-                        class="p-[11px] bg-[#F3F3F3] group-hover:bg-[#E6F3FB] transition-colors flex justify-center items-center h-full rounded-l-[16px] min-w-[68px]">
-                        <img src="./images/mdp-03.png" alt="Orange Money"
-                          class="w-full h-full object-contain max-w-[46px] max-h-[46px]">
-                      </div>
-                      <span
-                        class="text-sm font-medium text-[#141511] px-[11px] whitespace-nowrap overflow-hidden text-ellipsis">Autre
-                        mode 2</span>
-                    </div>
-                    <!-- Autre mode 3 -->
-                    <div onclick="selectMode(this, 'other2')" id="mode-other2"
-                      class="pay-mode group flex items-center border border-[#D7D7D7] bg-white rounded-[16px] cursor-pointer transition-all hover:border-[#0189D5] hover:shadow-sm">
-                      <div
-                        class="p-[11px] bg-[#F3F3F3] group-hover:bg-[#E6F3FB] transition-colors flex justify-center items-center h-full rounded-l-[16px] min-w-[68px]">
-                        <img src="./images/mdp-03.png" alt="Orange Money"
-                          class="w-full h-full object-contain max-w-[46px] max-h-[46px]">
-                      </div>
-                      <span
-                        class="text-sm font-medium text-[#141511] px-[11px] whitespace-nowrap overflow-hidden text-ellipsis">Autre
-                        mode 3</span>
-                    </div>
-                    <!-- Autre mode 4 -->
-                    <div onclick="selectMode(this, 'other2')" id="mode-other2"
-                      class="pay-mode group flex items-center border border-[#D7D7D7] bg-white rounded-[16px] cursor-pointer transition-all hover:border-[#0189D5] hover:shadow-sm">
-                      <div
-                        class="p-[11px] bg-[#F3F3F3] group-hover:bg-[#E6F3FB] transition-colors flex justify-center items-center h-full rounded-l-[16px] min-w-[68px]">
-                        <img src="./images/mdp-03.png" alt="Orange Money"
-                          class="w-full h-full object-contain max-w-[46px] max-h-[46px]">
-                      </div>
-                      <span
-                        class="text-sm font-medium text-[#141511] px-[11px] whitespace-nowrap overflow-hidden text-ellipsis">Autre
-                        mode 4</span>
-                    </div>
-                  </div>
-                </div>
-                <div><label class="text-[#101010] text-base font-medium">Numéro de téléphone<span
-                      class="text-red-500">*</span></label><input type="text" placeholder="Exp : +237 123 456 789"
-                    class="w-full h-[52px] px-4 mt-2 bg-white border border-[#E5E7EB] rounded-[8px] text-sm outline-none focus:border-[#03C3EC] placeholder:text-[#E0E0E0]">
-                </div>
-              </div>
-              <!-- Credit Card -->
-              <div id="pay-content-card" class="hidden ">
-                <div class="flex gap-4 mb-[24px]" id="card-types">
-                  <div onclick="selectCard(this)"
-                    class="card-type w-[102px] h-[51px] border-2 border-[#0189D5] rounded-[6px] flex items-center justify-center cursor-pointer relative bg-[#FBFAF8]">
-                    <svg width="65" height="20" viewBox="0 0 65 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M42.4297 0C44.4653 4.32049e-05 46.0951 0.417714 47.1348 0.806641L46.4238 4.96582L45.9521 4.74609C44.9838 4.3564 43.7415 3.98306 42.0225 4.00977C39.9675 4.00977 39.0176 4.8649 39.0176 5.66113C39.0056 6.55954 40.1287 7.15343 41.9648 8.04199C44.9925 9.41046 46.3901 11.0722 46.3711 13.2559C46.3312 17.24 42.7485 19.8143 37.2295 19.8145C34.8747 19.7908 32.6085 19.3249 31.3809 18.79L32.1182 14.4922L32.7949 14.7979C34.5193 15.5146 35.6348 15.8047 37.7363 15.8047C39.2452 15.8047 40.8636 15.2172 40.877 13.9307C40.8877 13.0909 40.1997 12.4898 38.1572 11.5508C36.1651 10.6308 33.5283 9.09403 33.5566 6.33398C33.5873 2.60423 37.2424 0 42.4297 0ZM64.8467 19.5342H59.9746C59.9741 19.532 59.494 17.3296 59.3369 16.6582C58.571 16.6582 53.2169 16.6514 52.6133 16.6514C52.4092 17.1705 51.5078 19.5342 51.5078 19.5342H45.9941L53.791 1.94531C54.3446 0.694483 55.2836 0.35354 56.541 0.353516H60.5986L64.8467 19.5342ZM28.0938 19.5293H22.8457L26.1279 0.334961H31.3779L28.0938 19.5293ZM24.0029 0.348633L15.7383 19.5059L10.1836 19.5137L5.48438 2.72559C8.81662 4.38832 11.7986 7.71023 12.7549 10.7773L13.3027 13.4375L18.4424 0.348633H24.0029ZM56.9111 5.52637C56.6458 6.24619 56.1844 7.4096 56.2158 7.3584C56.2158 7.3584 54.558 11.6184 54.123 12.7246H58.4824C58.2714 11.7619 57.2656 7.18164 57.2656 7.18164L56.9111 5.52637Z"
-                        fill="#1A1F71" />
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M8.53348 0.336121H0.0667097L0 0.735001C6.58663 2.32517 10.945 6.1642 12.7538 10.7781L10.9128 1.95609C10.5953 0.74035 9.67291 0.378148 8.53348 0.336121Z"
-                        fill="#F9A51A" />
-                    </svg>
-                    <div
-                      class="absolute -top-2 -right-2 w-5 h-5 bg-[#0189D5] rounded-full flex items-center justify-center">
-                      <svg width="8" height="6" fill="none">
-                        <path d="M1 3L3 5L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div onclick="selectCard(this)"
-                    class="card-type w-[102px] h-[51px] border border-[#DFE1E7] rounded-lg flex items-center justify-center cursor-pointer relative bg-[#FBFAF8] hover:border-[#0189D5]">
-                    <svg width="38" height="33" viewBox="0 0 38 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M20.6377 21.1816H12.0547V23.542H20.4414V26.709H12.0547V29.1729H20.6377V32.4229H8.15625V17.9316H20.6377V21.1816ZM29.418 22.3828L33.0312 17.9316H37.7842L31.6533 25.1152L37.8281 32.4229H32.9443L29.3096 27.9297L25.6973 32.4229H20.9453L27.0537 25.1973L20.9238 17.9316H25.8057L29.418 22.3828ZM18.1738 14.4912H13.7949L12.5244 11.5312H5.5625L4.29199 14.4912H0L6.56836 0H11.627L18.1738 14.4912ZM28.2227 9.23242L31.6387 0H37.7705V14.4912H33.916V3.76758L29.8643 14.4912H26.4717L22.4434 3.76758V14.4912H18.5879V0H24.7842L28.2227 9.23242ZM6.89648 8.38379H11.167L9.02051 3.41602L6.89648 8.38379Z"
-                        fill="#006FAC" />
-                    </svg>
-                    <div
-                      class="check hidden absolute -top-2 -right-2 w-5 h-5 bg-[#0189D5] rounded-full items-center justify-center">
-                      <svg width="8" height="6" fill="none">
-                        <path d="M1 3L3 5L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div onclick="selectCard(this)"
-                    class="card-type w-[102px] h-[51px] border border-[#E5E7EB] rounded-lg flex items-center justify-center cursor-pointer relative bg-[#FBFAF8] hover:border-[#0189D5]">
-                    <svg width="55" height="33" viewBox="0 0 55 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M37.4781 32.4231C46.6241 32.4231 54.0383 25.1649 54.0383 16.2115C54.0383 7.25815 46.6241 0 37.4781 0C28.3322 0 20.918 7.25815 20.918 16.2115C20.918 25.1649 28.3322 32.4231 37.4781 32.4231Z"
-                        fill="#F79E1B" />
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M16.5602 32.4231C25.7061 32.4231 33.1203 25.1649 33.1203 16.2115C33.1203 7.25815 25.7061 0 16.5602 0C7.41424 0 0 7.25815 0 16.2115C0 25.1649 7.41424 32.4231 16.5602 32.4231Z"
-                        fill="#EB001B" />
-                      <path
-                        d="M27.0186 3.64288C30.7418 6.61555 33.12 11.1411 33.1201 16.2112C33.1201 21.2814 30.7418 25.8069 27.0186 28.7796C23.2958 25.8069 20.918 21.2811 20.918 16.2112C20.918 11.1414 23.2957 6.61556 27.0186 3.64288Z"
-                        fill="#FF5F00" />
-                    </svg>
-                    <div
-                      class="check hidden absolute -top-2 -right-2 w-5 h-5 bg-[#0189D5] rounded-full items-center justify-center">
-                      <svg width="8" height="6" fill="none">
-                        <path d="M1 3L3 5L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div><label class="text-[#0D0D12] text-sm font-medium">Nom du propriétaire de la carte</label><input
-                    type="text" placeholder="Entrez le nom"
-                    class="w-full h-[52px] px-4 mt-[6px] bg-white border border-[#E5E7EB] rounded-[10px] text-sm outline-none focus:border-[#03C3EC] placeholder:text-[#EDEDED]">
-                </div>
-                <div class="grid grid-cols-12 gap-3 mt-[10px]">
-                  <div class="col-span-12 lg:col-span-6"><label class="text-[#161924] text-sm font-medium">Numéro de la
-                      carte</label><input type="text" placeholder="0011 2233 4455"
-                      class="w-full h-[52px] px-4 mt-[6px] bg-white border border-[#E5E7EB] rounded-[10px] text-sm outline-none focus:border-[#03C3EC] placeholder:text-[#EDEDED]">
-                  </div>
-                  <div class="col-span-6 lg:col-span-3"><label
-                      class="text-[#161924] text-sm font-medium">CCV</label><input type="text" placeholder="001"
-                      class="w-full h-[52px] px-4 mt-[6px] bg-white border border-[#E5E7EB] rounded-[10px] text-sm outline-none focus:border-[#03C3EC] placeholder:text-[#EDEDED]">
-                  </div>
-                  <div class="col-span-6 lg:col-span-3"><label class="text-[#161924] text-sm font-medium">Date
-                      d'expiration</label><input type="text" placeholder="01/27"
-                      class="w-full h-[52px] px-4 mt-[6px] bg-white border border-[#E5E7EB] rounded-[10px] text-sm outline-none focus:border-[#03C3EC] placeholder:text-[#EDEDED]">
-                  </div>
-                </div>
-              </div>
-              <!-- Cash -->
-              <div id="pay-content-cash" class="hidden lg:mt-[100px] lg:mb-[116px]">
-                <div
-                  class="w-full bg-[#D9EDF9] rounded-[10px] p-6 flex flex-col items-center text-center gap-4 min-h-[140px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)]">
-                  <div class="flex items-center justify-center">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="white" />
-                      <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#015280" />
-                      <path opacity="0.4"
-                        d="M24.4002 20.33C24.1202 21.08 23.5302 21.65 22.7602 21.91C21.6802 22.27 20.5702 22.54 19.4502 22.73C19.3402 22.75 19.2302 22.77 19.1202 22.78C18.9402 22.81 18.7602 22.83 18.5802 22.85C18.3602 22.88 18.1302 22.9 17.9002 22.92C17.2702 22.97 16.6502 23 16.0202 23C15.3802 23 14.7402 22.97 14.1102 22.91C13.8402 22.89 13.5802 22.86 13.3202 22.82C13.1702 22.8 13.0202 22.78 12.8802 22.76C12.7702 22.74 12.6602 22.73 12.5502 22.71C11.4402 22.53 10.3402 22.26 9.2702 21.9C8.4702 21.63 7.8602 21.06 7.5902 20.33C7.3202 19.61 7.4202 18.77 7.8502 18.05L8.9802 16.17C9.2202 15.76 9.4402 14.97 9.4402 14.49V12.63C9.4402 8.99999 12.3902 6.04999 16.0202 6.04999C19.6402 6.04999 22.5902 8.99999 22.5902 12.63V14.49C22.5902 14.97 22.8102 15.76 23.0602 16.17L24.1902 18.05C24.6002 18.75 24.6802 19.57 24.4002 20.33Z"
-                        fill="#015280" />
-                      <path
-                        d="M16.0002 14.76C15.5802 14.76 15.2402 14.42 15.2402 14V10.9C15.2402 10.48 15.5802 10.14 16.0002 10.14C16.4202 10.14 16.7602 10.48 16.7602 10.9V14C16.7502 14.42 16.4102 14.76 16.0002 14.76Z"
-                        fill="#015280" />
-                      <path
-                        d="M18.8297 24.01C18.4097 25.17 17.2997 26 15.9997 26C15.2097 26 14.4297 25.68 13.8797 25.11C13.5597 24.81 13.3197 24.41 13.1797 24C13.3097 24.02 13.4397 24.03 13.5797 24.05C13.8097 24.08 14.0497 24.11 14.2897 24.13C14.8597 24.18 15.4397 24.21 16.0197 24.21C16.5897 24.21 17.1597 24.18 17.7197 24.13C17.9297 24.11 18.1397 24.1 18.3397 24.07C18.4997 24.05 18.6597 24.03 18.8297 24.01Z"
-                        fill="#015280" />
-                    </svg>
+          <div
+            class="h-auto px-[12px] rounded-[16px] border-[1px] border-[#E5E7EB] bg-white flex flex-col gap-[18px] lg:gap-[24px] min-h-[519px] lg:min-h-[597px]">
+            <!-- top -->
+            <div
+              class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 py-[8px]  lg:py-[15px] px-[8px]">
+              <h3 class="text-[#0D0D12] text-base font-semibold font-Inter leading-[150%]">Ajouter des
+                participants à cet évènement</h3>
+              <button
+                class="px-[21px] py-[10px] bg-[#0589D3] rounded-[6px] text-white flex flex-row items-center gap-[10px] shadow-sm shadow-blue-500/30 hover:bg-[#0077b5] transition-colors w-auto cursor-pointer min-w-[228px]">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.4"
+                    d="M21.0901 21.5C21.0901 21.78 20.8701 22 20.5901 22H3.41016C3.13016 22 2.91016 21.78 2.91016 21.5C2.91016 17.36 6.99015 14 12.0002 14C13.0302 14 14.0302 14.14 14.9502 14.41C14.3602 15.11 14.0002 16.02 14.0002 17C14.0002 17.75 14.2101 18.46 14.5801 19.06C14.7801 19.4 15.0401 19.71 15.3401 19.97C16.0401 20.61 16.9702 21 18.0002 21C19.1202 21 20.1302 20.54 20.8502 19.8C21.0102 20.34 21.0901 20.91 21.0901 21.5Z"
+                    fill="white" />
+                  <path
+                    d="M20.97 14.33C20.25 13.51 19.18 13 18 13C16.88 13 15.86 13.46 15.13 14.21C14.43 14.93 14 15.92 14 17C14 17.75 14.21 18.46 14.58 19.06C14.78 19.4 15.04 19.71 15.34 19.97C16.04 20.61 16.97 21 18 21C19.46 21 20.73 20.22 21.42 19.06C21.63 18.72 21.79 18.33 21.88 17.93C21.96 17.63 22 17.32 22 17C22 15.98 21.61 15.04 20.97 14.33ZM19.5 17.73H18.75V18.51C18.75 18.92 18.41 19.26 18 19.26C17.59 19.26 17.25 18.92 17.25 18.51V17.73H16.5C16.09 17.73 15.75 17.39 15.75 16.98C15.75 16.57 16.09 16.23 16.5 16.23H17.25V15.52C17.25 15.11 17.59 14.77 18 14.77C18.41 14.77 18.75 15.11 18.75 15.52V16.23H19.5C19.91 16.23 20.25 16.57 20.25 16.98C20.25 17.39 19.91 17.73 19.5 17.73Z"
+                    fill="white" />
+                  <path
+                    d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                    fill="white" />
+                </svg>
 
+                <span class="text[15px] font-normal leading-[23px]">Ajouter un participant</span>
+              </button>
+            </div>
+            <!-- table -->
+            <div class="w-full overflow-x-auto">
+              <table class="w-full min-w-[800px] border-separate border-spacing-0">
+                <thead class="bg-[#F6F8FA]">
+                  <tr>
+                    <th
+                      class="py-[12px] px-[16px] text-left text-sm font-medium text-[#6B7280] leading-[150%] border-y border-l border-[#DFE1E7] rounded-l-[10px]">
+                      Nom</th>
+                    <th
+                      class="py-[12px] px-[16px] text-left text-sm font-medium text-[#6B7280] leading-[150%] border-y border-[#DFE1E7]">
+                      TÉLÉPHONE / Email</th>
+                    <th
+                      class="py-[12px] px-[16px] text-left text-sm font-medium text-[#6B7280] leading-[150%] border-y border-[#DFE1E7]">
+                      Lieu</th>
+                    <th
+                      class="py-[12px] px-[16px] text-left text-sm font-medium text-[#6B7280] leading-[150%] border-y border-[#DFE1E7]">
+                      Forfaits</th>
+                    <th
+                      class="py-[12px] px-[16px] text-left text-sm font-medium text-[#6B7280] leading-[150%] border-y border-[#DFE1E7]">
+                      Invitation</th>
+                    <th
+                      class="py-[12px] px-[16px] text-left text-sm font-medium text-[#6B7280] leading-[150%] border-y border-r border-[#DFE1E7] rounded-r-[10px]">
+                      Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white [&>tr>td]:border-b [&>tr>td]:border-[#E5E7EB]">
+                  <!-- Row 1 -->
+                  <tr>
+                    <td class="py-[16px] px-[16px] text-sm text-[#0D0D12] font-medium min-w-[140px] flex flex-col">
+                      <span>Sophia Turner</span>
+                      <ul class="mt-[2px]">
+                        <li class="text-xs leading-[150%] font-medium text-[#666D80]">Statut : <span
+                            class="text-[#FF2D55]">En attente</span></li>
+                        <li class="text-xs leading-[150%] font-medium text-[#666D80]">Position : <span
+                            class="text-[#0189D5]">02</span></li>
+                      </ul>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <div class="flex flex-col">
+                        <span class="text-xs text-[#0D0D12] font-medium leading-[150%]">+237 691 67 90 45</span>
+                        <a href="#"
+                          class="text-[10px] text-[#666D80] font-medium leading-[150%]">sophiaturner@example.com</span>
+                      </div>
+                    </td>
+                    <td class="py-[16px] px-[16px] text-xs text-[#0D0D12] font-medium leading-[150%] min-w-[160px]">
+                      ESPACE
+                      COWORKING</td>
+                    <td class="py-[16px] px-[16px]">
+                      <span
+                        class="inline-block px-[18px] py-[6px] rounded-[6px] bg-[#E6F3FB] border border-[#0189D5] text-[#0189D5] text-xs font-medium capitalize cursor-pointer">GRATUIT</span>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <button
+                        class="flex items-center gap-[4px] pl-[6px] pr-[8px] py-[6px] rounded-[6px] bg-[#E6F3FB] border border-[#0189D5] text-[#0189D5] text-xs font-medium capitalize cursor-pointer">
+                        <span>Télécharger</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.1445 13.9582V2.2915" stroke="#0189D5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M15.9419 17.2917H4.34766" stroke="#0189D5" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M14 10L9.9996 14L6 10" stroke="#0189D5" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </button>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <div class="flex items-center gap-2">
+                        <button
+                          class="w-[28px] h-[28px] bg-[#F0FBFF] rounded-[6px] hover:bg-blue-100 transition-colors flex items-center justify-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.54516 1.91635C9.32333 1.69455 8.96366 1.69455 8.74182 1.91635C8.51998 2.13816 8.51998 2.49778 8.74182 2.71959L11.2803 5.2577C11.5021 5.47951 11.8618 5.47951 12.0836 5.2577C12.3055 5.03589 12.3055 4.67628 12.0836 4.45447L9.54516 1.91635Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M3.56594 7.15349C3.45502 7.2644 3.45502 7.44421 3.56594 7.55511L6.44553 10.4343C6.55645 10.5452 6.73628 10.5452 6.8472 10.4343L10.532 6.75062C10.6429 6.63972 10.6429 6.45826 10.532 6.34736L7.65201 3.46775C7.54109 3.35684 7.35962 3.35686 7.2487 3.46776L3.56594 7.15349Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M2.19524 8.86971L1.75917 11.4857C1.68515 11.9298 2.07022 12.3148 2.51438 12.2408L5.13075 11.8048C5.30659 11.7755 5.4736 11.7109 5.62214 11.6159C5.75429 11.5314 5.75314 11.3484 5.64223 11.2375L2.76264 8.35831C2.65172 8.2474 2.46869 8.24626 2.38417 8.37839C2.28917 8.52691 2.22454 8.6939 2.19524 8.86971Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M7.58333 11.0833C7.26117 11.0833 7 11.3445 7 11.6667C7 11.9888 7.26117 12.25 7.58333 12.25H11.6667C11.9888 12.25 12.25 11.9888 12.25 11.6667C12.25 11.3445 11.9888 11.0833 11.6667 11.0833H7.58333Z"
+                              fill="#33CFFF" />
+                          </svg>
+
+                        </button>
+                        <button
+                          class="w-[28px] h-[28px] bg-[#FFF0F3] rounded-[6px] hover:bg-red-100 transition-colors flex items-center justify-center">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 2.5H4.26772C4.38903 1.65193 5.11838 1 6 1C6.88162 1 7.61097 1.65193 7.73228 2.5H9.5C9.77614 2.5 10 2.72386 10 3C10 3.27614 9.77614 3.5 9.5 3.5H2.5C2.22386 3.5 2 3.27614 2 3C2 2.72386 2.22386 2.5 2.5 2.5ZM6 2C6.32655 2 6.60436 2.2087 6.70732 2.5H5.29268C5.39564 2.2087 5.67345 2 6 2Z"
+                              fill="#DF1C41" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.9235 4H3.07651C2.77224 4 2.5385 4.26949 2.58154 4.57071L3.31602 9.71213C3.42159 10.4511 4.05447 11 4.80095 11H7.19906C7.94554 11 8.57842 10.4511 8.68399 9.71213L9.41848 4.57071C9.46151 4.26949 9.22778 4 8.9235 4ZM5.00001 5.5C5.27615 5.5 5.50001 5.72386 5.50001 6V9C5.50001 9.27614 5.27615 9.5 5.00001 9.5C4.72386 9.5 4.50001 9.27614 4.50001 9V6C4.50001 5.72386 4.72386 5.5 5.00001 5.5ZM7 5.5C7.27615 5.5 7.5 5.72386 7.5 6V9C7.5 9.27614 7.27615 9.5 7 9.5C6.72386 9.5 6.50001 9.27614 6.50001 9V6C6.50001 5.72386 6.72386 5.5 7 5.5Z"
+                              fill="#DF1C41" />
+                          </svg>
+
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Row 2 -->
+                  <tr>
+                    <td class="py-[16px] px-[16px] text-sm text-[#0D0D12] font-medium min-w-[140px] flex flex-col">
+                      <span>Sophia Turner</span>
+                      <ul class="mt-[2px]">
+                        <li class="text-xs leading-[150%] font-medium text-[#666D80]">Statut : <span
+                            class="text-[#FF2D55]">En attente</span></li>
+                        <li class="text-xs leading-[150%] font-medium text-[#666D80]">Position : <span
+                            class="text-[#0189D5]">02</span></li>
+                      </ul>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <div class="flex flex-col">
+                        <span class="text-xs text-[#0D0D12] font-medium leading-[150%]">+237 691 67 90 45</span>
+                        <a href="#"
+                          class="text-[10px] text-[#666D80] font-medium leading-[150%]">sophiaturner@example.com</span>
+                      </div>
+                    </td>
+                    <td class="py-[16px] px-[16px] text-xs text-[#0D0D12] font-medium leading-[150%] min-w-[160px]">
+                      ESPACE
+                      COWORKING</td>
+                    <td class="py-[16px] px-[16px]">
+                      <span
+                        class="inline-block px-[18px] py-[6px] rounded-[6px] bg-[#E6F3FB] border border-[#0189D5] text-[#0189D5] text-xs font-medium capitalize cursor-pointer">GRATUIT</span>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <button
+                        class="flex items-center gap-[4px] pl-[6px] pr-[8px] py-[6px] rounded-[6px] bg-[#E6F3FB] border border-[#0189D5] text-[#0189D5] text-xs font-medium capitalize cursor-pointer">
+                        <span>Télécharger</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.1445 13.9582V2.2915" stroke="#0189D5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M15.9419 17.2917H4.34766" stroke="#0189D5" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M14 10L9.9996 14L6 10" stroke="#0189D5" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+
+                      </button>
+                    </td>
+                    <td class="py-[16px] px-[16px]">
+                      <div class="flex items-center gap-2">
+                        <button
+                          class="w-[28px] h-[28px] bg-[#F0FBFF] rounded-[6px] hover:bg-blue-100 transition-colors flex items-center justify-center">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.54516 1.91635C9.32333 1.69455 8.96366 1.69455 8.74182 1.91635C8.51998 2.13816 8.51998 2.49778 8.74182 2.71959L11.2803 5.2577C11.5021 5.47951 11.8618 5.47951 12.0836 5.2577C12.3055 5.03589 12.3055 4.67628 12.0836 4.45447L9.54516 1.91635Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M3.56594 7.15349C3.45502 7.2644 3.45502 7.44421 3.56594 7.55511L6.44553 10.4343C6.55645 10.5452 6.73628 10.5452 6.8472 10.4343L10.532 6.75062C10.6429 6.63972 10.6429 6.45826 10.532 6.34736L7.65201 3.46775C7.54109 3.35684 7.35962 3.35686 7.2487 3.46776L3.56594 7.15349Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M2.19524 8.86971L1.75917 11.4857C1.68515 11.9298 2.07022 12.3148 2.51438 12.2408L5.13075 11.8048C5.30659 11.7755 5.4736 11.7109 5.62214 11.6159C5.75429 11.5314 5.75314 11.3484 5.64223 11.2375L2.76264 8.35831C2.65172 8.2474 2.46869 8.24626 2.38417 8.37839C2.28917 8.52691 2.22454 8.6939 2.19524 8.86971Z"
+                              fill="#33CFFF" />
+                            <path
+                              d="M7.58333 11.0833C7.26117 11.0833 7 11.3445 7 11.6667C7 11.9888 7.26117 12.25 7.58333 12.25H11.6667C11.9888 12.25 12.25 11.9888 12.25 11.6667C12.25 11.3445 11.9888 11.0833 11.6667 11.0833H7.58333Z"
+                              fill="#33CFFF" />
+                          </svg>
+
+                        </button>
+                        <button
+                          class="w-[28px] h-[28px] bg-[#FFF0F3] rounded-[6px] hover:bg-red-100 transition-colors flex items-center justify-center">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 2.5H4.26772C4.38903 1.65193 5.11838 1 6 1C6.88162 1 7.61097 1.65193 7.73228 2.5H9.5C9.77614 2.5 10 2.72386 10 3C10 3.27614 9.77614 3.5 9.5 3.5H2.5C2.22386 3.5 2 3.27614 2 3C2 2.72386 2.22386 2.5 2.5 2.5ZM6 2C6.32655 2 6.60436 2.2087 6.70732 2.5H5.29268C5.39564 2.2087 5.67345 2 6 2Z"
+                              fill="#DF1C41" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.9235 4H3.07651C2.77224 4 2.5385 4.26949 2.58154 4.57071L3.31602 9.71213C3.42159 10.4511 4.05447 11 4.80095 11H7.19906C7.94554 11 8.57842 10.4511 8.68399 9.71213L9.41848 4.57071C9.46151 4.26949 9.22778 4 8.9235 4ZM5.00001 5.5C5.27615 5.5 5.50001 5.72386 5.50001 6V9C5.50001 9.27614 5.27615 9.5 5.00001 9.5C4.72386 9.5 4.50001 9.27614 4.50001 9V6C4.50001 5.72386 4.72386 5.5 5.00001 5.5ZM7 5.5C7.27615 5.5 7.5 5.72386 7.5 6V9C7.5 9.27614 7.27615 9.5 7 9.5C6.72386 9.5 6.50001 9.27614 6.50001 9V6C6.50001 5.72386 6.72386 5.5 7 5.5Z"
+                              fill="#DF1C41" />
+                          </svg>
+
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- bottom -->
+            <div class="hidden lg:flex justify-center mt-auto mb-5">
+              <div class="w-full max-w-[344px] bg-[#E6F3FB] rounded-[12px] p-[14px]">
+                <div class="space-y-[10px] pb-[10px]">
+                  <!-- 1 -->
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_640_24206)">
+                          <path opacity="0.4"
+                            d="M12.0081 3.6377C9.84204 3.6377 8.08105 5.39868 8.08105 7.56476C8.08105 9.68952 9.74283 11.4092 11.9089 11.4836C11.9751 11.4753 12.0412 11.4753 12.0908 11.4836C12.1073 11.4836 12.1156 11.4836 12.1321 11.4836C12.1404 11.4836 12.1404 11.4836 12.1487 11.4836C14.2652 11.4092 15.9269 9.68952 15.9352 7.56476C15.9352 5.39868 14.1742 3.6377 12.0081 3.6377Z"
+                            fill="#1FD7F3" />
+                          <path
+                            d="M16.2077 13.6826C13.9011 12.1449 10.1394 12.1449 7.8162 13.6826C6.76623 14.3854 6.1875 15.3361 6.1875 16.353C6.1875 17.3699 6.76623 18.3124 7.80793 19.0069C8.96538 19.784 10.4866 20.1726 12.0078 20.1726C13.5291 20.1726 15.0503 19.784 16.2077 19.0069C17.2494 18.3042 17.8282 17.3617 17.8282 16.3365C17.8199 15.3196 17.2494 14.3771 16.2077 13.6826Z"
+                            fill="#1FD7F3" />
+                          <path opacity="0.4"
+                            d="M20.2675 8.05262C20.3998 9.65651 19.2589 11.062 17.6798 11.2521C17.6715 11.2521 17.6715 11.2521 17.6633 11.2521H17.6385C17.5889 11.2521 17.5393 11.2521 17.4979 11.2687C16.696 11.31 15.9602 11.0537 15.4062 10.5825C16.2578 9.82186 16.7456 8.68095 16.6464 7.44082C16.5885 6.77115 16.357 6.15936 16.0098 5.6385C16.3239 5.48142 16.6877 5.38221 17.0598 5.34914C18.6802 5.20859 20.127 6.41565 20.2675 8.05262Z"
+                            fill="#1FD7F3" />
+                          <path opacity="0.4"
+                            d="M3.74173 8.05262C3.60945 9.65651 4.75037 11.062 6.32946 11.2521C6.33773 11.2521 6.33773 11.2521 6.346 11.2521H6.3708C6.4204 11.2521 6.47001 11.2521 6.51135 11.2687C7.3133 11.31 8.0491 11.0537 8.60303 10.5825C7.75147 9.82186 7.26369 8.68095 7.3629 7.44082C7.42077 6.77115 7.65226 6.15936 7.9995 5.6385C7.68533 5.48142 7.32156 5.38221 6.94952 5.34914C5.32909 5.20859 3.88228 6.41565 3.74173 8.05262Z"
+                            fill="#1FD7F3" />
+                          <path
+                            d="M21.9207 15.6998C21.8545 16.5017 21.3419 17.1962 20.4821 17.6675C19.6554 18.1222 18.6136 18.3371 17.5802 18.3123C18.1755 17.7749 18.5227 17.1053 18.5888 16.3943C18.6715 15.3691 18.1837 14.3853 17.2082 13.5998C16.6542 13.1617 16.0094 12.8144 15.3066 12.5581C17.1338 12.029 19.4321 12.3845 20.8459 13.5254C21.6065 14.1372 21.9951 14.9061 21.9207 15.6998Z"
+                            fill="#1FD7F3" />
+                          <path
+                            d="M2.08814 15.6998C2.15428 16.5017 2.66686 17.1962 3.52668 17.6675C4.35344 18.1222 5.39514 18.3371 6.42858 18.3123C5.83332 17.7749 5.48609 17.1053 5.41995 16.3943C5.33727 15.3691 5.82505 14.3853 6.80062 13.5998C7.35454 13.1617 7.99941 12.8144 8.70215 12.5581C6.87503 12.029 4.57666 12.3845 3.16291 13.5254C2.4023 14.1372 2.01373 14.9061 2.08814 15.6998Z"
+                            fill="#1FD7F3" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_640_24206">
+                            <rect width="19.842" height="19.842" fill="white" transform="translate(2.0791 1.98419)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                      <span class="text-[#012D50] text-sm font-normal leading-[25px]">Nombre de participants</span>
+                    </div>
+                    <span class="text-base text-[#03C3EC] leading-[25px]">02</span>
                   </div>
-                  <p class="text-[#015280] text-base font-medium leading-[150%]">En cliquant sur Payer vous récevrez un
-                    qr code à presenter à l'organisateur pour effectuer le paiement.</p>
+                  <!-- 2 -->
+                  <div class="flex justify-between items-center text-[#012D50] text-sm lg:text-base font-normal">
+                    <div class="flex items-center gap-2">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_640_24216)">
+                          <path opacity="0.4"
+                            d="M12.0081 3.6377C9.84204 3.6377 8.08105 5.39868 8.08105 7.56476C8.08105 9.68952 9.74283 11.4092 11.9089 11.4836C11.9751 11.4753 12.0412 11.4753 12.0908 11.4836C12.1073 11.4836 12.1156 11.4836 12.1321 11.4836C12.1404 11.4836 12.1404 11.4836 12.1487 11.4836C14.2652 11.4092 15.9269 9.68952 15.9352 7.56476C15.9352 5.39868 14.1742 3.6377 12.0081 3.6377Z"
+                            fill="#FF383C" />
+                          <path
+                            d="M16.2077 13.6826C13.9011 12.1449 10.1394 12.1449 7.8162 13.6826C6.76623 14.3854 6.1875 15.3361 6.1875 16.353C6.1875 17.3699 6.76623 18.3124 7.80793 19.0069C8.96538 19.784 10.4866 20.1726 12.0078 20.1726C13.5291 20.1726 15.0503 19.784 16.2077 19.0069C17.2494 18.3042 17.8282 17.3617 17.8282 16.3365C17.8199 15.3196 17.2494 14.3771 16.2077 13.6826Z"
+                            fill="#FF383C" />
+                          <path opacity="0.4"
+                            d="M20.2675 8.05262C20.3998 9.65651 19.2589 11.062 17.6798 11.2521C17.6715 11.2521 17.6715 11.2521 17.6633 11.2521H17.6385C17.5889 11.2521 17.5393 11.2521 17.4979 11.2687C16.696 11.31 15.9602 11.0537 15.4062 10.5825C16.2578 9.82186 16.7456 8.68095 16.6464 7.44082C16.5885 6.77115 16.357 6.15936 16.0098 5.6385C16.3239 5.48142 16.6877 5.38221 17.0598 5.34914C18.6802 5.20859 20.127 6.41565 20.2675 8.05262Z"
+                            fill="#FF383C" />
+                          <path opacity="0.4"
+                            d="M3.74173 8.05262C3.60945 9.65651 4.75037 11.062 6.32946 11.2521C6.33773 11.2521 6.33773 11.2521 6.346 11.2521H6.3708C6.4204 11.2521 6.47001 11.2521 6.51135 11.2687C7.3133 11.31 8.0491 11.0537 8.60303 10.5825C7.75147 9.82186 7.26369 8.68095 7.3629 7.44082C7.42077 6.77115 7.65226 6.15936 7.9995 5.6385C7.68533 5.48142 7.32156 5.38221 6.94952 5.34914C5.32909 5.20859 3.88228 6.41565 3.74173 8.05262Z"
+                            fill="#FF383C" />
+                          <path
+                            d="M21.9207 15.6998C21.8545 16.5017 21.3419 17.1962 20.4821 17.6675C19.6554 18.1222 18.6136 18.3371 17.5802 18.3123C18.1755 17.7749 18.5227 17.1053 18.5888 16.3943C18.6715 15.3691 18.1837 14.3853 17.2082 13.5998C16.6542 13.1617 16.0094 12.8144 15.3066 12.5581C17.1338 12.029 19.4321 12.3845 20.8459 13.5254C21.6065 14.1372 21.9951 14.9061 21.9207 15.6998Z"
+                            fill="#FF383C" />
+                          <path
+                            d="M2.08814 15.6998C2.15428 16.5017 2.66686 17.1962 3.52668 17.6675C4.35344 18.1222 5.39514 18.3371 6.42858 18.3123C5.83332 17.7749 5.48609 17.1053 5.41995 16.3943C5.33727 15.3691 5.82505 14.3853 6.80062 13.5998C7.35454 13.1617 7.99941 12.8144 8.70215 12.5581C6.87503 12.029 4.57666 12.3845 3.16291 13.5254C2.4023 14.1372 2.01373 14.9061 2.08814 15.6998Z"
+                            fill="#FF383C" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_640_24216">
+                            <rect width="19.842" height="19.842" fill="white" transform="translate(2.0791 1.98419)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span class="text-[#012D50] text-sm font-normal leading-[25px]">Participants en attente</span>
+                    </div>
+                    <span class="text-base text-[#03C3EC] leading-[25px]">00</span>
+                  </div>
+                  <!-- 3 -->
+                  <div class="flex justify-between items-center text-[#012D50] text-sm lg:text-base font-normal">
+                    <div class="flex items-center gap-2">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.4"
+                          d="M19.3 7.91949V13.0695C19.3 16.1495 17.54 17.4695 14.9 17.4695H6.10995C5.65995 17.4695 5.22996 17.4295 4.82996 17.3395C4.57996 17.2995 4.33996 17.2295 4.11996 17.1495C2.61996 16.5895 1.70996 15.2895 1.70996 13.0695V7.91949C1.70996 4.83949 3.46995 3.51953 6.10995 3.51953H14.9C17.14 3.51953 18.75 4.46953 19.18 6.63953C19.25 7.03953 19.3 7.44949 19.3 7.91949Z"
+                          fill="#0189D5" />
+                        <path
+                          d="M22.3001 10.9196V16.0696C22.3001 19.1496 20.5401 20.4696 17.9001 20.4696H9.11008C8.37008 20.4696 7.70009 20.3697 7.12009 20.1497C5.93009 19.7097 5.12008 18.7997 4.83008 17.3397C5.23008 17.4297 5.66008 17.4696 6.11008 17.4696H14.9001C17.5401 17.4696 19.3001 16.1496 19.3001 13.0696V7.91962C19.3001 7.44962 19.2601 7.02965 19.1801 6.63965C21.0801 7.03965 22.3001 8.37962 22.3001 10.9196Z"
+                          fill="#0189D5" />
+                        <path
+                          d="M10.4994 13.1404C11.9574 13.1404 13.1394 11.9584 13.1394 10.5004C13.1394 9.04233 11.9574 7.86035 10.4994 7.86035C9.04136 7.86035 7.85938 9.04233 7.85938 10.5004C7.85938 11.9584 9.04136 13.1404 10.4994 13.1404Z"
+                          fill="#0189D5" />
+                        <path
+                          d="M4.78027 8.25C4.37027 8.25 4.03027 8.59 4.03027 9V12C4.03027 12.41 4.37027 12.75 4.78027 12.75C5.19027 12.75 5.53027 12.41 5.53027 12V9C5.53027 8.59 5.20027 8.25 4.78027 8.25Z"
+                          fill="#0189D5" />
+                        <path
+                          d="M16.21 8.25C15.8 8.25 15.46 8.59 15.46 9V12C15.46 12.41 15.8 12.75 16.21 12.75C16.62 12.75 16.96 12.41 16.96 12V9C16.96 8.59 16.63 8.25 16.21 8.25Z"
+                          fill="#0189D5" />
+                      </svg>
+
+                      <span class="text-[#012D50] text-sm font-normal leading-[25px]">Montant de la réservation</span>
+                    </div>
+                    <span class="text-base text-[#03C3EC] leading-[25px]">0 FCFA</span>
+                  </div>
+                </div>
+                <div class="border-t border-[#012D50]/10 mb-[13px]"></div>
+                <div class="flex justify-between items-center px-2">
+                  <h4 class="text-[#012D50] text-sm leading-[25px] font-Inter">Montant total à payer</h4>
+                  <span class="text-[#03C3EC] text-base leading-[25px] font-Inter">0 Fcfa</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- button -->
-          <div class="flex items-center justify-center mt-[30px]">
-            <a href="#" onclick="event.preventDefault(); toggleModal('success-modal')"
-              class="w-full max-w-[180px] py-[10px] rounded-[6px] bg-[#0589D3] text-base font-normal leading-[23px] text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98] inline-flex flex-row items-center justify-center gap-[4px] text-center"><span>Payer</span>
+          <div class="w-full flex flex-col md:flex-row justify-center pt-[30px] gap-5 lg:gap-[30px]">
+            <a href="#"
+              class="w-full md:w-auto md:min-w-[300px] px-[14px] py-[12px] rounded-[6px] bg-white  border-[1px] border-[#0589D3] text-xl font-normal leading-[23px] text-[#0589D3] shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#6ec0ec] hover:text-white active:scale-[0.98] inline-flex flex-row items-center justify-center gap-[4px] text-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.4"
+                  d="M21.0901 21.5C21.0901 21.78 20.8701 22 20.5901 22H3.41016C3.13016 22 2.91016 21.78 2.91016 21.5C2.91016 17.36 6.99015 14 12.0002 14C13.0302 14 14.0302 14.14 14.9502 14.41C14.3602 15.11 14.0002 16.02 14.0002 17C14.0002 17.75 14.2101 18.46 14.5801 19.06C14.7801 19.4 15.0401 19.71 15.3401 19.97C16.0401 20.61 16.9702 21 18.0002 21C19.1202 21 20.1302 20.54 20.8502 19.8C21.0102 20.34 21.0901 20.91 21.0901 21.5Z"
+                  fill="#0589D3" />
+                <path
+                  d="M20.97 14.33C20.25 13.51 19.18 13 18 13C16.88 13 15.86 13.46 15.13 14.21C14.43 14.93 14 15.92 14 17C14 17.75 14.21 18.46 14.58 19.06C14.78 19.4 15.04 19.71 15.34 19.97C16.04 20.61 16.97 21 18 21C19.46 21 20.73 20.22 21.42 19.06C21.63 18.72 21.79 18.33 21.88 17.93C21.96 17.63 22 17.32 22 17C22 15.98 21.61 15.04 20.97 14.33ZM19.5 17.73H18.75V18.51C18.75 18.92 18.41 19.26 18 19.26C17.59 19.26 17.25 18.92 17.25 18.51V17.73H16.5C16.09 17.73 15.75 17.39 15.75 16.98C15.75 16.57 16.09 16.23 16.5 16.23H17.25V15.52C17.25 15.11 17.59 14.77 18 14.77C18.41 14.77 18.75 15.11 18.75 15.52V16.23H19.5C19.91 16.23 20.25 16.57 20.25 16.98C20.25 17.39 19.91 17.73 19.5 17.73Z"
+                  fill="#0589D3" />
+                <path
+                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                  fill="#0589D3" />
+              </svg>
+
+
+              <span>Ajouter un participant</span>
+            </a>
+            <a href="#"
+              class="w-full md:w-auto md:min-w-[300px] px-[14px] py-[12px] rounded-[6px] bg-[#0589D3] border-[1px] border-[#0589D3] text-xl font-normal leading-[23px] text-white shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#0077b5] active:scale-[0.98] inline-flex flex-row items-center justify-center gap-[4px] text-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.4"
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  fill="white" />
+                <path
+                  d="M10.5804 15.58C10.3804 15.58 10.1904 15.5 10.0504 15.36L7.22043 12.53C6.93043 12.24 6.93043 11.76 7.22043 11.47C7.51043 11.18 7.99043 11.18 8.28043 11.47L10.5804 13.77L15.7204 8.62998C16.0104 8.33998 16.4904 8.33998 16.7804 8.62998C17.0704 8.91998 17.0704 9.39998 16.7804 9.68998L11.1104 15.36C10.9704 15.5 10.7804 15.58 10.5804 15.58Z"
+                  fill="white" />
+              </svg>
+
+
+              <span>Confirmer</span>
             </a>
           </div>
         </div>
@@ -487,23 +600,24 @@
     <!-- newsletter -->
     <section class="z-20 px-[37px] relative -mb-[68px] lg:-mb-[204px]">
       <div
-        class="container newsletter-bg rounded-[24px] lg:rounded-[30px] min-h-[318px] lg:min-h-[428px] flex flex-row justify-center items-center">
-        <div class="text-white max-w-[681px] flex flex-col justify-center items-center text-center">
-          <h2 class="text-2xl lg:text-[48px] font-bold">
+        class="lg:max-w-[1200px] mx-auto newsletter-bg rounded-[24px] lg:rounded-[30px] min-h-[318px] lg:min-h-[428px] flex flex-row justify-center items-center">
+        <div class="text-white  flex flex-col justify-center items-center text-center px-[21px]">
+          <h2 class="text-2xl lg:text-[48px] font-bold max-w-[274px] leading-[120%] w-full lg:max-w-[681px]">
             Prêt à lancer votre évènement ?
           </h2>
-          <p class="text-sm lg:text-xl font-bold font-Alegreya max-w-[421px] mt-4">
+          <p class="text-sm lg:text-xl font-bold font-Alegreya max-w-[275px] lg:max-w-[421px] mt-4 leading-[120%]">
             Créez votre événement en 2 minutes et profiter d’une expérience
             incroyable
           </p>
-          <div class="pt-[28px] lg:pt-[48px]">
+          <div class="pt-[20px] lg:pt-[48px] flex flex-col gap-[7px] lg:gap-[18px]">
             <a href="#"
-              class="inline-block py-[14px] px-[59px] rounded-[8px] bg-[#B0DAF2] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)] font-medium text-base text-blue-bright text-center w-full lg:w-auto">Créer
+              class="inline-block py-[7px] px-[8px] lg:px-[32px] lg:py-[14px] rounded-[8px] bg-[#E6F3FB] border-[0.5px] border-[#B0DAF2] ring-[2px] ring-[#E6F3FB] font-medium text-base leading-[150%] text-blue-bright text-center w-auto transition-all duration-300 ease-out hover:bg-[#B0DAF2] hover:ring-[#B0DAF2] hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">Créer
               votre évènement</a>
-            <div class="flex flex-col lg:flex-row items-center justify-end max-w-[300px] mt-[10px] gap-2">
+            <div class="flex flex-col lg:flex-row items-center justify-end max-w-[300px]  gap-1">
               <img src="./images/arrow-pointer.svg" alt="arrow-pointer"
                 class="w-[24px] h-[24px] lg:w-[30px] lg:h-[30px] lg:-mt-10" />
-              <p class="font-Reenie text-sm lg:text-[24px] w-full lg:w-[143px] lg:self-end text-center lg:text-start">
+              <p
+                class="font-Reenie text-sm lg:text-[24px] w-full lg:w-[143px] lg:self-end text-center lg:text-start leading-[100%]">
                 Commençons votre voyage ici !
               </p>
             </div>
@@ -611,7 +725,7 @@
       class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
       <!-- Icon -->
       <div class="mb-6 relative flex items-center justify-center">
-          <img src="./images/error-circle-2.svg" alt="error" class="shadow-lg rounded-full"/>
+        <img src="./images/error-circle-2.svg" alt="error" class="shadow-lg rounded-full" />
       </div>
 
       <!-- Content -->
