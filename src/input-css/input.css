@@ -27,10 +27,11 @@ h1,
 h2 {
   font-family: var(--font-Alegreya);
 }
+/* Overlay+Border */
 .header-blur {
   box-sizing: border-box;
   border: 2px solid rgba(255, 255, 255, 0.68);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
   background: rgba(255, 255, 255, 0.38);
 }
 
