@@ -254,7 +254,7 @@
               class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 py-[8px]  lg:py-[15px] px-[8px]">
               <h3 class="text-[#0D0D12] text-base font-semibold font-Inter leading-[150%]">Ajouter des
                 participants à cet évènement</h3>
-              <button
+              <button onclick="openModal('add-participant-modal')"
                 class="px-[21px] py-[10px] bg-[#0589D3] rounded-[6px] text-white flex flex-row items-center gap-[10px] shadow-sm shadow-blue-500/30 hover:bg-[#0077b5] transition-colors w-auto cursor-pointer min-w-[228px]">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.4"
@@ -550,8 +550,8 @@
             </div>
           </div>
           <div class="w-full flex flex-col md:flex-row justify-center pt-[30px] gap-5 lg:gap-[30px]">
-            <a href="#"
-              class="w-full md:w-auto md:min-w-[300px] px-[14px] py-[12px] rounded-[6px] bg-white  border-[1px] border-[#0589D3] text-xl font-normal leading-[23px] text-[#0589D3] shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#6ec0ec] hover:text-white active:scale-[0.98] inline-flex flex-row items-center justify-center gap-[4px] text-center">
+            <a onclick="openModal('add-participant-modal')"
+              class="w-full md:w-auto md:min-w-[300px] px-[14px] py-[12px] rounded-[6px] bg-white  border-[1px] border-[#0589D3] text-xl font-normal leading-[23px] text-[#0589D3] shadow-sm shadow-blue-500/30 transition-colors hover:bg-[#6ec0ec] hover:text-white active:scale-[0.98] inline-flex flex-row items-center justify-center gap-[4px] text-center cursor-pointer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.4"
                   d="M21.0901 21.5C21.0901 21.78 20.8701 22 20.5901 22H3.41016C3.13016 22 2.91016 21.78 2.91016 21.5C2.91016 17.36 6.99015 14 12.0002 14C13.0302 14 14.0302 14.14 14.9502 14.41C14.3602 15.11 14.0002 16.02 14.0002 17C14.0002 17.75 14.2101 18.46 14.5801 19.06C14.7801 19.4 15.0401 19.71 15.3401 19.97C16.0401 20.61 16.9702 21 18.0002 21C19.1202 21 20.1302 20.54 20.8502 19.8C21.0102 20.34 21.0901 20.91 21.0901 21.5Z"
@@ -707,6 +707,348 @@
       </div>
     </div>
   </footer>
+ <!-- Modal -->
+  <div id="add-participant-modal"
+    class="modal-overlay fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50 hidden">
+    <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+      <div
+        class="relative transform overflow-visible rounded-[20px] bg-white text-left shadow-xl transition-all sm:my-8 w-full max-w-[648px] flex flex-col z-[10000]">
+        <!-- Header -->
+        <div class="px-6 sm:px-8 pt-8 pb-[12px] lg:pb-5  flex-shrink-0">
+          <h3
+            class="text-[#0189D5] lg:text-[#0B0B0B] text-sm lg:text-xl font-medium lg:font-semibold font-Archivo inline-block lg:px-0 lg:py-0 px-4 py-2 rounded-full border-[1px] border-[#0189D5] bg-[#E6F3FB] lg:bg-transparent lg:border-transparent">
+            Ajouter un participant</h3>
+        </div>
+        <div class="border-t-[1px] border-[#697A8D]/40 mx-4 sm:mx-8 hidden lg:block "></div>
+        <!-- Content -->
+        <div class="pt-5 px-6 sm:px-8 pb-[24px] space-y-[14px]">
+          <!-- Name Fields -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm text-[#161924] font-medium mb-[6px]">Prénom</label>
+              <input type="text" placeholder="Ex : Maulana"
+                class="w-full h-[42px] px-3 bg-white border border-[#E8E8E9] rounded-[8px] text-base font-poppins font-medium outline-none focus:border-[#0189D5] placeholder:text-[#E0E0E0]">
+            </div>
+            <div>
+              <label class="block text-sm text-[#161924] font-medium mb-[6px]">Nom</label>
+              <input type="text" placeholder="Ex : Pratama"
+                class="w-full h-[42px] px-3 bg-white border border-[#E8E8E9] rounded-[8px] text-base font-poppins font-medium outline-none focus:border-[#0189D5] placeholder:text-[#E0E0E0]">
+            </div>
+          </div>
+
+          <!-- Email and Phone -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm text-[#161924] font-medium mb-[6px]">Adresse email</label>
+              <input id="input-email-participant" type="email" placeholder="Entrer l'adresse mail"
+                class="w-full h-[42px] px-3 bg-white border border-[#E8E8E9] rounded-[8px] text-base font-poppins font-medium outline-none focus:border-[#0189D5] placeholder:text-[#E0E0E0]">
+            </div>
+            <div>
+              <label class="block text-sm text-[#161924] font-medium mb-[6px]">N°Tel</label>
+              <div
+                class="flex h-[42px] border border-[#E8E8E9] rounded-[8px] focus-within:border-[#0189D5] relative z-30">
+                <!-- Country Code Dropdown -->
+                <div class="relative group-dropdown h-full">
+                  <button type="button" onclick="toggleDropdown('menu-phone-country', 'icon-phone-country')"
+                    class="h-full px-3 bg-white flex items-center gap-2  cursor-pointer hover:bg-gray-50 rounded-l-[8px] outline-none">
+                    <div class="w-5 h-5 rounded-full overflow-hidden shrink-0">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/cm.svg" alt="CM"
+                        class="w-full h-full object-cover">
+                    </div>
+                    <span id="country-code-text" class="text-sm text-[#14201F] font-medium">+237</span>
+                    <svg id="icon-phone-country" class="transition-transform duration-300" width="8" height="4"
+                      viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L4 4L8 0" fill="#161924" />
+                    </svg>
+
+                  </button>
+                  <!-- Dropdown Menu -->
+                  <div id="menu-phone-country"
+                    class="hidden absolute top-[calc(100%+4px)] left-0 w-[240px] bg-white border border-[#E5E7EB] rounded-[8px] shadow-lg max-h-[200px] overflow-y-auto z-50">
+                    <div onclick="selectPhoneCountry('cm', '+237', 'Cameroun')"
+                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/cm.svg" alt="CM"
+                        class="w-5 h-5 rounded-full object-cover"> <span>+237</span> <span
+                        class="text-gray-400">Cameroun</span>
+                    </div>
+                    <div onclick="selectPhoneCountry('fr', '+33', 'France')"
+                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/fr.svg" alt="FR"
+                        class="w-5 h-5 rounded-full object-cover"> <span>+33</span> <span
+                        class="text-gray-400">France</span>
+                    </div>
+                    <div onclick="selectPhoneCountry('us', '+1', 'USA')"
+                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/us.svg" alt="US"
+                        class="w-5 h-5 rounded-full object-cover"> <span>+1</span> <span
+                        class="text-gray-400">USA</span>
+                    </div>
+                    <div onclick="selectPhoneCountry('gb', '+44', 'UK')"
+                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/gb.svg" alt="GB"
+                        class="w-5 h-5 rounded-full object-cover"> <span>+44</span> <span
+                        class="text-gray-400">UK</span>
+                    </div>
+                    <div onclick="selectPhoneCountry('de', '+49', 'Germany')"
+                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/de.svg" alt="DE"
+                        class="w-5 h-5 rounded-full object-cover"> <span>+49</span> <span
+                        class="text-gray-400">Germany</span>
+                    </div>
+                    <div onclick="selectPhoneCountry('ga', '+241', 'Gabon')"
+                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/ga.svg" alt="GA"
+                        class="w-5 h-5 rounded-full object-cover"> <span>+241</span> <span
+                        class="text-gray-400">Gabon</span>
+                    </div>
+                    <div onclick="selectPhoneCountry('ng', '+234', 'Nigeria')"
+                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/ng.svg" alt="NG"
+                        class="w-5 h-5 rounded-full object-cover"> <span>+234</span> <span
+                        class="text-gray-400">Nigeria</span>
+                    </div>
+                    <div onclick="selectPhoneCountry('sn', '+221', 'Senegal')"
+                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/sn.svg" alt="SN"
+                        class="w-5 h-5 rounded-full object-cover"> <span>+221</span> <span
+                        class="text-gray-400">Senegal</span>
+                    </div>
+                    <div onclick="selectPhoneCountry('ci', '+225', 'Ivory Coast')"
+                      class="px-4 py-3 hover:bg-[#F6F8FA] cursor-pointer text-sm text-[#101010] flex items-center gap-3">
+                      <img src="https://circle-flags.cdn.skk.moe/flags/ci.svg" alt="CI"
+                        class="w-5 h-5 rounded-full object-cover"> <span>+225</span> <span class="text-gray-400">Ivory
+                        Coast</span>
+                    </div>
+                  </div>
+                </div>
+                <input id="input-phone-participant" type="tel" placeholder="numéro"
+                  class="flex-1 px-3 text-base font-medium outline-none placeholder:text-[#E0E0E0] bg-transparent h-full rounded-r-[8px]">
+              </div>
+            </div>
+          </div>
+          <div class="border-t-[1px] border-[#697A8D]/40"></div>
+          <!-- Lieu de participation -->
+          <div>
+            <label class="block text-sm text-[#14201F] font-medium mb-3">Lieu de participation</label>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="location-cards">
+              <!-- Location Card 1 - Selected -->
+              <div onclick="selectLocationCard(this)"
+                class="location-card selected bg-white border-[1px] border-[#0189D5] rounded-[12px] cursor-pointer transition-all flex flex-col overflow-visible relative">
+                <!-- Top color bar -->
+                <div
+                  class="location-card-header w-full h-[29px] bg-[#E6F3FB] border-b border-[#0189D5] rounded-t-[10px]">
+                </div>
+
+                <!-- Icon -->
+                <div
+                  class="location-card-icon w-[36px] h-[36px] rounded-full bg-[#0189D5]  border-[1px] border-[#0189D5]  flex items-center justify-center shrink-0 shadow-sm absolute top-[11px] left-4 z-10">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                      d="M17.1829 7.04165C16.3079 3.19165 12.9496 1.45831 9.99959 1.45831C9.99959 1.45831 9.99959 1.45831 9.99126 1.45831C7.04959 1.45831 3.68292 3.18331 2.80792 7.03331C1.83292 11.3333 4.46626 14.975 6.84959 17.2666C7.73292 18.1166 8.86626 18.5416 9.99959 18.5416C11.1329 18.5416 12.2663 18.1166 13.1413 17.2666C15.5246 14.975 18.1579 11.3416 17.1829 7.04165Z"
+                      fill="white" />
+                    <path
+                      d="M10 11.2167C11.4497 11.2167 12.625 10.0414 12.625 8.59168C12.625 7.14193 11.4497 5.96667 10 5.96667C8.55025 5.96667 7.375 7.14193 7.375 8.59168C7.375 10.0414 8.55025 11.2167 10 11.2167Z"
+                      fill="white" />
+                  </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="pl-4 pr-[10px] pb-[12px] pt-[24px]">
+                  <h4 class="text-[#161924] text-base font-medium leading-tight ">Douala - Salle des fêtes d'Akwa
+                  </h4>
+                  <p class="text-[#5A5C66] text-sm mt-1 font-medium">20 Nov 2025 | 12:00 - 18:00</p>
+                </div>
+              </div>
+
+              <!-- Location Card 2 -->
+              <div onclick="selectLocationCard(this)"
+                class="location-card bg-white border-[1px] border-[#E8E8E9] rounded-[12px] cursor-pointer transition-all hover:border-[#0189D5] flex flex-col overflow-visible relative">
+                <!-- Top color bar -->
+                <div
+                  class="location-card-header w-full h-[29px] bg-[#F4F5F5] border-b border-[#E8E8E9] rounded-t-[10px]">
+                </div>
+
+                <!-- Icon -->
+                <div
+                  class="location-card-icon w-[36px] h-[36px] rounded-full bg-[#F4F5F5] border-[1px] border-[#E8E8E9] flex items-center justify-center shrink-0 shadow-sm absolute top-[11px] left-4 z-10 text-[#C7C7CC] hover:text-[#0189D5]">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                      d="M17.1829 7.04165C16.3079 3.19165 12.9496 1.45831 9.99959 1.45831C9.99959 1.45831 9.99959 1.45831 9.99126 1.45831C7.04959 1.45831 3.68292 3.18331 2.80792 7.03331C1.83292 11.3333 4.46626 14.975 6.84959 17.2666C7.73292 18.1166 8.86626 18.5416 9.99959 18.5416C11.1329 18.5416 12.2663 18.1166 13.1413 17.2666C15.5246 14.975 18.1579 11.3416 17.1829 7.04165Z"
+                      fill="currentColor" />
+                    <path
+                      d="M10 11.2167C11.4497 11.2167 12.625 10.0414 12.625 8.59168C12.625 7.14193 11.4497 5.96667 10 5.96667C8.55025 5.96667 7.375 7.14193 7.375 8.59168C7.375 10.0414 8.55025 11.2167 10 11.2167Z"
+                      fill="currentColor" />
+                  </svg>
+
+                </div>
+
+                <!-- Content -->
+                <div class="pl-4 pr-[10px] pb-[12px] pt-[24px]">
+                  <h4 class="text-[#161924] text-base font-medium leading-tight">Douala - Salle des fêtes d’Akwa
+                  </h4>
+                  <p class="text-[#5A5C66] text-sm mt-1 font-medium">20 Nov 2025 | 12:00 - 18:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-t-[1px] border-[#697A8D]/40"></div>
+          <!-- Forfaits -->
+          <div>
+            <label class="block text-sm text-[#14201F] font-medium mb-3">Forfaits</label>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="package-cards">
+              <!-- Package Card 1 - Selected -->
+              <div onclick="selectPackageCard(this)"
+                class="package-card selected bg-white border-[1px] border-[#0189D5] rounded-[12px] cursor-pointer transition-all flex flex-col overflow-visible relative">
+                <!-- Top color bar -->
+                <div
+                  class="package-card-header w-full h-[29px] bg-[#E6F3FB] border-b border-[#0189D5] rounded-t-[10px]">
+                </div>
+
+                <!-- Icon -->
+                <div
+                  class="package-card-icon w-[36px] h-[36px] rounded-full bg-[#0189D5] border-[1px] border-[#0189D5] flex items-center justify-center shrink-0 shadow-sm absolute top-[11px] left-4 z-10">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                      d="M16.0834 6.59999V10.8917C16.0834 13.4583 14.6167 14.5583 12.4167 14.5583H5.09171C4.71671 14.5583 4.35838 14.525 4.02504 14.45C3.81671 14.4167 3.61672 14.3584 3.43339 14.2917C2.18339 13.825 1.42505 12.7417 1.42505 10.8917V6.59999C1.42505 4.03332 2.89171 2.93335 5.09171 2.93335H12.4167C14.2834 2.93335 15.625 3.72501 15.9834 5.53335C16.0417 5.86668 16.0834 6.20832 16.0834 6.59999Z"
+                      fill="white" />
+                    <path
+                      d="M18.5837 9.09997V13.3917C18.5837 15.9583 17.1171 17.0583 14.9171 17.0583H7.59206C6.97539 17.0583 6.41706 16.975 5.93373 16.7917C4.94206 16.425 4.26706 15.6667 4.02539 14.45C4.35872 14.525 4.71706 14.5583 5.09206 14.5583H12.4171C14.6171 14.5583 16.0837 13.4583 16.0837 10.8917V6.59997C16.0837 6.2083 16.0504 5.85833 15.9837 5.53333C17.5671 5.86666 18.5837 6.9833 18.5837 9.09997Z"
+                      fill="white" />
+                    <path
+                      d="M8.75006 10.9501C9.96509 10.9501 10.9501 9.96509 10.9501 8.75006C10.9501 7.53503 9.96509 6.55005 8.75006 6.55005C7.53503 6.55005 6.55005 7.53503 6.55005 8.75006C6.55005 9.96509 7.53503 10.9501 8.75006 10.9501Z"
+                      fill="white" />
+                    <path
+                      d="M3.9834 6.875C3.64173 6.875 3.3584 7.15833 3.3584 7.5V10C3.3584 10.3417 3.64173 10.625 3.9834 10.625C4.32507 10.625 4.6084 10.3417 4.6084 10V7.5C4.6084 7.15833 4.3334 6.875 3.9834 6.875Z"
+                      fill="white" />
+                    <path
+                      d="M13.5088 6.875C13.1671 6.875 12.8838 7.15833 12.8838 7.5V10C12.8838 10.3417 13.1671 10.625 13.5088 10.625C13.8505 10.625 14.1338 10.3417 14.1338 10V7.5C14.1338 7.15833 13.8588 6.875 13.5088 6.875Z"
+                      fill="white" />
+                  </svg>
+
+                </div>
+                <!-- Content -->
+                <div class="pl-4 pr-[10px] pb-[12px] pt-[24px] flex justify-between items-start">
+                  <div>
+                    <h4 class="text-[#161924] text-base font-medium">Gratuit</h4>
+                    <p class="text-[#5A5C66] text-sm font-medium">Consulter annonce</p>
+                  </div>
+                  <span class="text-[#5A5C66] text-sm font-medium">XAF 0</span>
+                </div>
+              </div>
+
+              <!-- Package Card 2 -->
+              <div onclick="selectPackageCard(this)"
+                class="package-card bg-white border-[1px] border-[#E8E8E9] rounded-[12px] cursor-pointer transition-all hover:border-[#0189D5] flex flex-col overflow-visible relative">
+                <!-- Top color bar -->
+                <div
+                  class="package-card-header w-full h-[29px] bg-[#F4F5F5] border-b border-[#E8E8E9] rounded-t-[10px]">
+                </div>
+
+                <!-- Icon -->
+                <div
+                  class="package-card-icon w-[36px] h-[36px] rounded-full bg-[#F4F5F5] border-[1px] border-[#E8E8E9] flex items-center justify-center shrink-0 shadow-sm absolute top-[11px] left-4 z-10 text-[#C7C7CC] hover:text-[#0189D5]">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4"
+                      d="M16.0834 6.59999V10.8917C16.0834 13.4583 14.6167 14.5583 12.4167 14.5583H5.09171C4.71671 14.5583 4.35838 14.525 4.02504 14.45C3.81671 14.4167 3.61672 14.3584 3.43339 14.2917C2.18339 13.825 1.42505 12.7417 1.42505 10.8917V6.59999C1.42505 4.03332 2.89171 2.93335 5.09171 2.93335H12.4167C14.2834 2.93335 15.625 3.72501 15.9834 5.53335C16.0417 5.86668 16.0834 6.20832 16.0834 6.59999Z"
+                      fill="currentColor" />
+                    <path
+                      d="M18.5837 9.09997V13.3917C18.5837 15.9583 17.1171 17.0583 14.9171 17.0583H7.59206C6.97539 17.0583 6.41706 16.975 5.93373 16.7917C4.94206 16.425 4.26706 15.6667 4.02539 14.45C4.35872 14.525 4.71706 14.5583 5.09206 14.5583H12.4171C14.6171 14.5583 16.0837 13.4583 16.0837 10.8917V6.59997C16.0837 6.2083 16.0504 5.85833 15.9837 5.53333C17.5671 5.86666 18.5837 6.9833 18.5837 9.09997Z"
+                      fill="currentColor" />
+                    <path
+                      d="M8.75006 10.9501C9.96509 10.9501 10.9501 9.96509 10.9501 8.75006C10.9501 7.53503 9.96509 6.55005 8.75006 6.55005C7.53503 6.55005 6.55005 7.53503 6.55005 8.75006C6.55005 9.96509 7.53503 10.9501 8.75006 10.9501Z"
+                      fill="currentColor" />
+                    <path
+                      d="M3.9834 6.875C3.64173 6.875 3.3584 7.15833 3.3584 7.5V10C3.3584 10.3417 3.64173 10.625 3.9834 10.625C4.32507 10.625 4.6084 10.3417 4.6084 10V7.5C4.6084 7.15833 4.3334 6.875 3.9834 6.875Z"
+                      fill="currentColor" />
+                    <path
+                      d="M13.5088 6.875C13.1671 6.875 12.8838 7.15833 12.8838 7.5V10C12.8838 10.3417 13.1671 10.625 13.5088 10.625C13.8505 10.625 14.1338 10.3417 14.1338 10V7.5C14.1338 7.15833 13.8588 6.875 13.5088 6.875Z"
+                      fill="currentColor" />
+                  </svg>
+
+                </div>
+
+                <!-- Content -->
+                <div class="pl-4 pr-[10px] pb-[12px] pt-[24px] flex justify-between items-start">
+                  <div>
+                    <h4 class="text-[#161924] text-base font-medium">Standard</h4>
+                    <p class="text-[#5A5C66] text-sm font-medium">Pass, Bonbon</p>
+                  </div>
+                  <span class="text-[#5A5C66] text-sm font-medium"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-t-[1px] border-[#697A8D]/40"></div>
+          <!-- Invitation Method -->
+          <div>
+            <label class="block text-sm text-[#14201F] font-medium mb-3">Comment souhaitez-vous recevoir votre
+              invitation
+              ?</label>
+            <div class="space-y-4 px-4 py-3 rounded-[12px] border-[1px] border-[#E8E8E9]">
+              <!-- Email Toggle -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="toggle-email" onclick="toggleSwitch(this)"
+                  class="toggle-switch w-[44px] h-[24px] rounded-full bg-[#E5E7EB] relative transition-colors cursor-pointer">
+                  <span
+                    class="toggle-knob absolute top-[2px] left-[2px] w-[20px] h-[20px] rounded-full bg-white shadow-md transition-all"></span>
+                </button>
+                <span class="text-sm font-medium text-[#73757C]">Email</span>
+              </div>
+              <!-- Direct Download Toggle -->
+              <div class="flex items-center gap-3">
+                <button type="button" onclick="toggleSwitch(this)"
+                  class="toggle-switch w-[44px] h-[24px] rounded-full bg-[#E5E7EB] relative transition-colors cursor-pointer">
+                  <span
+                    class="toggle-knob absolute top-[2px] left-[2px] w-[20px] h-[20px] rounded-full bg-white shadow-md transition-all"></span>
+                </button>
+                <span class="text-sm font-medium text-[#73757C]">Téléchargement direct</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Buttons -->
+        <div class="px-6 sm:px-8 pb-[32px]  flex flex-col sm:flex-row gap-3 flex-shrink-0">
+          <button onclick="closeModal('add-participant-modal')"
+            class="flex-1 py-[10px] px-6 rounded-[8px] bg-[#C3C4C7] text-[#000000] font-medium text-sm hover:bg-[#b0b0b0] transition-colors cursor-pointer">
+            Annuler
+          </button>
+          <button onclick="validateAndAddParticipant()"
+            class="flex-1 py-[10px] px-6 rounded-[8px] bg-[#008CCF] text-white font-medium text-sm hover:bg-[#007bb5] transition-colors cursor-pointer">
+            Ajouter
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal file d -->
+  <div id="success-modal"
+    class="modal-overlay fixed inset-0 z-50 bg-black bg-opacity-50 hidden flex items-center justify-center p-4">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Icon -->
+      <div class="mb-6 relative flex items-center justify-center">
+        <img src="./images/walk-option.svg" alt="walk-option" class="w-full max-w-[92px]" />
+      </div>
+
+      <!-- Content -->
+      <h3 class="text-2xl font-semibold font-Archivo text-[#14201F] mb-2">File d’attente</h3>
+      <p class="text-[#666E6D] text-base font-normal font-Archivo leading-[150%] mb-6">
+        <span>Le participant Patrick sera dans la file d’attente</span>
+      </p>
+
+      <!-- Button -->
+      <div class="w-full flex flex-row items-center justify-between gap-[24px]">
+        <button onclick="openModal('wishlist-modal'); closeModal('success-modal')"
+          class="flex-1 py-[10px] w-full rounded-[12px] ovbtn text-white font-medium text-sm  hover:bg-[#02a0c1] transition-colors flex items-center justify-center gap-2 cursor-pointer">Ajouter
+        </button>
+        <button onclick="closeModal('success-modal')"
+          class="flex-1 py-[10px] w-full rounded-[12px] white-modal-btn text-[#14201F] font-medium text-sm  hover:bg-[#dcdedd] transition-colors flex items-center justify-center gap-2 ring-[1px] ring-[#dbdedd] cursor-pointer">
+          Annuler
+        </button>
+      </div>
+    </div>
+  </div>
   <!-- Modal contact -->
   <div id="contact-modal"
     class="modal-overlay fixed inset-0 flex items-start lg:items-center hidden justify-center p-4 py-8 overflow-y-auto">
@@ -806,7 +1148,377 @@
       </div>
     </div>
   </div>
+  <!-- Modal wishlist -->
+  <div id="wishlist-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 hidden">
+    <div
+      class="modal-content bg-white w-full max-w-[460px] rounded-[20px] px-6 py-8 flex flex-col items-center text-center relative">
+      <!-- Icon -->
+      <div class="mb-6 relative flex items-center justify-center">
+        <img src="./images/waitlist.png" alt="waitlist" class="w-full max-w-[92px]" />
+      </div>
+
+      <!-- Content -->
+      <p class="text-[#73757C] text-base lg:text-xl font-semibold font-Archivo leading-[120%] mb-6 w-full">Vous avez été
+        ajouté à la liste d’attente pour cet évènement !
+      </p>
+
+      <!-- Button -->
+      <button onclick="closeModal('wishlist-modal'); openModal('email-address-success-modal')"
+        class="w-full max-w-[176px] py-[10px] rounded-[12px] bg-[#FF383C] text-white font-medium text-sm  hover:bg-[#cf0d10] transition-colors flex items-center justify-center gap-2 border-[1px] border-[##d9dcdb]">
+        Annuler
+      </button>
+    </div>
+  </div>
+  <!-- Modal email error -->
+  <div id="email-error-modal"
+    class="modal-overlay fixed inset-0 z-[60] bg-black bg-opacity-50 flex items-center hidden justify-center p-4">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Icon -->
+      <div class="mb-[24px] relative flex items-center justify-center">
+        <img src="./images/error-circle-2.svg" alt="error" class="shadow-lg rounded-full" />
+      </div>
+
+      <!-- Content -->
+      <p class="text-[#73757C] text-base lg:text-xl font-semibold font-Archivo leading-[120%] mb-6 space-y-2">
+        <span class="block">Vous n’avez renseigné ni le numéro de téléphone, ni l’adresse mail.</span>
+        <span class="block">Veillez renseigner au moins l’une de ces informations</span>
+      </p>
+
+      <!-- Button -->
+      <button onclick="closeModal('email-error-modal'); openModal('add-participant-modal')"
+        class="w-full max-w-[176px] py-[10px] rounded-[12px] bg-[#FF383C] text-white font-medium text-sm  hover:bg-[#cf0d10] transition-colors flex items-center justify-center gap-2 border-[1px] border-[##d9dcdb] cursor-pointer">
+        Retour
+      </button>
+    </div>
+  </div>
+  <!-- Modal email error two -->
+  <div id="email-error-two-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 hidden">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Icon -->
+      <div class="mb-6 relative flex items-center justify-center">
+        <img src="./images/error-circle-2.svg" alt="error" class="shadow-lg rounded-full" />
+      </div>
+
+      <!-- Content -->
+      <p class="text-[#73757C] text-base lg:text-xl font-semibold font-Archivo leading-[120%] mb-6">
+        <span>Vous n’avez pas renseigné d’adresse email afin de recevoir votre billet !</span>
+      </p>
+
+      <!-- Button -->
+      <button onclick="closeModal('email-error-two-modal'); openModal('add-participant-modal')"
+        class="w-full max-w-[176px] py-[10px] rounded-[12px] bg-[#FF383C] text-white font-medium text-sm  hover:bg-[#cf0d10] transition-colors flex items-center justify-center gap-2 border-[1px] border-[##d9dcdb] cursor-pointer">
+        Retour
+      </button>
+    </div>
+  </div>
+  <!-- modal email address success -->
+  <div id="email-address-success-modal"
+    class="modal-overlay fixed inset-0 flex hidden items-start lg:items-center justify-center p-4 py-8 overflow-y-auto">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Logo -->
+      <img src="./images/logo-header.svg" alt="Sunday Events" class="h-[48px] mb-6" />
+
+      <!-- Icon -->
+      <div class="mb-[32px] relative flex items-center justify-center">
+        <img src="./images/sucess.png" alt="success" />
+      </div>
+
+      <!-- Content -->
+      <h2 class="text-[#161924] text-[32px] font-semibold leading-[120%] mb-6 !font-Archivo">Succès</h2>
+
+      <div class="border-[1px] border-[#E7E9E9] bg-[#F9FAFA] rounded-[12px] p-[14px] space-y-4">
+        <p class="text-[#73757C] text-[16px] font-medium leading-[120%]">Les participants suivants sont sur liste
+          d'attente</p>
+        <div class="bg-[#E6F3FB] rounded-[12px] p-[14px]">
+          <!-- 1 -->
+          <div class="flex flex-col items-start justify-between">
+            <span class="text-[#0D0D12] text-[14px] font-medium leading-[150%]">Sophia Turner</span>
+            <div class="flex flex-row items-start gap-[18px]">
+              <div class="min-w-[111px] text-[#666D80] text-[12px] font-medium leading-[150%] text-start">Statut :
+                <span class="text-[#FF2D55]">En
+                  attente</span>
+              </div>
+              <div class=" text-[#666D80] text-[12px] font-medium leading-[150%]">Position : <span
+                  class="text-[#0189D5]">02</span></div>
+            </div>
+          </div>
+          <!-- divider -->
+          <div class="border-b-[1px] border-[#697A8D]/40 my-[10px]"></div>
+          <!-- 2 -->
+          <div class="flex flex-col items-start justify-between">
+            <span class="text-[#0D0D12] text-[14px] font-medium leading-[150%]">Sophia Turner</span>
+            <div class="flex flex-row items-start gap-[18px]">
+              <div class="min-w-[111px] text-[#666D80] text-[12px] font-medium leading-[150%] text-start">Statut :
+                <span class="text-[#FF2D55]">En
+                  attente</span>
+              </div>
+              <div class=" text-[#666D80] text-[12px] font-medium leading-[150%]">Position : <span
+                  class="text-[#0189D5]">02</span></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="text-[#73757C] text-[16px] font-medium leading-[120%]">vous pouvez annuler en cliquant sur le bouton
+          </p>
+          <a href="#" class="text-[#0189D5] text-xl font-medium leading-[120%]">Désister</a>
+        </div>
+      </div>
+      <!-- Button -->
+      <a onclick="closeModal('email-address-success-modal'); openModal('payment-success-modal')"
+        class="w-auto min-w-[176px] py-[10px] px-[23px] rounded-[12px] ovbtn text-white font-medium text-sm  hover:bg-[#02a0c1] transition-colors flex items-center justify-center gap-2 mt-[27px] cursor-pointer">
+        Nos évènements
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.7334 9.98332H16.2251" stroke="white" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M11.2354 4.98999L16.2662 9.99999L11.2354 15.01" stroke="white" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+
+      </a>
+    </div>
+  </div>
+  <!-- modal payment success -->
+  <div id="payment-success-modal" class="modal-overlay fixed inset-0 flex hidden items-center justify-center p-4">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Logo -->
+      <img src="./images/logo-header.svg" alt="Sunday Events" class="h-[48px] mb-6" />
+
+      <!-- Icon -->
+      <div class="mb-[32px] relative flex items-center justify-center">
+        <img src="./images/sucess.png" alt="success" />
+      </div>
+
+      <!-- Content -->
+      <h2 class="text-[#161924] text-[32px] font-semibold leading-[120%] mb-6 !font-Archivo">Succès</h2>
+
+      <p class="text-[#73757C] text-base font-medium font-Archivo leading-[120%] mb-8 space-y-2">
+        <span>Vous allez recevoir vos invitations par </span><span class="font-semibold text-[#101010]">Mail</span>
+        <br>ou<br>
+        Cliquez sur le bouton <a href="#" class="font-semibold text-[#0189D5]">Télécharger</a>
+      </p>
+
+      <!-- Button -->
+      <a href="./index.html"
+        class="w-full max-w-[176px] py-[10px] rounded-[12px] ovbtn text-white font-medium text-sm  hover:bg-[#02a0c1] transition-colors flex items-center justify-center gap-2 cursor-pointer">
+        Nos évènements
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.7334 9.98332H16.2251" stroke="white" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M11.2354 4.98999L16.2662 9.99999L11.2354 15.01" stroke="white" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+
+      </a>
+    </div>
+  </div>
+
   <!-- js -->
+  <script>
+    function validateAndAddParticipant() {
+      const email = document.getElementById('input-email-participant').value.trim();
+      const phone = document.getElementById('input-phone-participant').value.trim();
+      const emailToggle = document.getElementById('toggle-email');
+      const isEmailToggleActive = emailToggle && emailToggle.classList.contains('active');
+
+      if (isEmailToggleActive && !email) {
+        // Show specific error if Email toggle is ON but no email provided
+        closeModal('add-participant-modal');
+        openModal('email-error-two-modal');
+      } else if (!email && !phone) {
+        // Show error if both are empty
+        closeModal('add-participant-modal');
+        openModal('email-error-modal');
+      } else {
+        // Proceed if at least one is filled or requirements met
+        closeModal('add-participant-modal');
+        openModal('success-modal');
+      }
+    }
+    // Phone country selector
+    function selectPhoneCountry(countryCode, code, country) {
+      const codeText = document.getElementById('country-code-text');
+      codeText.textContent = code;
+
+      // Update main flag image
+      const flagImg = document.querySelector('.group-dropdown img');
+      if (flagImg) {
+        flagImg.src = `https://circle-flags.cdn.skk.moe/flags/${countryCode}.svg`;
+        flagImg.alt = countryCode.toUpperCase();
+      }
+
+      toggleDropdown('menu-phone-country', 'icon-phone-country');
+    }
+
+    // Location card selection
+    // Location card selection
+    function selectLocationCard(el) {
+      const cards = document.querySelectorAll('#location-cards .location-card');
+      cards.forEach(card => {
+        // Reset Card Container
+        card.classList.remove('selected', 'border-[#0189D5]', 'border-2', 'bg-white');
+        card.classList.add('border', 'border-[#E8E8E9]', 'bg-white');
+
+        // Reset Header
+        const header = card.querySelector('.location-card-header');
+        if (header) {
+          header.classList.remove('bg-[#E6F3FB]', 'border-[#0189D5]');
+          header.classList.add('bg-[#F4F5F5]', 'border-[#E8E8E9]');
+        }
+
+        // Reset Icon
+        const iconContainer = card.querySelector('.location-card-icon');
+        if (iconContainer) {
+          // Remove selected classes
+          iconContainer.classList.remove('bg-[#0189D5]', 'border-[#0189D5]');
+
+          // Add unselected classes
+          iconContainer.classList.add('bg-[#F4F5F5]', 'border-[#E8E8E9]', 'text-[#C7C7CC]', 'hover:text-[#0189D5]');
+          // User had border-[1px] in HTML, so we use border class if defined in Tailwind config or just assume border implies 1px
+          // Actually, Tailwind 'border' is 1px. User used 'border-[1px]'. 'border' is cleaner.
+          // But let's stick to what's in the snippet or standard 'border'.
+
+          // Set paths to currentColor
+          const paths = iconContainer.querySelectorAll('path');
+          paths.forEach(p => p.setAttribute('fill', 'currentColor'));
+        }
+      });
+
+      // Set Selected State
+      el.classList.remove('border', 'border-[#E8E8E9]');
+      el.classList.add('selected', 'border-[#0189D5]', 'border-2', 'bg-white');
+
+      // Set Header
+      const header = el.querySelector('.location-card-header');
+      if (header) {
+        header.classList.remove('bg-[#F4F5F5]', 'border-[#E8E8E9]');
+        header.classList.add('bg-[#E6F3FB]', 'border-[#0189D5]');
+      }
+
+      // Set Icon
+      const iconContainer = el.querySelector('.location-card-icon');
+      if (iconContainer) {
+        // Remove unselected classes
+        iconContainer.classList.remove('bg-[#F4F5F5]', 'border-[#E8E8E9]', 'text-[#C7C7CC]', 'hover:text-[#0189D5]');
+
+        // Add selected classes
+        iconContainer.classList.add('bg-[#0189D5]', 'border-[#0189D5]');
+
+        // Set paths to white
+        const paths = iconContainer.querySelectorAll('path');
+        paths.forEach(p => p.setAttribute('fill', 'white'));
+      }
+    }
+
+    // Package card selection
+    function selectPackageCard(el) {
+      const cards = document.querySelectorAll('#package-cards .package-card');
+      cards.forEach(card => {
+        // Reset Card Container
+        card.classList.remove('selected', 'border-[#0189D5]', 'border-2', 'bg-white');
+        card.classList.add('border', 'border-[#E8E8E9]', 'bg-white');
+
+        // Reset Header
+        const header = card.querySelector('.package-card-header');
+        if (header) {
+          header.classList.remove('bg-[#E6F3FB]', 'border-[#0189D5]');
+          header.classList.add('bg-[#F4F5F5]', 'border-[#E8E8E9]');
+        }
+
+        // Reset Icon
+        const iconContainer = card.querySelector('.package-card-icon');
+        if (iconContainer) {
+          iconContainer.classList.remove('bg-[#0189D5]', 'border-[#0189D5]');
+          iconContainer.classList.add('bg-[#F4F5F5]', 'border-[#E8E8E9]', 'text-[#C7C7CC]', 'hover:text-[#0189D5]');
+
+          const paths = iconContainer.querySelectorAll('path');
+          paths.forEach(p => p.setAttribute('fill', 'currentColor'));
+        }
+      });
+
+      // Set Selected State
+      el.classList.remove('border', 'border-[#E8E8E9]');
+      el.classList.add('selected', 'border-[#0189D5]', 'border-2', 'bg-white');
+
+      // Set Header
+      const header = el.querySelector('.package-card-header');
+      if (header) {
+        header.classList.remove('bg-[#F4F5F5]', 'border-[#E8E8E9]');
+        header.classList.add('bg-[#E6F3FB]', 'border-[#0189D5]');
+      }
+
+      // Set Icon
+      const iconContainer = el.querySelector('.package-card-icon');
+      if (iconContainer) {
+        iconContainer.classList.remove('bg-[#F4F5F5]', 'border-[#E8E8E9]', 'text-[#C7C7CC]', 'hover:text-[#0189D5]');
+        iconContainer.classList.add('bg-[#0189D5]', 'border-[#0189D5]');
+
+        const paths = iconContainer.querySelectorAll('path');
+        paths.forEach(p => p.setAttribute('fill', 'white'));
+      }
+    }
+
+    // Toggle switch
+    function toggleSwitch(el) {
+      const isActive = el.classList.contains('active');
+      const knob = el.querySelector('.toggle-knob');
+
+      if (isActive) {
+        el.classList.remove('active', 'bg-[#017BC0]');
+        el.classList.add('bg-[#E5E7EB]');
+        knob.style.left = '2px';
+      } else {
+        el.classList.add('active', 'bg-[#017BC0]');
+        el.classList.remove('bg-[#E5E7EB]');
+        knob.style.left = '22px';
+      }
+    }
+  </script>
+  <script>
+    function toggleDropdown(menuId, iconId) {
+      const menu = document.getElementById(menuId);
+      const icon = document.getElementById(iconId);
+
+      // Check if currently open
+      const isOpen = !menu.classList.contains("hidden");
+
+      // 1. Close ALL dropdowns first (Standard UI behavior)
+      // This prevents having multiple menus floating open at once
+      document
+        .querySelectorAll('[id^="menu-"]')
+        .forEach((el) => el.classList.add("hidden"));
+      document
+        .querySelectorAll('[id^="icon-"]')
+        .forEach((el) => el.classList.remove("rotate-180"));
+
+      // 2. If it wasn't open before, open it now
+      if (!isOpen) {
+        menu.classList.remove("hidden");
+        icon.classList.add("rotate-180");
+      }
+    }
+
+    // 3. Global Click Listener: Close dropdowns if clicking "outside"
+    document.addEventListener("click", function (event) {
+      // Check if the click is INSIDE any dropdown container
+      const isClickInside = event.target.closest(".group-dropdown");
+
+      // If click is NOT inside a dropdown container, close everything
+      if (!isClickInside) {
+        document
+          .querySelectorAll('[id^="menu-"]')
+          .forEach((el) => el.classList.add("hidden"));
+        document
+          .querySelectorAll('[id^="icon-"]')
+          .forEach((el) => el.classList.remove("rotate-180"));
+      }
+    });
+  </script>
   <script type="module" src="./js/index.js"></script>
 </body>
 

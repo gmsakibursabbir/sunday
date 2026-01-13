@@ -719,7 +719,7 @@
       </div>
     </div>
   </footer>
-  <!-- Modal -->
+   <!-- Modal -->
   <div id="add-participant-modal"
     class="modal-overlay fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50 hidden">
     <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
@@ -752,7 +752,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm text-[#161924] font-medium mb-[6px]">Adresse email</label>
-              <input type="email" placeholder="Entrer l'adresse mail"
+              <input id="input-email-participant" type="email" placeholder="Entrer l'adresse mail"
                 class="w-full h-[42px] px-3 bg-white border border-[#E8E8E9] rounded-[8px] text-base font-poppins font-medium outline-none focus:border-[#0189D5] placeholder:text-[#E0E0E0]">
             </div>
             <div>
@@ -833,7 +833,7 @@
                     </div>
                   </div>
                 </div>
-                <input type="tel" placeholder="numéro"
+                <input id="input-phone-participant" type="tel" placeholder="numéro"
                   class="flex-1 px-3 text-base font-medium outline-none placeholder:text-[#E0E0E0] bg-transparent h-full rounded-r-[8px]">
               </div>
             </div>
@@ -999,7 +999,7 @@
             <div class="space-y-4 px-4 py-3 rounded-[12px] border-[1px] border-[#E8E8E9]">
               <!-- Email Toggle -->
               <div class="flex items-center gap-3">
-                <button type="button" onclick="toggleSwitch(this)"
+                <button type="button" id="toggle-email" onclick="toggleSwitch(this)"
                   class="toggle-switch w-[44px] h-[24px] rounded-full bg-[#E5E7EB] relative transition-colors cursor-pointer">
                   <span
                     class="toggle-knob absolute top-[2px] left-[2px] w-[20px] h-[20px] rounded-full bg-white shadow-md transition-all"></span>
@@ -1009,9 +1009,9 @@
               <!-- Direct Download Toggle -->
               <div class="flex items-center gap-3">
                 <button type="button" onclick="toggleSwitch(this)"
-                  class="toggle-switch active w-[44px] h-[24px] rounded-full bg-[#017BC0] relative transition-colors cursor-pointer">
+                  class="toggle-switch w-[44px] h-[24px] rounded-full bg-[#E5E7EB] relative transition-colors cursor-pointer">
                   <span
-                    class="toggle-knob absolute top-[2px] left-[22px] w-[20px] h-[20px] rounded-full bg-white shadow-md transition-all"></span>
+                    class="toggle-knob absolute top-[2px] left-[2px] w-[20px] h-[20px] rounded-full bg-white shadow-md transition-all"></span>
                 </button>
                 <span class="text-sm font-medium text-[#73757C]">Téléchargement direct</span>
               </div>
@@ -1025,7 +1025,7 @@
             class="flex-1 py-[10px] px-6 rounded-[8px] bg-[#C3C4C7] text-[#000000] font-medium text-sm hover:bg-[#b0b0b0] transition-colors cursor-pointer">
             Annuler
           </button>
-          <button onclick="closeModal('add-participant-modal'); openModal('success-modal')"
+          <button onclick="validateAndAddParticipant()"
             class="flex-1 py-[10px] px-6 rounded-[8px] bg-[#008CCF] text-white font-medium text-sm hover:bg-[#007bb5] transition-colors cursor-pointer">
             Ajouter
           </button>
@@ -1175,14 +1175,183 @@
       </p>
 
       <!-- Button -->
-      <button onclick="closeModal('wishlist-modal')"
+      <button onclick="closeModal('wishlist-modal'); openModal('email-address-success-modal')"
         class="w-full max-w-[176px] py-[10px] rounded-[12px] bg-[#FF383C] text-white font-medium text-sm  hover:bg-[#cf0d10] transition-colors flex items-center justify-center gap-2 border-[1px] border-[##d9dcdb]">
         Annuler
       </button>
     </div>
   </div>
+  <!-- Modal email error -->
+  <div id="email-error-modal"
+    class="modal-overlay fixed inset-0 z-[60] bg-black bg-opacity-50 flex items-center hidden justify-center p-4">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Icon -->
+      <div class="mb-[24px] relative flex items-center justify-center">
+        <img src="./images/error-circle-2.svg" alt="error" class="shadow-lg rounded-full" />
+      </div>
+
+      <!-- Content -->
+      <p class="text-[#73757C] text-base lg:text-xl font-semibold font-Archivo leading-[120%] mb-6 space-y-2">
+        <span class="block">Vous n’avez renseigné ni le numéro de téléphone, ni l’adresse mail.</span>
+        <span class="block">Veillez renseigner au moins l’une de ces informations</span>
+      </p>
+
+      <!-- Button -->
+      <button onclick="closeModal('email-error-modal'); openModal('add-participant-modal')"
+        class="w-full max-w-[176px] py-[10px] rounded-[12px] bg-[#FF383C] text-white font-medium text-sm  hover:bg-[#cf0d10] transition-colors flex items-center justify-center gap-2 border-[1px] border-[##d9dcdb] cursor-pointer">
+        Retour
+      </button>
+    </div>
+  </div>
+  <!-- Modal email error two -->
+  <div id="email-error-two-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 hidden">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Icon -->
+      <div class="mb-6 relative flex items-center justify-center">
+        <img src="./images/error-circle-2.svg" alt="error" class="shadow-lg rounded-full" />
+      </div>
+
+      <!-- Content -->
+      <p class="text-[#73757C] text-base lg:text-xl font-semibold font-Archivo leading-[120%] mb-6">
+        <span>Vous n’avez pas renseigné d’adresse email afin de recevoir votre billet !</span>
+      </p>
+
+      <!-- Button -->
+      <button onclick="closeModal('email-error-two-modal'); openModal('add-participant-modal')"
+        class="w-full max-w-[176px] py-[10px] rounded-[12px] bg-[#FF383C] text-white font-medium text-sm  hover:bg-[#cf0d10] transition-colors flex items-center justify-center gap-2 border-[1px] border-[##d9dcdb] cursor-pointer">
+        Retour
+      </button>
+    </div>
+  </div>
+  <!-- modal email address success -->
+  <div id="email-address-success-modal"
+    class="modal-overlay fixed inset-0 flex hidden items-start lg:items-center justify-center p-4 py-8 overflow-y-auto">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Logo -->
+      <img src="./images/logo-header.svg" alt="Sunday Events" class="h-[48px] mb-6" />
+
+      <!-- Icon -->
+      <div class="mb-[32px] relative flex items-center justify-center">
+        <img src="./images/sucess.png" alt="success" />
+      </div>
+
+      <!-- Content -->
+      <h2 class="text-[#161924] text-[32px] font-semibold leading-[120%] mb-6 !font-Archivo">Succès</h2>
+
+      <div class="border-[1px] border-[#E7E9E9] bg-[#F9FAFA] rounded-[12px] p-[14px] space-y-4">
+        <p class="text-[#73757C] text-[16px] font-medium leading-[120%]">Les participants suivants sont sur liste
+          d'attente</p>
+        <div class="bg-[#E6F3FB] rounded-[12px] p-[14px]">
+          <!-- 1 -->
+          <div class="flex flex-col items-start justify-between">
+            <span class="text-[#0D0D12] text-[14px] font-medium leading-[150%]">Sophia Turner</span>
+            <div class="flex flex-row items-start gap-[18px]">
+              <div class="min-w-[111px] text-[#666D80] text-[12px] font-medium leading-[150%] text-start">Statut :
+                <span class="text-[#FF2D55]">En
+                  attente</span>
+              </div>
+              <div class=" text-[#666D80] text-[12px] font-medium leading-[150%]">Position : <span
+                  class="text-[#0189D5]">02</span></div>
+            </div>
+          </div>
+          <!-- divider -->
+          <div class="border-b-[1px] border-[#697A8D]/40 my-[10px]"></div>
+          <!-- 2 -->
+          <div class="flex flex-col items-start justify-between">
+            <span class="text-[#0D0D12] text-[14px] font-medium leading-[150%]">Sophia Turner</span>
+            <div class="flex flex-row items-start gap-[18px]">
+              <div class="min-w-[111px] text-[#666D80] text-[12px] font-medium leading-[150%] text-start">Statut :
+                <span class="text-[#FF2D55]">En
+                  attente</span>
+              </div>
+              <div class=" text-[#666D80] text-[12px] font-medium leading-[150%]">Position : <span
+                  class="text-[#0189D5]">02</span></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="text-[#73757C] text-[16px] font-medium leading-[120%]">vous pouvez annuler en cliquant sur le bouton
+          </p>
+          <a href="#" class="text-[#0189D5] text-xl font-medium leading-[120%]">Désister</a>
+        </div>
+      </div>
+      <!-- Button -->
+      <a onclick="closeModal('email-address-success-modal'); openModal('payment-success-modal')"
+        class="w-auto min-w-[176px] py-[10px] px-[23px] rounded-[12px] ovbtn text-white font-medium text-sm  hover:bg-[#02a0c1] transition-colors flex items-center justify-center gap-2 mt-[27px] cursor-pointer">
+        Nos évènements
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.7334 9.98332H16.2251" stroke="white" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M11.2354 4.98999L16.2662 9.99999L11.2354 15.01" stroke="white" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+
+      </a>
+    </div>
+  </div>
+  <!-- modal payment success -->
+  <div id="payment-success-modal" class="modal-overlay fixed inset-0 flex hidden items-center justify-center p-4">
+    <div
+      class="modal-content bg-white w-full max-w-[527px] rounded-[20px] p-8 flex flex-col items-center text-center relative">
+      <!-- Logo -->
+      <img src="./images/logo-header.svg" alt="Sunday Events" class="h-[48px] mb-6" />
+
+      <!-- Icon -->
+      <div class="mb-[32px] relative flex items-center justify-center">
+        <img src="./images/sucess.png" alt="success" />
+      </div>
+
+      <!-- Content -->
+      <h2 class="text-[#161924] text-[32px] font-semibold leading-[120%] mb-6 !font-Archivo">Succès</h2>
+
+      <p class="text-[#73757C] text-base font-medium font-Archivo leading-[120%] mb-8 space-y-2">
+        <span>Vous allez recevoir vos invitations par </span><span class="font-semibold text-[#101010]">Mail</span>
+        <br>ou<br>
+        Cliquez sur le bouton <a href="#" class="font-semibold text-[#0189D5]">Télécharger</a>
+      </p>
+
+      <!-- Button -->
+      <a href="./index.html"
+        class="w-full max-w-[176px] py-[10px] rounded-[12px] ovbtn text-white font-medium text-sm  hover:bg-[#02a0c1] transition-colors flex items-center justify-center gap-2 cursor-pointer">
+        Nos évènements
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.7334 9.98332H16.2251" stroke="white" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M11.2354 4.98999L16.2662 9.99999L11.2354 15.01" stroke="white" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+
+      </a>
+    </div>
+  </div>
+
   <!-- js -->
   <script>
+    function validateAndAddParticipant() {
+      const email = document.getElementById('input-email-participant').value.trim();
+      const phone = document.getElementById('input-phone-participant').value.trim();
+      const emailToggle = document.getElementById('toggle-email');
+      const isEmailToggleActive = emailToggle && emailToggle.classList.contains('active');
+
+      if (isEmailToggleActive && !email) {
+        // Show specific error if Email toggle is ON but no email provided
+        closeModal('add-participant-modal');
+        openModal('email-error-two-modal');
+      } else if (!email && !phone) {
+        // Show error if both are empty
+        closeModal('add-participant-modal');
+        openModal('email-error-modal');
+      } else {
+        // Proceed if at least one is filled or requirements met
+        closeModal('add-participant-modal');
+        openModal('success-modal');
+      }
+    }
     // Phone country selector
     function selectPhoneCountry(countryCode, code, country) {
       const codeText = document.getElementById('country-code-text');
@@ -1362,7 +1531,6 @@
       }
     });
   </script>
-
   <script type="module" src="./js/index.js"></script>
 </body>
 
