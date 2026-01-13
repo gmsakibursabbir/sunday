@@ -663,48 +663,49 @@
         </ul>
       </div>
     </div>
-    <!-- js -->
-    <script>
-      function toggleDropdown(menuId, iconId) {
-        const menu = document.getElementById(menuId);
-        const icon = document.getElementById(iconId);
+  </div>
+  <!-- js -->
+  <script>
+    function toggleDropdown(menuId, iconId) {
+      const menu = document.getElementById(menuId);
+      const icon = document.getElementById(iconId);
 
-        // Check if currently open
-        const isOpen = !menu.classList.contains("hidden");
+      // Check if currently open
+      const isOpen = !menu.classList.contains("hidden");
 
-        // 1. Close ALL dropdowns first (Standard UI behavior)
-        // This prevents having multiple menus floating open at once
+      // 1. Close ALL dropdowns first (Standard UI behavior)
+      // This prevents having multiple menus floating open at once
+      document
+        .querySelectorAll('[id^="menu-"]')
+        .forEach((el) => el.classList.add("hidden"));
+      document
+        .querySelectorAll('[id^="icon-"]')
+        .forEach((el) => el.classList.remove("rotate-180"));
+
+      // 2. If it wasn't open before, open it now
+      if (!isOpen) {
+        menu.classList.remove("hidden");
+        icon.classList.add("rotate-180");
+      }
+    }
+
+    // 3. Global Click Listener: Close dropdowns if clicking "outside"
+    document.addEventListener("click", function (event) {
+      // Check if the click is INSIDE any dropdown container
+      const isClickInside = event.target.closest(".group-dropdown");
+
+      // If click is NOT inside a dropdown container, close everything
+      if (!isClickInside) {
         document
           .querySelectorAll('[id^="menu-"]')
           .forEach((el) => el.classList.add("hidden"));
         document
           .querySelectorAll('[id^="icon-"]')
           .forEach((el) => el.classList.remove("rotate-180"));
-
-        // 2. If it wasn't open before, open it now
-        if (!isOpen) {
-          menu.classList.remove("hidden");
-          icon.classList.add("rotate-180");
-        }
       }
-
-      // 3. Global Click Listener: Close dropdowns if clicking "outside"
-      document.addEventListener("click", function (event) {
-        // Check if the click is INSIDE any dropdown container
-        const isClickInside = event.target.closest(".group-dropdown");
-
-        // If click is NOT inside a dropdown container, close everything
-        if (!isClickInside) {
-          document
-            .querySelectorAll('[id^="menu-"]')
-            .forEach((el) => el.classList.add("hidden"));
-          document
-            .querySelectorAll('[id^="icon-"]')
-            .forEach((el) => el.classList.remove("rotate-180"));
-        }
-      });
-    </script>
-    <script type="module" src="./js/index.js"></script>
+    });
+  </script>
+  <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>

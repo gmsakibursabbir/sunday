@@ -242,5 +242,22 @@ function toggleModal(modalId) {
     document.body.style.overflow = "";
   }
 }
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+  modal.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+  modal.classList.add("hidden");
+  document.body.style.overflow = "";
+}
+
 // Expose to global scope for inline onclick handlers (required for ES modules)
 window.toggleModal = toggleModal;
+window.openModal = openModal;
+window.closeModal = closeModal;
